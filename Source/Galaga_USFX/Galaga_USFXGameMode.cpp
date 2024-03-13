@@ -40,16 +40,16 @@ void AGalaga_USFXGameMode::BeginPlay()
 	FVector ubicacionNave001 = FVector(-250.0f, 700.0f, 200.0f);
 	FVector ubicacionNave0001 = FVector(-500.0f, 700.0f, 200.0f);
 	FVector ubicacionNave02 = FVector(0.0f, 700.0f, 200.0f);
-	FVector ubicacionNave002 = FVector(-500.0f, 1000.0f, 200.0f);
+	FVector ubicacionNave002 = FVector(-250.0f, 1000.0f, 200.0f);
 	FVector ubicacionNave0002 = FVector(-500.0f, 1000.0f, 200.0f);
 	FVector ubicacionNave03 = FVector(0.0f, 400.0f, 200.0f);
-	FVector ubicacionNave003 = FVector(-500.0f, 400.0f, 200.0f);
+	FVector ubicacionNave003 = FVector(-250.0f, 400.0f, 200.0f);
 	FVector ubicacionNave0003 = FVector(-500.0f, 400.0f, 200.0f);
 	FVector ubicacionNave04 = FVector(0.0f, 100.0f, 200.0f);
-	FVector ubicacionNave004 = FVector(-500.0f, 100.0f, 200.0f);
+	FVector ubicacionNave004 = FVector(-250.0f, 100.0f, 200.0f);
 	FVector ubicacionNave0004 = FVector(-500.0f, 100.0f, 200.0f);
 	FVector ubicacionNave05 = FVector(0.0f, -200.0f, 200.0f);
-	FVector ubicacionNave005 = FVector(-500.0f, -200.0f, 200.0f);
+	FVector ubicacionNave005 = FVector(-250.0f, -200.0f, 200.0f);
 	FVector ubicacionNave0005 = FVector(-500.0f, -200.0f, 200.0f);
 	
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);

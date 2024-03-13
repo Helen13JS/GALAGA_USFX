@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class GALAGA_USFX_API ANaveEnemigaNodrizaAlfa : public ANaveEnemigaNodriza
+class GALAGA_USFX_API ANaveEnemigaNodrizaAlfa : public ANaveEnemigaNodriza 
 {
 	GENERATED_BODY()
 	

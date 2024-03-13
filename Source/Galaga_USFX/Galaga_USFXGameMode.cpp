@@ -36,30 +36,30 @@ void AGalaga_USFXGameMode::BeginPlay()
 	Super::BeginPlay();
 	//Set the game state to playing
 
-	FVector ubicacionNave01 = FVector(-500.0f, 1000.0f, 200.0f);
-	FVector ubicacionNave001 = FVector(-500.0f, 1000.0f, 200.0f);
-	FVector ubicacionNave0001 = FVector(-500.0f, 1000.0f, 200.0f);
-	FVector ubicacionNave02 = FVector(-500.0f, 500.0f, 200.0f);
-	FVector ubicacionNave002 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave0002 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave03 = FVector(-500.0f, 0.0f, 200.0f);
-	FVector ubicacionNave003 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave0003 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave04 = FVector(-500.0f, -500.0f, 200.0f);
-	FVector ubicacionNave004 = FVector(-500.0f, -500.0f, 200.0f);
-	FVector ubicacionNave0004 = FVector(-500.0f, -500.0f, 200.0f);
-	FVector ubicacionNave05 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave005 = FVector(-500.0f, -500.0f, 400.0f);
-	FVector ubicacionNave0005 = FVector(-500.0f, -500.0f, 200.0f);
+	FVector ubicacionNave01 = FVector(0.0f, 1000.0f, 200.0f);
+	FVector ubicacionNave001 = FVector(-250.0f, 700.0f, 200.0f);
+	FVector ubicacionNave0001 = FVector(-500.0f, 700.0f, 200.0f);
+	FVector ubicacionNave02 = FVector(0.0f, 700.0f, 200.0f);
+	FVector ubicacionNave002 = FVector(-500.0f, 1000.0f, 200.0f);
+	FVector ubicacionNave0002 = FVector(-500.0f, 1000.0f, 200.0f);
+	FVector ubicacionNave03 = FVector(0.0f, 400.0f, 200.0f);
+	FVector ubicacionNave003 = FVector(-500.0f, 400.0f, 200.0f);
+	FVector ubicacionNave0003 = FVector(-500.0f, 400.0f, 200.0f);
+	FVector ubicacionNave04 = FVector(0.0f, 100.0f, 200.0f);
+	FVector ubicacionNave004 = FVector(-500.0f, 100.0f, 200.0f);
+	FVector ubicacionNave0004 = FVector(-500.0f, 100.0f, 200.0f);
+	FVector ubicacionNave05 = FVector(0.0f, -200.0f, 200.0f);
+	FVector ubicacionNave005 = FVector(-500.0f, -200.0f, 200.0f);
+	FVector ubicacionNave0005 = FVector(-500.0f, -200.0f, 200.0f);
 	
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
-	FVector ubicacionBonus = FVector(300.0f, 0.0f, 200.0f);
-	FRotator rotacionBonus = FRotator(0.0f, 0.0f, 0.0f);
+	//FVector ubicacionBonus = FVector(300.0f, 0.0f, 200.0f);
+	//FRotator rotacionBonus = FRotator(0.0f, 0.0f, 0.0f);
 
 
-	FVector ubicacionPuntaje = FVector(100.0f, 700.0f, 350.0f);
-	FRotator rotacionPuntaje = FRotator(0.0f, 0.0f, 0.0f);
+	//FVector ubicacionPuntaje = FVector(100.0f, 700.0f, 350.0f);
+	//FRotator rotacionPuntaje = FRotator(0.0f, 0.0f, 0.0f);
 
 	UWorld* const World = GetWorld();
 	if (World != nullptr)
@@ -87,8 +87,8 @@ void AGalaga_USFXGameMode::BeginPlay()
 		NaveEnemigaNodrizaAlfa01 = World->SpawnActor<ANaveEnemigaNodrizaAlfa>(ubicacionNave005, rotacionNave);
 		NaveEnemigaNodrizaBeta01 = World->SpawnActor<ANaveEnemigaNodrizaBeta>(ubicacionNave0005, rotacionNave);
 
-		Bonus01 = World->SpawnActor<ABonus>(ubicacionBonus, rotacionBonus);
-		Puntaje01 = World->SpawnActor<APuntaje>(ubicacionPuntaje, rotacionPuntaje);
+		//Bonus01 = World->SpawnActor<ABonus>(ubicacionBonus, rotacionBonus);
+		//Puntaje01 = World->SpawnActor<APuntaje>(ubicacionPuntaje, rotacionPuntaje);
 		
 	}
 	//NaveEnemiga01->SetPosicion(FVector(2000.0f, 0.0f, 120.0f));
@@ -112,6 +112,6 @@ void AGalaga_USFXGameMode::BeginPlay()
 	NaveEnemigaReabastecimientoAlfa01->SetPosicion(FVector(0.0f, 500.0f, 200.0f));
 	NaveEnemigaReabastecimientoBeta01->SetPosicion(FVector(0.0f, 500.0f, 200.0f));
 
-	Bonus01->SetPosicion(FVector(1000.0f, 0.0f, 130.0f));
-	Puntaje01->SetPosicion(FVector(3000.0f, 100.0f, 500.0f));
+	//Bonus01->SetPosicion(FVector(1000.0f, 0.0f, 130.0f));
+	//Puntaje01->SetPosicion(FVector(3000.0f, 100.0f, 500.0f));
 }

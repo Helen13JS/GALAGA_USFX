@@ -1,0 +1,25 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "NaveEnemigaCaza.h"
+#include "NaveEnemigaCazaAlfa.generated.h"
+
+/**
+ * 
+ */
+UCLASS()
+class GALAGA_USFX_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
+{
+	GENERATED_BODY()
+
+
+protected:
+	virtual void Tick(float DeltaTime);
+	virtual void Mover();
+	virtual void Disparar();
+	virtual void Destruirse();
+	virtual void Escapar();
+	
+};

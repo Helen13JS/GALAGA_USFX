@@ -1,0 +1,9 @@
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+C:\Program Files\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX/NaveEnemigaNodrizaBeta.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaNodriza.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemiga.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaBeta.generated.h

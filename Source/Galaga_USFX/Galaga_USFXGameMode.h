@@ -28,8 +28,8 @@ class ANaveEnemigaReabastecimiento;
 class ANaveEnemigaReabastecimientoAlfa;
 class ANaveEnemigaReabastecimientoBeta;
 
-class ABonus;
-class APuntaje;
+//class ABonus;
+//class APuntaje;
 
 UCLASS(MinimalAPI)
 class AGalaga_USFXGameMode : public AGameModeBase
@@ -65,8 +65,18 @@ public:
 	ANaveEnemigaNodrizaAlfa* NaveEnemigaNodrizaAlfa01;
 	ANaveEnemigaNodrizaBeta* NaveEnemigaNodrizaBeta01;
 
-	ABonus* Bonus01;
-	APuntaje* Puntaje01;
+	//ABonus* Bonus01;
+	//APuntaje* Puntaje01;
+public:
+	TArray<ANaveEnemiga*> TANavesEnemigas;
+	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+private:
+	int TiempoTranscurrido;
+
+public:
+	virtual void Tick(float DeltaTime) override;
+
 
 };
 

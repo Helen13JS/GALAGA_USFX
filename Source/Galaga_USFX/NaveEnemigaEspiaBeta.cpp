@@ -3,6 +3,15 @@
 
 #include "NaveEnemigaEspiaBeta.h"
 
+
+ANaveEnemigaEspiaBeta::ANaveEnemigaEspiaBeta()
+{
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cone.Shape_Cone'"));
+    mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+}
+
+
 void ANaveEnemigaEspiaBeta::Mover()
 {
 }
@@ -18,3 +27,7 @@ void ANaveEnemigaEspiaBeta::Destruirse()
 void ANaveEnemigaEspiaBeta::Escapar()
 {
 }
+
+/*void ANaveEnemigaEspiaBeta::Tick(float DeltaTime)
+{
+}*/

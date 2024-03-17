@@ -14,6 +14,15 @@ class GALAGA_USFX_API ANaveEnemigaReabastecimientoAlfa : public ANaveEnemigaReab
 {
 	GENERATED_BODY()
 
+private:
+	int capacidadCombustible;
+
+public:
+	FORCEINLINE int GetCapacidadCombustible() const { return capacidadCombustible; }
+	FORCEINLINE void SetCapacidadCombustible(int _capacidadCombustible) { capacidadCombustible = _capacidadCombustible; }
+	ANaveEnemigaReabastecimientoAlfa();
+
+
 protected:
 	virtual void Mover();
 	virtual void Disparar();

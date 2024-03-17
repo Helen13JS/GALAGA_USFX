@@ -14,9 +14,20 @@ class GALAGA_USFX_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 {
 	GENERATED_BODY()
 
+private:
+	int cantidadlaser;
+
+
+public:
+
+	ANaveEnemigaCazaAlfa();
+
+	FORCEINLINE int GetCantidadlaser() const { return cantidadlaser; }
+	FORCEINLINE void SetCantidadlaser(int _cantidadlaser) { cantidadlaser = _cantidadlaser; }
 
 protected:
-	virtual void Tick(float DeltaTime);
+	
+	//virtual void Tick(float DeltaTime);
 	virtual void Mover();
 	virtual void Disparar();
 	virtual void Destruirse();

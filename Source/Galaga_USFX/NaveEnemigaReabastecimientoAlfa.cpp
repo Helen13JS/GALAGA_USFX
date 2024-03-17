@@ -3,6 +3,13 @@
 
 #include "NaveEnemigaReabastecimientoAlfa.h"
 
+ANaveEnemigaReabastecimientoAlfa::ANaveEnemigaReabastecimientoAlfa()
+{
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Tube.Shape_Tube'"));
+    mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+}
+
 void ANaveEnemigaReabastecimientoAlfa::Mover()
 {
 }

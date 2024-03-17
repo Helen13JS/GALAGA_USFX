@@ -3,9 +3,17 @@
 
 #include "NaveEnemigaCazaAlfa.h"
 
-void ANaveEnemigaCazaAlfa::Tick(float DeltaTime)
+ANaveEnemigaCazaAlfa::ANaveEnemigaCazaAlfa()
 {
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cylinder.Shape_Cylinder'"));
+
+	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
 }
+
+/*void ANaveEnemigaCazaAlfa::Tick(float DeltaTime)
+{
+}*/
 
 void ANaveEnemigaCazaAlfa::Mover()
 {

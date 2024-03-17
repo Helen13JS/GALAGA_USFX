@@ -15,7 +15,14 @@ class GALAGA_USFX_API ANaveEnemigaTransporteBeta : public ANaveEnemigaTransporte
 	GENERATED_BODY()
 
 
+private:
+	int dobleBlindaje;//para mayor resistencia
+public:
+	FORCEINLINE float GetDobleBlindaje() const { return dobleBlindaje; }
+	FORCEINLINE void SetDobleBlindaje(float _dobleBlindaje) { dobleBlindaje = _dobleBlindaje; }
+
 protected:
+	ANaveEnemigaTransporteBeta();
 	virtual void Mover();
 	virtual void Disparar();
 	virtual void Destruirse();

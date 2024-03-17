@@ -1,12 +1,14 @@
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Bonus.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\escenario.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Galaga_USFXGameMode.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Galaga_USFXPawn.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Galaga_USFXProjectile.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemiga.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaCaza.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Galaga_USFXGameMode.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaCazaBeta.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaEspia.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaEspiaAlfa.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaEspiaBeta.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaNodriza.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaNodrizaAlfa.h
@@ -14,10 +16,8 @@ C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaReabastecimientoAlfa.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaReabastecimientoBeta.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaTransporte.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaTransporteAlfa.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaTransporteBeta.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\proyectilEnemigo.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Puntaje.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaEspiaAlfa.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaTransporte.h

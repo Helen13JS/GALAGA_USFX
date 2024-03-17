@@ -13,5 +13,19 @@ UCLASS()
 class GALAGA_USFX_API ANaveEnemigaNodrizaAlfa : public ANaveEnemigaNodriza 
 {
 	GENERATED_BODY()
+
+private:
+	int capacidadNaves;
+
+public:
+	FORCEINLINE int GetCapacidadNaves() const { return capacidadNaves; }
+	FORCEINLINE void SetCapacidadNaves(int _capacidadNaves) { capacidadNaves = _capacidadNaves; }
+	ANaveEnemigaNodrizaAlfa();
+
+protected:
+	virtual void Mover();
+	virtual void Disparar();
+	virtual void Destruirse();
+	virtual void Escapar();
 	
 };

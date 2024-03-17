@@ -19,16 +19,20 @@ private:
 	float capacidadCargaVolumen;
 
 public:
+
+	ANaveEnemigaTransporte();
 	FORCEINLINE float GetCapacidadCargaPeso() const { return capacidadCargaPeso; }
 	FORCEINLINE void SetCapacidadCargaPeso(float capacidad) { capacidadCargaPeso = capacidad; }
 	FORCEINLINE float GetCapacidadCargaVolumen() const { return capacidadCargaVolumen; }
 	FORCEINLINE void SetCapacidadCargaVolumen(float capacidad) { capacidadCargaVolumen = capacidad; }
 
 protected:
-	ANaveEnemigaTransporte();
-	virtual void Mover();
+	
+	virtual void Mover(float DeltaTime);
 	virtual void Disparar();
 	virtual void Destruirse();
 	virtual void Escapar();
 
+public:
+	virtual void Tick(float DeltaTime) override;
 };

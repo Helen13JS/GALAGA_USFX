@@ -24,6 +24,7 @@
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 {
 	// set default pawn class to our character class
+	PrimaryActorTick.bCanEverTick = true;
 	DefaultPawnClass = AGalaga_USFXPawn::StaticClass();
 	//NaveEnemiga01 = nullptr;
 	//Bonus01 = nullptr;
@@ -51,6 +52,8 @@ void AGalaga_USFXGameMode::BeginPlay()
 	FVector ubicacionNave05 = FVector(0.0f, -200.0f, 200.0f);
 	FVector ubicacionNave005 = FVector(-250.0f, -200.0f, 200.0f);
 	FVector ubicacionNave0005 = FVector(-500.0f, -200.0f, 200.0f);
+
+	//FVector UbicacionInicioNavesEnemigasCaza = FVector(-500.0f, -200.0f, 200.0f);
 	
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
@@ -114,4 +117,9 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 	//Bonus01->SetPosicion(FVector(1000.0f, 0.0f, 130.0f));
 	//Puntaje01->SetPosicion(FVector(3000.0f, 100.0f, 500.0f));
+}
+
+void AGalaga_USFXGameMode::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 }

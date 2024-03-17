@@ -3,6 +3,13 @@
 
 #include "NaveEnemigaNodrizaBeta.h"
 
+ANaveEnemigaNodrizaBeta::ANaveEnemigaNodrizaBeta()
+{
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
+    mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+}
+
 void ANaveEnemigaNodrizaBeta::Mover()
 {
 }

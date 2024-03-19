@@ -17,10 +17,11 @@ void ANaveEnemigaNodriza::Tick(float DeltaTime)
 }
 
 
+
 void ANaveEnemigaNodriza::Mover(float DeltaTime)
 {
     //Obtiene la posicion actual del actor
-    FVector PosicionActual = GetActorLocation();
+   /* FVector PosicionActual = GetActorLocation();
 
     //Genera nueva scoordenadas X e Y aleatorias
     float NuevaX = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
@@ -30,7 +31,7 @@ void ANaveEnemigaNodriza::Mover(float DeltaTime)
     FVector NuevaPosicion = (FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z));
 
     //Establece la nueva posicion del actor
-    SetActorLocation(NuevaPosicion);
+    SetActorLocation(NuevaPosicion);*/
 
 }
 

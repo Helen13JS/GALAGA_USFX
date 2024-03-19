@@ -67,6 +67,8 @@ void AGalaga_USFXGameMode::BeginPlay()
 	UWorld* const World = GetWorld();
 	if (World != nullptr)
 	{
+		
+		
 		// spawn the projectile
 		//NaveEnemiga01 = World->SpawnActor<ANaveEnemiga>(ubicacionNave, rotacionNave);
 		NaveEnemigaTransporte01 = World->SpawnActor<ANaveEnemigaTransporte>(ubicacionNave01, rotacionNave);
@@ -117,9 +119,123 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 	//Bonus01->SetPosicion(FVector(1000.0f, 0.0f, 130.0f));
 	//Puntaje01->SetPosicion(FVector(3000.0f, 100.0f, 500.0f));
+
+
+	const int32 NumeroDeColumnas = 2; // Número de columnas
+	const int32 NumeroDeFilas = 3;    // Número de filas
+
+	// Generar naves enemigas caza y agregarlas al TMap en las columnas correspondientes
+	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
+	{
+		TArray<ANaveEnemigaCaza*> NavesEnColumna;
+		for (int32 Fila = 0; Fila < NumeroDeFilas; ++Fila)
+		{
+			// Definir la ubicación y rotación de la nave enemiga
+			FVector SpawnLocation = FVector(Columna * 200.0f, Fila * 200.0f, 350.0f); // Ejemplo de ubicación de generación
+			FRotator SpawnRotation = FRotator::ZeroRotator; // Rotación inicial
+
+			// Generar la nave enemiga caza y agregarla al TArray
+			ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpawnRotation);
+			if (NuevaNaveCaza)
+			{
+				// Configurar la lógica de la nave enemiga caza si es necesario
+
+			}
+			else
+			{
+				// Ocurrió un error al crear la nave enemiga caza
+				UE_LOG(LogTemp, Error, TEXT("No se pudo crear la nave enemiga caza."));
+			}
+
+			NavesEnColumna.Add(NuevaNaveCaza);
+		}
+
+		// Agregar el TArray al TMap
+		ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
+	}
+
+
+	//En esta columna proporcioname lo que llegaria a ser un modificador que hago lo mismo que en la columna
+	//Generar naves enemigas transporte y agregarlas al TMap en las columnas correspondientes
+	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
+	{
+		TArray<ANaveEnemigaTransporte*> NavesEnColumna;
+		for (int32 Fila = 0; Fila < NumeroDeFilas; ++Fila)
+		{
+			// Definir la ubicación y rotación de la nave enemiga
+			FVector SpawnLocation = FVector(Columna * 200.0f, Fila * 200.0f, 350.0f); // Ejemplo de ubicación de generación
+			FRotator SpawnRotation = FRotator::ZeroRotator; // Rotación inicial
+
+			// Generar la nave enemiga transporte y agregarla al TArray
+			ANaveEnemigaTransporte* NuevaNaveTransporte = GetWorld()->SpawnActor<ANaveEnemigaTransporte>(SpawnLocation, SpawnRotation);
+			if (NuevaNaveTransporte)
+			{
+				// Configurar la lógica de la nave enemiga transporte si es necesario
+			}
+			else
+			{
+				// Ocurrió un error al crear la nave enemiga transporte
+				UE_LOG(LogTemp, Error, TEXT("No se pudo crear la nave enemiga transporte."));
+			}
+
+			NavesEnColumna.Add(NuevaNaveTransporte);
+		}
+
+		// Agregar el TArray al TMap
+		ColumnaNavesEnemigasTransporte.Add(Columna, NavesEnColumna);
+
+	}
+
+	//Generar naves enemigas nodriza y agregarlas al TMap en las columnas correspondientes
+	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
+	{
+		TArray<ANaveEnemigaNodriza*> NavesEnColumna;
+		for (int32 Fila = 0; Fila < NumeroDeFilas; ++Fila)
+		{
+			// Definir la ubicación y rotación de la nave enemiga
+			FVector SpawnLocation = FVector(Columna * 200.0f, Fila * 200.0f, 350.0f); // Ejemplo de ubicación de generación
+			FRotator SpawnRotation = FRotator::ZeroRotator; // Rotación inicial
+
+			// Generar la nave enemiga nodriza y agregarla al TArray
+			ANaveEnemigaNodriza* NuevaNaveNodriza = GetWorld()->SpawnActor<ANaveEnemigaNodriza>(SpawnLocation, SpawnRotation);
+			if (NuevaNaveNodriza)
+			{
+				// Configurar la lógica de la nave enemiga nodriza si es necesario
+			}
+			else
+			{
+				// Ocurrió un error al crear la nave enemiga nodriza
+				UE_LOG(LogTemp, Error, TEXT("No se pudo crear la nave enemiga nodriza."));
+			}
+
+			NavesEnColumna.Add(NuevaNaveNodriza);
+		}
+
+		// Agregar el TArray al TMap
+		ColumnaNavesEnemigasNodriza.Add(Columna, NavesEnColumna);
+	}
+
 }
 
 void AGalaga_USFXGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	TiempoTranscurrido ++;
+
+
+	if (TiempoTranscurrido >= 100)
+	{
+		int numeroEnemigo = FMath::RandRange(0, 9);
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, FString::Printf(TEXT("Hola estoy aqui")));
+
+
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Entero: %d"), numeroEnemigo));
+
+		}
+		//TANavesEnemigas[numeroEnemigo]->PrimaryActorTick.bCanEverTick = false;
+		TANavesEnemigas[numeroEnemigo]->SetVelocidad(0);
+	}
 }

@@ -71,11 +71,20 @@ public:
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+	TArray<ANaveEnemigaNodriza*> TANavesEnemigasNodriza;
 private:
 	int TiempoTranscurrido;
 
 public:
 	virtual void Tick(float DeltaTime) override;
+
+public:
+	// Declaración del TMap
+	TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
+	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;
+	TMap<int32, TArray<ANaveEnemigaNodriza*>> ColumnaNavesEnemigasNodriza;
+	//Clave int 32, valor array de naves enemigas
+
 
 
 };

@@ -1,5 +1,0 @@
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemigaCaza.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\NaveEnemiga.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h

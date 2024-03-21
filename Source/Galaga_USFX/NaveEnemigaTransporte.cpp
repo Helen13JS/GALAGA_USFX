@@ -19,7 +19,35 @@ void ANaveEnemigaTransporte::Tick(float DeltaTime)
 
 void ANaveEnemigaTransporte::Mover(float DeltaTime)
 {
-    /*//Obtiene la posicion actual del actor
+	static FVector PosicionActual = GetActorLocation();
+
+	static float TopeAbajo = PosicionActual.X - 1300.0f;
+	static float Reaparicion = PosicionActual.X + 200.0f;
+	static float MovimientoY = 0.0f;
+
+
+	FVector Desplazamiento = FVector(-150.0f * DeltaTime, MovimientoY * DeltaTime, FMath::RandRange(-500.0f, 500.0f) * DeltaTime);
+
+	FVector ReaparicionPocision = GetActorLocation() + Desplazamiento;
+	if (ReaparicionPocision.X < TopeAbajo)
+	{
+		ReaparicionPocision.X = Reaparicion;
+	}
+	SetActorLocation(ReaparicionPocision);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*//Obtiene la posicion actual del actor
     FVector PosicionActual = GetActorLocation();
 
     //Genera nueva scoordenadas X e Y aleatorias
@@ -34,7 +62,7 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 
 
 
-	// Define la velocidad de movimiento horizontal de la nave
+	/*/ Define la velocidad de movimiento horizontal de la nave
 	float VelocidadHorizontal = 200.0f; // Puedes ajustar este valor según la velocidad deseada
 
 	// Define una velocidad de rotación
@@ -58,7 +86,7 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 	FVector NuevaPosicion = GetActorLocation() + DesplazamientoHorizontal + FVector(0.0f, ZigzagOffset, 0.0f);
 
 	// Establece la nueva posición del actor
-	SetActorLocation(NuevaPosicion);
+	SetActorLocation(NuevaPosicion);*/
 
 }
 

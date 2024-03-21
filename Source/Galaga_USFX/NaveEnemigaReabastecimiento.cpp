@@ -19,7 +19,28 @@ void ANaveEnemigaReabastecimiento::Tick(float DeltaTime)
 
 void ANaveEnemigaReabastecimiento::Mover(float DeltaTime)
 {
-    //Obtiene la posicion actual del actor
+    static FVector PosicionActual = GetActorLocation();
+
+    static float TopeAbajo = PosicionActual.X - 1300.0f;
+    static float Reaparicion = PosicionActual.X + 200.0f;
+    static float MovimientoY = 0.0f;
+
+
+    FVector Desplazamiento = FVector(-125.0f * DeltaTime, MovimientoY * DeltaTime, FMath::RandRange(-500.0f, 500.0f) * DeltaTime);
+
+    FVector ReaparicionPocision = GetActorLocation() + Desplazamiento;
+    if (ReaparicionPocision.X < TopeAbajo)
+    {
+        ReaparicionPocision.X = Reaparicion;
+    }
+    SetActorLocation(ReaparicionPocision);
+    
+    
+    
+    
+    
+    
+    /*/Obtiene la posicion actual del actor
     FVector PosicionActual = GetActorLocation();
 
     //Genera nueva scoordenadas X e Y aleatorias
@@ -30,7 +51,7 @@ void ANaveEnemigaReabastecimiento::Mover(float DeltaTime)
     FVector NuevaPosicion = (FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z));
 
     //Establece la nueva posicion del actor
-    SetActorLocation(NuevaPosicion);
+    SetActorLocation(NuevaPosicion);*/
 
 }
 void ANaveEnemigaReabastecimiento::Disparar()

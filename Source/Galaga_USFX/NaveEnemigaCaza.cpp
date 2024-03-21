@@ -40,7 +40,29 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     SetActorLocation(NuevaPosicion);*/
 
 
-    // Define la velocidad de movimiento horizontal de la nave
+    static FVector PosicionActual = GetActorLocation();
+
+    static float TopeAbajo = PosicionActual.X - 1300.0f;
+    static float Reaparicion = PosicionActual.X + 200.0f;
+    static float MovimientoY = 0.0f;
+
+
+    FVector Desplazamiento = FVector(-50.0f * DeltaTime, MovimientoY * DeltaTime, FMath::RandRange(-500.0f, 500.0f) * DeltaTime);
+
+    FVector ReaparicionPocision = GetActorLocation() + Desplazamiento;
+    if (ReaparicionPocision.X < TopeAbajo)
+    {
+        ReaparicionPocision.X = Reaparicion;
+    }
+    SetActorLocation(ReaparicionPocision);
+
+
+
+    
+    
+    
+    
+    /*// Define la velocidad de movimiento horizontal de la nave
     float VelocidadHorizontal = 200.0f; // Puedes ajustar este valor según la velocidad deseada
 
     // Define una velocidad de rotación
@@ -65,7 +87,7 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     FVector NuevaPosicion = GetActorLocation() + DesplazamientoHorizontal + FVector(X, Y, 0.0f);
 
     // Establece la nueva posición del actor
-    SetActorLocation(NuevaPosicion);
+    SetActorLocation(NuevaPosicion);*/
 
 }
 

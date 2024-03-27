@@ -4,10 +4,6 @@
 #include "NaveEnemigaCaza.h"
 
 
-//// Create the mesh component
-//mallaNaveEnemiga = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
-
-
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
@@ -40,7 +36,7 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     SetActorLocation(NuevaPosicion);*/
 
 
-    static FVector PosicionActual = GetActorLocation();
+   /* static FVector PosicionActual = GetActorLocation();
 
     static float TopeAbajo = PosicionActual.X - 1300.0f;
     static float Reaparicion = PosicionActual.X + 200.0f;
@@ -54,7 +50,21 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     {
         ReaparicionPocision.X = Reaparicion;
     }
-    SetActorLocation(ReaparicionPocision);
+    SetActorLocation(ReaparicionPocision);*/
+
+
+    FVector PosicionActual = GetActorLocation();
+    FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * velocidad, PosicionActual.Y, PosicionActual.Z);
+
+    SetActorLocation(NuevaPosicion);
+
+
+    if (NuevaPosicion.X < limiteX) 
+    {
+
+        SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
+
+    }
 
 
 

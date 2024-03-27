@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "InventoryComponent.h"
+#include "Capsulas.h"
 #include "Galaga_USFXPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -25,6 +27,25 @@ class AGalaga_USFXPawn : public APawn
 
 public:
 	AGalaga_USFXPawn();
+
+	UPROPERTY()
+	UInventoryComponent* MyInventory;
+	UFUNCTION()
+	void DropItem();
+	UFUNCTION()
+	void TakeItem(ACapsulas* InventoryItem);
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+		AActor* Other, class UPrimitiveComponent* OtherComp,
+		bool bSelfMoved, FVector HitLocation, FVector
+		HitNormal, FVector NormalImpulse, const FHitResult&
+		Hit) override;
+
+	UFUNCTION()
+	void ReloadAmmo();
+
+
+
 
 	/** Offset from the ships location to spawn projectiles */
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite )
@@ -53,6 +74,13 @@ public:
 	/* Handler for the fire timer expiry */
 	void ShotTimerExpired();
 
+	//Recargar energia
+	void ReloadEnergy();
+
+	//Saber el numero de inventario
+	void CheckInventory();
+
+
 	// Static names for axis bindings
 	static const FName MoveForwardBinding;
 	static const FName MoveRightBinding;
@@ -66,6 +94,10 @@ private:
 
 	/** Handle for efficient management of ShotTimerExpired timer */
 	FTimerHandle TimerHandle_ShotTimerExpired;
+
+	int32 NumProyectilesDisparados;
+	int32 MaxProyectilesDisparados;
+	int32 NumItems;
 
 public:
 	/** Returns ShipMeshComponent subobject **/

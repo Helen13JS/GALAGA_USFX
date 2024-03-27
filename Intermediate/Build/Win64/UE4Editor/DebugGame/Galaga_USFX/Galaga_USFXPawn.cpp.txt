@@ -6,6 +6,14 @@ C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Ch
 C:\Program Files\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\InventoryComponent.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Capsulas.h
+C:\Program Files\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\MovimientoVertical.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\MovimientoVertical.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsulas.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Galaga_USFXProjectile.h
 C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXProjectile.generated.h
@@ -22,3 +30,7 @@ C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Di
 C:\Program Files\UE_4.27\Engine\Source\Runtime\Engine\Classes\Kismet\GameplayStaticsTypes.h
 C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\CapsulasEnergia.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergia.generated.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\CapsulasArmas.h
+C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasArmas.generated.h

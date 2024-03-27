@@ -17,7 +17,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"));
 	UStaticMeshComponent* mallaNaveEnemiga; //malla nave enemigo
 
-private:
+protected:
 	float resistencia; //Numero de disparos que puede recibir antes de ser destruido
 	float velocidad;
 	float danoProducido; //potencia de cada proyectil que dispsra la nave
@@ -33,6 +33,8 @@ private:
 
 	float peso;
 	float volumen;
+	float limiteZ;
+	float limiteX;
 
 public:
 	
@@ -51,6 +53,8 @@ public:
 	FORCEINLINE float Getenergia() const { return energia; }
 	FORCEINLINE float Getpeso() const { return peso; }
 	FORCEINLINE float Getvolumen() const { return volumen; }
+	//FORCEINLINE float GetlimiteZ() const { return limiteZ; }
+	//FORCEINLINE float GetlimiteX() const { return limiteX; }
 	
 
 	FORCEINLINE void SetResistencia(float _resistencia) { resistencia = _resistencia; }
@@ -67,6 +71,8 @@ public:
 	FORCEINLINE void Setenergia(float _energia) { energia = _energia; }
 	FORCEINLINE void Setpeso(float _peso) { peso = _peso; }
 	FORCEINLINE void Setvolumen(float _volumen) { volumen = _volumen; }
+	//FORCEINLINE void SetlimiteZ(float _limiteZ) { limiteZ = _limiteZ; }
+	//FORCEINLINE void SetlimiteX(float _limiteX) { limiteX = _limiteX; }
 	
 	
 

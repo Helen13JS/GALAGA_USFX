@@ -43,7 +43,7 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:
+/*public:
 	ANaveEnemiga* NaveEnemiga01;
 	ANaveEnemigaTransporte* NaveEnemigaTransporte01;
 	ANaveEnemigaTransporteAlfa* NaveEnemigaTransporteAlfa01;
@@ -63,15 +63,21 @@ public:
 
 	ANaveEnemigaNodriza* NaveEnemigaNodriza01;
 	ANaveEnemigaNodrizaAlfa* NaveEnemigaNodrizaAlfa01;
-	ANaveEnemigaNodrizaBeta* NaveEnemigaNodrizaBeta01;
+	ANaveEnemigaNodrizaBeta* NaveEnemigaNodrizaBeta01;*/
 
 	//ABonus* Bonus01;
 	//APuntaje* Puntaje01;
 public:
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
-	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
+	//TArray<ANaveEnemigaKamikaze*> TANavesEnemigasKamikaze;
 	TArray<ANaveEnemigaNodriza*> TANavesEnemigasNodriza;
+	TArray<ANaveEnemigaReabastecimiento*> TANavesEnemigasReabastecimiento;
+	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+	//TArray<ACapsulaEnergia50pts*> TACapsulasEnergia50pts;
+	//TArray<ACapsulaEnergia100pts*> TACapsulasEnergia100pts;
+	//TArray<ACapsulaEnergia200pts*> TACapsulasEnergia200pts;
 private:
 	int TiempoTranscurrido;
 
@@ -79,11 +85,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	// Declaración del TMap
+	// Inicialización del TMap
 	TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
-	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;
+	TMap<int32, TArray<ANaveEnemigaEspia*>> ColumnaNavesEnemigasEspia;
+	//TMap<int32, TArray<ANaveEnemiga*>> ColumnaNavesEnemigasKamikaze;
 	TMap<int32, TArray<ANaveEnemigaNodriza*>> ColumnaNavesEnemigasNodriza;
-	//Clave int 32, valor array de naves enemigas
+	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>> ColumnaNavesEnemigasReabastecimiento;
+	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;
+	//TMap<int32, TArray<ACapsulaEnergia50pts*>> ColumnaCapsulasEnergia50pts;
+	//TMap<int32, TArray<ACapsulaEnergia100pts*>> ColumnaCapsulasEnergia100pts;
+	//TMap<int32, TArray<ACapsulaEnergia200pts*>> ColumnaCapsulasEnergia200pts;
 
 
 

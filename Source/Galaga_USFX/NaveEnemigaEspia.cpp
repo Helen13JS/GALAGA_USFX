@@ -21,8 +21,22 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 void ANaveEnemigaEspia::Mover(float DeltaTime)
 {
 
+
+
+    FVector PosicionActual = GetActorLocation();
+    FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * velocidad, PosicionActual.Y, PosicionActual.Z);
+
+    SetActorLocation(NuevaPosicion);
+
+
+    if (NuevaPosicion.X < limiteX) {
+
+        SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
+
+    }
+
     
-    static FVector PosicionActual = GetActorLocation();
+    /*static FVector PosicionActual = GetActorLocation();
 
     static float TopeAbajo = PosicionActual.X - 1300.0f;
     static float Reaparicion = PosicionActual.X + 200.0f;
@@ -36,7 +50,7 @@ void ANaveEnemigaEspia::Mover(float DeltaTime)
     {
         ReaparicionPocision.X = Reaparicion;
     }
-    SetActorLocation(ReaparicionPocision);
+    SetActorLocation(ReaparicionPocision);*/
 
 
     

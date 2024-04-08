@@ -19,6 +19,9 @@
 #include "CapsulasArmas.h"
 #include "Containers/Queue.h"
 
+#include "GameFramework/PlayerInput.h"
+#include "GameFramework/CharacterMovementComponent.h"
+
 const FName AGalaga_USFXPawn::MoveForwardBinding("MoveForward");
 const FName AGalaga_USFXPawn::MoveRightBinding("MoveRight");
 const FName AGalaga_USFXPawn::FireForwardBinding("FireForward");
@@ -75,6 +78,15 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
 
+	FInputAxisKeyMapping DiagIzqUpKey("DiagonalIzquierdaUp", EKeys::Q, 1.0f);
+	FInputAxisKeyMapping DiagDerUpKey("DiagonalDerechaUp", EKeys::E, 1.0f);
+	FInputAxisKeyMapping DiagIzqDownKey("DiagonalIzquierdaDown", EKeys::Z, 1.0f);
+	FInputAxisKeyMapping DiagDerDownKey("DiagonalIzquierdaDown", EKeys::C, 1.0f);
+	FInputActionKeyMapping saltokey("Salto", EKeys::T, 0, 0, 0, 0);
+	//FInputActionKeyMapping CrearBarreraKey("CrearBarrera", EKeys::K, 0, 0, 0, 0);
+	FInputActionKeyMapping DoubleShotKey("Doubleshot", EKeys::J, 0, 0, 0, 0);
+	FInputActionKeyMapping ReturnStart("ReturntoStart", EKeys::G, 0, 0, 0, 0);
+
 
 	PlayerInputComponent->BindAction("DropItem",
 		EInputEvent::IE_Pressed, this,
@@ -82,6 +94,101 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 
 	PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
 	PlayerInputComponent->BindAction("ReloadEnergy", IE_Pressed, this, &AGalaga_USFXPawn::ReloadEnergy);
+
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(DiagIzqUpKey);
+	PlayerInputComponent->BindAxis("DiagonalIzquierdaUp", this, &AGalaga_USFXPawn::izquierdaArriba);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(DiagDerUpKey);
+	PlayerInputComponent->BindAxis("DiagonalDerechaUp", this, &AGalaga_USFXPawn::derechaArriba);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping (DiagIzqDownKey);
+	PlayerInputComponent->BindAxis("DiagonalIzquierdaDown", this, &AGalaga_USFXPawn::izquierdaAbajo);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(DiagDerDownKey);
+	PlayerInputComponent->BindAxis("DiagonalIzquierdaDown", this, &AGalaga_USFXPawn::derechaAbajo);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(saltokey);
+	PlayerInputComponent->BindAction("Salto", IE_Pressed, this, &AGalaga_USFXPawn::Salto);
+	//GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(CrearBarreraKey);
+//PlayerInputComponent->BindAction("CrearBarrera", IE_Pressed, this, &AGalaga_USFXPawn::CrearBarrera);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(DoubleShotKey);
+	PlayerInputComponent->BindAction("Doubleshot", IE_Pressed, this, &AGalaga_USFXPawn::DoubleShot);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(ReturnStart);
+	PlayerInputComponent->BindAction("ReturntoStart", IE_Pressed, this, &AGalaga_USFXPawn::ReturnStart);
+}
+
+void AGalaga_USFXPawn::izquierdaArriba(float Value)
+{
+	const FVector Velocidad = FVector(650.0f, -650.0f, 0.0f);
+
+	AddActorWorldOffset(Velocidad * Value * GetWorld()->GetDeltaSeconds(), true);
+
+	if (Value)
+	{
+		FRotator RotQ = Velocidad.Rotation();
+		SetActorRotation(RotQ);
+	}
+}
+
+void AGalaga_USFXPawn::derechaArriba(float Value)
+{
+	const FVector Velocidad = FVector(650.0f, 650.0f, 0.0f);
+
+	AddActorWorldOffset(Velocidad * Value * GetWorld()->GetDeltaSeconds(), true);
+
+	if (Value)
+	{
+		FRotator RotE = Velocidad.Rotation();
+		SetActorRotation(RotE);
+	}
+}
+
+void AGalaga_USFXPawn::izquierdaAbajo(float Value)
+{
+	const FVector Velocidad = FVector(-650.0f, -650.0f, 0.0f);
+
+	AddActorWorldOffset(Velocidad * Value * GetWorld()->GetDeltaSeconds(), true);
+
+	if (Value)
+	{
+		FRotator RotZ = Velocidad.Rotation();
+		SetActorRotation(RotZ);
+	}
+}
+
+void AGalaga_USFXPawn::derechaAbajo(float Value)
+{
+	const FVector Velocidad = FVector(-650.0f, 650.0f, 0.0f);
+
+	AddActorWorldOffset(Velocidad * Value * GetWorld()->GetDeltaSeconds(), true);
+
+	if (Value)
+	{
+		FRotator RotC = Velocidad.Rotation();
+		SetActorRotation(RotC);
+	}
+}
+
+void AGalaga_USFXPawn::Salto()
+{
+	const float FuerzaSalto = 11000.0f;
+	const FVector Impulso = FVector(0.0f, 0.0f, 1.0f) * FuerzaSalto;
+
+	AddActorLocalOffset(FVector(0.0f, 0.0f, FuerzaSalto * GetWorld()->GetDeltaSeconds()), true);
+
+	GetWorldTimerManager().SetTimer(TimerHandle_Salto, this, &AGalaga_USFXPawn::descender, 0.4f, false);
+}
+
+void AGalaga_USFXPawn::descender()
+{
+	const float FuerzaSalto = 11000.0f;
+	const FVector Impulso = FVector(0.0f, 0.0f, -1.0f) * FuerzaSalto;
+
+	AddActorLocalOffset(FVector(0.0f, 0.0f, -FuerzaSalto * GetWorld()->GetDeltaSeconds()), true);
+}
+
+void AGalaga_USFXPawn::DoubleShot()
+{
+}
+
+void AGalaga_USFXPawn::ReturnStart()
+{
 }
 
 void AGalaga_USFXPawn::Tick(float DeltaSeconds)

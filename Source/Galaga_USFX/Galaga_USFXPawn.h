@@ -63,10 +63,23 @@ public:
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
 	class USoundBase* FireSound;
 
+
+protected:
+	//virtual void BeginPlay() override;
+	FTimerHandle TimerHandle_Salto;
 	// Begin Actor Interface
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End Actor Interface
+
+	virtual void izquierdaArriba(float Value);
+	virtual void derechaArriba(float Value);
+	virtual void izquierdaAbajo(float Value);
+	virtual void derechaAbajo(float Value);
+	virtual void Salto();
+	virtual void descender();
+    virtual void DoubleShot();
+	virtual void ReturnStart();
 
 	/* Fire a shot in the specified direction */
 	void FireShot(FVector FireDirection);
@@ -98,6 +111,7 @@ private:
 	int32 NumProyectilesDisparados;
 	int32 MaxProyectilesDisparados;
 	int32 NumItems;
+	bool movimiento;
 
 public:
 	/** Returns ShipMeshComponent subobject **/
@@ -106,5 +120,6 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
 };
 

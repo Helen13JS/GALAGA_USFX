@@ -21,8 +21,8 @@ void ACapsulasArmas::CustomizeAppearance()
     static ConstructorHelpers::FObjectFinder<UStaticMesh> CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_WideCapsule.Shape_WideCapsule'"));
     if (CylinderMeshAsset.Succeeded())
     {
-        //
-       // GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);
+        
+       GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);
     }
 
     // Ejemplo: Cambiar el material

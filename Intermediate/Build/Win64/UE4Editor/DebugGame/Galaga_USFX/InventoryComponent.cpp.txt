@@ -1,9 +1,9 @@
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\InventoryComponent.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Capsulas.h
-C:\Program Files\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
-C:\Program Files\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\MovimientoVertical.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\MovimientoVertical.generated.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsulas.generated.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\Capsulas.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\MovimientoVertical.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\MovimientoVertical.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsulas.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h

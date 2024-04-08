@@ -9,6 +9,6 @@ ACapsulasEnergia::ACapsulasEnergia()
         CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Tube.Shape_Tube'"));
     if (CylinderMeshAsset.Succeeded())
     {
-        //GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);
+        GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);
     }
 }

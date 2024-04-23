@@ -62,7 +62,7 @@ AGalaga_USFXPawn::AGalaga_USFXPawn()
 
 
 	NumProyectilesDisparados = 0;
-	MaxProyectilesDisparados = 5; //Establece el número máximo de proyectiles disparados
+	MaxProyectilesDisparados = 50; //Establece el número máximo de proyectiles disparados
 	MyInventory =
 		CreateDefaultSubobject<UInventoryComponent>("MyInventory");
 	NumItems = 0;
@@ -78,6 +78,19 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	PlayerInputComponent->BindAxis(FireForwardBinding);
 	PlayerInputComponent->BindAxis(FireRightBinding);
 
+	
+	FInputAxisKeyMapping DropItemKey("DropItem",EKeys::J, 1.0f);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(DropItemKey);
+	PlayerInputComponent->BindAction("DropItem", IE_Pressed, this, &AGalaga_USFXPawn::DropItem);
+	FInputActionKeyMapping ReloadAmmoKey("ReloadAmmo", EKeys::LeftShift, 0, 0, 0, 0);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(ReloadAmmoKey);
+	PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
+	FInputAxisKeyMapping ReloadEnergyKey("ReloadEnergy", EKeys::O, 1.0f);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(ReloadEnergyKey);
+	PlayerInputComponent->BindAction("ReloadEnergy", IE_Pressed, this, &AGalaga_USFXPawn::ReloadEnergy);
+
+
+
 	FInputAxisKeyMapping DiagIzqUpKey("DiagonalIzquierdaUp", EKeys::Q, 1.0f);
 	FInputAxisKeyMapping DiagDerUpKey("DiagonalDerechaUp", EKeys::E, 1.0f);
 	FInputAxisKeyMapping DiagIzqDownKey("DiagonalIzquierdaDown", EKeys::Z, 1.0f);
@@ -88,12 +101,8 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	FInputActionKeyMapping ReturnStart("ReturntoStart", EKeys::G, 0, 0, 0, 0);
 
 
-	PlayerInputComponent->BindAction("DropItem",
-		EInputEvent::IE_Pressed, this,
-		&AGalaga_USFXPawn::DropItem);
-
-	PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
-	PlayerInputComponent->BindAction("ReloadEnergy", IE_Pressed, this, &AGalaga_USFXPawn::ReloadEnergy);
+	//PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
+	//PlayerInputComponent->BindAction("ReloadEnergy", IE_Pressed, this, &AGalaga_USFXPawn::ReloadEnergy);
 
 	GetWorld()->GetFirstPlayerController()->PlayerInput->AddAxisMapping(DiagIzqUpKey);
 	PlayerInputComponent->BindAxis("DiagonalIzquierdaUp", this, &AGalaga_USFXPawn::izquierdaArriba);
@@ -308,7 +317,7 @@ void AGalaga_USFXPawn::ShotTimerExpired()
 		if (GEngine)
 		{
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "No tienes municiones");
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, "Presiona Q para recargar");
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, "Presiona Shift para recargar");
 
 
 		}
@@ -324,7 +333,7 @@ void AGalaga_USFXPawn::DropItem()
 	{
 		if (GEngine)
 		{
-			FString Message = FString::Printf(TEXT("Tienes %d objetos en tu inventario"), NumItems);
+			FString Message = FString::Printf(TEXT("No tienes objetos en tu inventario"));
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, Message);
 		}
 		return;
@@ -419,7 +428,7 @@ void AGalaga_USFXPawn::ReloadAmmo()
 			// Elimina el objeto de munición del inventario			
 			//MyInventory->RemoveFromInventory(AmmoItem);
 			NumProyectilesDisparados = 0; // Restablece el contador de proyectiles disparados.
-			MaxProyectilesDisparados = 20; // Establece el número máximo de proyectiles disparados
+			MaxProyectilesDisparados = 50; // Establece el número máximo de proyectiles disparados
 			bCanFire = true; // Permite al jugador disparar nuevamente.
 
 			if (GEngine)

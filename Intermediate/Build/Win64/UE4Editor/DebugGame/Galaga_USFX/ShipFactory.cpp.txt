@@ -1,0 +1,15 @@
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\ShipFactory.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporte.generated.h

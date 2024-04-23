@@ -84,13 +84,16 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	FString ShipName;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
 protected:
 	//virtual void Mover() = 0;
+	FString GetShipName();
 	void Mover(float DeltaTime) PURE_VIRTUAL(ANaveEnemiga::Mover, );
 	void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar, );
 	void Destruirse() PURE_VIRTUAL(ANaveEnemiga::Destruirse, );

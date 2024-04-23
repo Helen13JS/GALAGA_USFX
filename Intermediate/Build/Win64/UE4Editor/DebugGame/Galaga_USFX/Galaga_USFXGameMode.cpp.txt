@@ -55,6 +55,8 @@ C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabasteci
 C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoBeta.generated.h
 C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\Puntaje.h
 C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje.generated.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\ShipFactory.h
+C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h
 C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\CapsulasEnergia.h
 C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergia.generated.h
 C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\CapsulasArmas.h

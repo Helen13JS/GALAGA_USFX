@@ -10,7 +10,7 @@ UMovimientoVertical::UMovimientoVertical()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	MovementRadius = 5;
+	MovementRadius = 1;
 
 	// ...
 }
@@ -32,15 +32,16 @@ void UMovimientoVertical::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	AActor* Parent = GetOwner();
-
+	 float Speed= 100.0f;
 
 	if (Parent)
 	{
-		if (Parent->GetActorLocation().Z >= 215.f)
+		if (Parent->GetActorLocation().Z >= -1.f)
 		{
-
+			// Calcular el desplazamiento basado en la velocidad y DeltaTime
+			FVector DeltaPos = FVector(-Speed * DeltaTime, 0, 0);
 			// Find a new position for the object to go to
-			auto NewPos = Parent->GetActorLocation() + FVector(0, 0, -1);
+			auto NewPos = Parent->GetActorLocation() + DeltaPos;
 			/*FVector
 			(
 				FMath::FRandRange(-1, 1) *

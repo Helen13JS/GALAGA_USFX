@@ -24,7 +24,7 @@ public:
 
 protected:
 	ANaveEnemigaTransporteAlfa();
-	virtual void Mover();
+	 void Mover();
 	virtual void Disparar();
 	virtual void Destruirse();
 	virtual void Escapar();

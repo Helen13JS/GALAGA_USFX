@@ -37,3 +37,8 @@ void ANaveEnemiga::Tick(float DeltaTime)
 
 }
 
+FString ANaveEnemiga::GetShipName()
+{
+	return ShipName;
+}
+

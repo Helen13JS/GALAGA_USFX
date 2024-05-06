@@ -1,3 +1,0 @@
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX\Definitions.Galaga_USFX.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Source\Galaga_USFX\Puntaje.h
-C:\Users\Maplehugs\Downloads\Galaga_USFX-master\Galaga_USFX-master\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje.generated.h

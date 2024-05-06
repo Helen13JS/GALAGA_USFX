@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\HELEN\\source\\repos\\Galaga_USFX\\Source\\Galaga_USFX\\Galaga_USFX.Build.cs",
-		"C:\\Users\\HELEN\\source\\repos\\Galaga_USFX\\Source\\Galaga_USFX.Target.cs",
-		"C:\\Users\\HELEN\\source\\repos\\Galaga_USFX\\Source\\Galaga_USFXEditor.Target.cs"
+		"D:\\PaqueteCapsulas\\Galaga_USFX\\Source\\Galaga_USFX\\Galaga_USFX.Build.cs",
+		"D:\\PaqueteCapsulas\\Galaga_USFX\\Source\\Galaga_USFX.Target.cs",
+		"D:\\PaqueteCapsulas\\Galaga_USFX\\Source\\Galaga_USFXEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }

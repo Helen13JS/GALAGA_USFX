@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include"CapMunicionBuilder.h"
+#include "CapsuleDirector.h"
+#include "AuxCapsulas.h"
+#include "CapsulasInterface.h"
 #include "Galaga_USFXGameMode.generated.h"
 
 
@@ -73,7 +77,9 @@ public:
 	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>> ColumnaNavesEnemigasReabastecimiento;
 	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;
 
+private :
 
+	ACapsuleDirector* CapsuleDirector;
 
 };
 

@@ -19,17 +19,24 @@ void ANaveEnemigaReabastecimiento::Tick(float DeltaTime)
 
 void ANaveEnemigaReabastecimiento::Mover(float DeltaTime)
 {
-    FVector PosicionActual = GetActorLocation();
-    FVector NuevaPosicion = FVector(PosicionActual.X, PosicionActual.Y, PosicionActual.Z + 50.0f * DeltaTime * velocidad);
+    float LimiteDerecho = 1000.0f;
+    float LimiteIzquierdo = -1000.0f;
+    //    float velocidad = 0.8;
 
-    SetActorLocation(NuevaPosicion);
+    FVector NuevaPosicion = FVector(GetActorLocation().X, GetActorLocation().Y - velocidad * 100 * DeltaTime, GetActorLocation().Z); //calcula la nueva posicion de la nave
 
-    if (NuevaPosicion.Z > limiteZ) 
+    // Verifica los límites de la posición en X
+    if (NuevaPosicion.Y < LimiteIzquierdo)
     {
-
-        SetActorLocation(FVector(PosicionActual.X, PosicionActual.Y, 250.0f));
-
+        NuevaPosicion.Y = LimiteDerecho;
     }
+    else if (NuevaPosicion.Y > LimiteDerecho)
+    {
+        NuevaPosicion.Y = LimiteIzquierdo;
+    }
+
+    SetActorLocation(NuevaPosicion); //establece la nueva p
+
 }
 
 

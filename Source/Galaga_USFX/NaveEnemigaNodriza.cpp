@@ -21,17 +21,24 @@ void ANaveEnemigaNodriza::Tick(float DeltaTime)
 void ANaveEnemigaNodriza::Mover(float DeltaTime)
 {
 
-    FVector PosicionActual = GetActorLocation();
-    FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * velocidad, PosicionActual.Y, PosicionActual.Z);
+    float LimiteDerecho = 1000.0f;
+    float LimiteIzquierdo = -1000.0f;
+    //    float velocidad = 0.8;
 
-    SetActorLocation(NuevaPosicion);
+    FVector NuevaPosicion = FVector(GetActorLocation().X, GetActorLocation().Y - velocidad * 100 * DeltaTime, GetActorLocation().Z); //calcula la nueva posicion de la nave
 
-
-    if (NuevaPosicion.X < limiteX) {
-
-        SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
-
+    // Verifica los límites de la posición en X
+    if (NuevaPosicion.Y < LimiteIzquierdo)
+    {
+        NuevaPosicion.Y = LimiteDerecho;
     }
+    else if (NuevaPosicion.Y > LimiteDerecho)
+    {
+        NuevaPosicion.Y = LimiteIzquierdo;
+    }
+
+    SetActorLocation(NuevaPosicion); //establece la nueva p
+
 
 
     /*static FVector PosicionActual = GetActorLocation();

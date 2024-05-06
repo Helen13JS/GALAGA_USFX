@@ -24,6 +24,7 @@
 #include "Capsulas.h"
 #include "CapsulasEnergia.h" 
 #include "CapsulasArmas.h"
+#include "CapsulasVelocidad.h"
 
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 {
@@ -39,11 +40,11 @@ void AGalaga_USFXGameMode::BeginPlay()
 	Super::BeginPlay();
 	//Set the game state to playing
 
-	FVector SpawnNaveLocation = FVector(-100.f, -500.f, 200.f);
+	FVector SpawnNaveLocation = FVector(500.f, -500.f, 200.f);
 	FRotator RotacionNave = FRotator::ZeroRotator;
 
 	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
-	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
+	//FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
 	UWorld* const World = GetWorld();
 
@@ -55,38 +56,50 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 		{
 
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + i * 200, SpawnNaveLocation.Y , SpawnNaveLocation.Z);
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X , SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaCaza = AShipFactory::CrearNaveEnemiga("EnemigaCaza", World, PosicionNaveActual, RotacionNave);
 			TANavesEnemigas.Push(NuevaNaveEnemigaCaza);
 		}
 
 		for (int i = 0; i < 6; i++)
 		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + i * 200, SpawnNaveLocation.Y + 200, SpawnNaveLocation.Z);
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X+200 , SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaEspia = AShipFactory::CrearNaveEnemiga("EnemigaEspia", World, PosicionNaveActual, RotacionNave);
 			TANavesEnemigas.Push(NuevaNaveEnemigaEspia);
 		}
 
 		for (int i = 0; i < 6; i++)
 		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + i*200, SpawnNaveLocation.Y + 400, SpawnNaveLocation.Z);
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaNodriza = AShipFactory::CrearNaveEnemiga("EnemigaNodriza", World, PosicionNaveActual, RotacionNave);
 			TANavesEnemigas.Push(NuevaNaveEnemigaNodriza);
 		}
 
 		for (int i = 0; i < 6; i++)
 		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + i * 200, SpawnNaveLocation.Y - 200, SpawnNaveLocation.Z);
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 200, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaReabastecimiento = AShipFactory::CrearNaveEnemiga("EnemigaReabastecimiento", World, PosicionNaveActual, RotacionNave);
 			TANavesEnemigas.Push(NuevaNaveEnemigaReabastecimiento);
 		}
 
 		for (int i = 0; i < 6; i++)
 		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + i * 200, SpawnNaveLocation.Y - 400, SpawnNaveLocation.Z);
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaTransporte = AShipFactory::CrearNaveEnemiga("EnemigaTransporte", World, PosicionNaveActual, RotacionNave);
 			TANavesEnemigas.Push(NuevaNaveEnemigaTransporte);
 		}
+
+
+		CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
+		ICapsulasInterface* Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+		ICapsulasInterface* CapsulaEnergia = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		ICapsulasInterface* CapsulaSalud = GetWorld()->SpawnActor<ACapSaludBuilder>();
+		AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);
+
+		AAuxCapsulas* capsulaEnergia = CapsuleDirector->ConstruirCapsula(CapsulaEnergia);
+		AAuxCapsulas* capsulaSalud = CapsuleDirector->ConstruirCapsula(CapsulaSalud);
+
+
 
 
 
@@ -190,10 +203,10 @@ void AGalaga_USFXGameMode::BeginPlay()
 		TiempoTranscurrido = 0;
 
 		// Inicializar el Handle del Timer
-    SpawnTimerHandle = FTimerHandle();
+   // SpawnTimerHandle = FTimerHandle();
 
 	//Para el spawn de las objetos de inventario
-	GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_USFXGameMode::SpawnInventario, 30.0f, true, 0.0f);
+	//GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_USFXGameMode::SpawnInventario, 30.0f, true, 0.0f);
 	
 	}
 		
@@ -208,23 +221,23 @@ void AGalaga_USFXGameMode::Tick(float DeltaTime)
 
 }
 
-void AGalaga_USFXGameMode::SpawnInventario()
-
-{
-	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
-	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
-	for (int i = 0; i < 6; i++) {
-		FVector PosicionInventario = FVector(ubicacionDeObjetosInventario.X, ubicacionDeObjetosInventario.Y + i * 500.0f, ubicacionDeObjetosInventario.Z);
-		//Generar un número aleatorio entre 0 y 1
-		float RandomNumber = FMath::FRandRange(0.0f, 1.0f);
-
-		if (RandomNumber <= 0.5f) {
-			ACapsulas* ObjetoInventario = GetWorld()->SpawnActor<ACapsulas>(ACapsulasArmas::StaticClass(), PosicionInventario, rotacionNave);
-			//Spawnea el objeto de inventario en una posicion y rotacion especifica  
-		}
-		else {
-			ACapsulas* ObjetoInventario = GetWorld()->SpawnActor<ACapsulas>(ACapsulasEnergia::StaticClass(), PosicionInventario, rotacionNave);
-			//Spawnea el objeto de inventario en una posicion y rotacion especifica  
-		}
-	}
-}
+//void AGalaga_USFXGameMode::SpawnInventario()
+//
+//{
+//	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
+//	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
+//	for (int i = 0; i < 6; i++) {
+//		FVector PosicionInventario = FVector(ubicacionDeObjetosInventario.X, ubicacionDeObjetosInventario.Y + i * 500.0f, ubicacionDeObjetosInventario.Z);
+//		//Generar un número aleatorio entre 0 y 1
+//		float RandomNumber = FMath::FRandRange(0.0f, 1.0f);
+//
+//		if (RandomNumber <= 0.5f) {
+//			ACapsulas* ObjetoInventario = GetWorld()->SpawnActor<ACapsulas>(ACapsulasArmas::StaticClass(), PosicionInventario, rotacionNave);
+//			//Spawnea el objeto de inventario en una posicion y rotacion especifica  
+//		}
+//		else {
+//			ACapsulas* ObjetoInventario = GetWorld()->SpawnActor<ACapsulas>(ACapsulasEnergia::StaticClass(), PosicionInventario, rotacionNave);
+//			//Spawnea el objeto de inventario en una posicion y rotacion especifica  
+//		}
+//	}
+//}

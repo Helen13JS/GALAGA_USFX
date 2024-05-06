@@ -1,0 +1,3 @@
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasInterface.h
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasInterface.generated.h

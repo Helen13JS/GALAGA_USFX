@@ -44,6 +44,11 @@ public:
 	UFUNCTION()
 	void ReloadAmmo();
 
+	bool velocity;
+
+	void MoveFast();
+	void VelocidadNormal();
+
 
 
 

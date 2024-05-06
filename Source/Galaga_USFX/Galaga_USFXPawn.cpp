@@ -17,6 +17,8 @@
 #include "Capsulas.h"
 #include "CapsulasEnergia.h"
 #include "CapsulasArmas.h"
+#include "CapsulasVelocidad.h"
+//#include "CapsulaVelocidad.h"
 #include "Containers/Queue.h"
 
 #include "GameFramework/PlayerInput.h"
@@ -98,7 +100,7 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	FInputActionKeyMapping saltokey("Salto", EKeys::T, 0, 0, 0, 0);
 	//FInputActionKeyMapping CrearBarreraKey("CrearBarrera", EKeys::K, 0, 0, 0, 0);
 	FInputActionKeyMapping DoubleShotKey("Doubleshot", EKeys::J, 0, 0, 0, 0);
-	FInputActionKeyMapping ReturnStart("ReturntoStart", EKeys::G, 0, 0, 0, 0);
+	FInputActionKeyMapping MoveFast("MoveFast", EKeys::G, 0, 0, 0, 0);
 
 
 	//PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
@@ -118,8 +120,8 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 //PlayerInputComponent->BindAction("CrearBarrera", IE_Pressed, this, &AGalaga_USFXPawn::CrearBarrera);
 	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(DoubleShotKey);
 	PlayerInputComponent->BindAction("Doubleshot", IE_Pressed, this, &AGalaga_USFXPawn::DoubleShot);
-	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(ReturnStart);
-	PlayerInputComponent->BindAction("ReturntoStart", IE_Pressed, this, &AGalaga_USFXPawn::ReturnStart);
+	GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(MoveFast);
+	PlayerInputComponent->BindAction("MoveFast", IE_Pressed, this, &AGalaga_USFXPawn::MoveFast);
 }
 
 void AGalaga_USFXPawn::izquierdaArriba(float Value)
@@ -234,6 +236,12 @@ void AGalaga_USFXPawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+
+	if (velocity)
+	{
+		MoveFast();
+		//MoveSpeed = 1000.0f;
+	}
 }
 
 void AGalaga_USFXPawn::FireShot(FVector FireDirection)
@@ -400,6 +408,13 @@ void AGalaga_USFXPawn::TakeItem(ACapsulas*
 
 	}
 
+	ACapsulasVelocidad* SpeedItem = Cast<ACapsulasVelocidad>(InventoryItem);
+	if (SpeedItem)
+	{
+		FTimerHandle MyTimerHandle3;
+		GetWorldTimerManager().SetTimer(MyTimerHandle3, this, &AGalaga_USFXPawn::MoveFast, DelayInSeconds, bLooping);
+	}
+
 	//GetWorldTimerManager().SetTimer(MyTimerHandle1, this, &AGalaga_USFX_L01Pawn::ReloadAmmo, DelayInSeconds, bLooping);
 
 	//Verifica el inventario después de recoger un objeto
@@ -533,4 +548,32 @@ void AGalaga_USFXPawn::ReloadEnergy()
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "No tienes Energia para recargar");
 		}
 	}
+}
+
+// Este es un método que se llama cuando tu Pawn comienza a superponerse con otro actor
+//void APawn::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
+//{
+//	// Verifica si el otro actor es una cápsula
+//	if (OtherActor && (OtherActor != this) && OtherActor->IsA(ACapsula::StaticClass()))
+//	{
+//		// Aumenta la velocidad de tu Pawn
+//		velocidad += 10.0f;
+//
+//		// Destruye la cápsula
+//		OtherActor->Destroy();
+//	}
+//}
+
+void AGalaga_USFXPawn::MoveFast()
+{
+
+	MoveSpeed = 2000.0f;
+
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFXPawn::VelocidadNormal, 5.0f);
+}
+
+void AGalaga_USFXPawn::VelocidadNormal()
+{
+	velocity = false;
+	MoveSpeed = 1000.0f;
 }

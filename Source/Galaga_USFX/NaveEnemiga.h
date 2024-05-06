@@ -33,7 +33,7 @@ protected:
 
 	float peso;
 	float volumen;
-	float limiteZ;
+	float limiteY;
 	float limiteX;
 
 public:

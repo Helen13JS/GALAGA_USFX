@@ -17,7 +17,7 @@ ANaveEnemiga::ANaveEnemiga()
 	RootComponent = mallaNaveEnemiga;
 
 	velocidad = 4;
-	limiteZ = 700.0f;
+	limiteY = 1000;
 	limiteX = -1600.0f;
 
 }

@@ -1,7 +1,7 @@
-C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaBeta.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
-C:\Users\HELEN\source\repos\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaBeta.generated.h
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaBeta.h
+D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
+D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
+D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaBeta.generated.h

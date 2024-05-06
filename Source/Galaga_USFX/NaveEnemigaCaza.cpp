@@ -7,7 +7,7 @@
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cylinder.Shape_Cylinder'"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO1.TwinStickUFO1'"));
     mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
   
 }
@@ -16,6 +16,58 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
+
+    AActor* Parent = GetOwner();
+
+    if (Parent)
+    {
+        FVector PosicionActual = Parent->GetActorLocation();
+
+        // Definir los límite DERECHO E IZQUIERDO de movimiento
+        float LimiteDerecho = 1000.0f;
+        float LimiteIzquierdo = -1000.0f;
+
+        // Definir la velocidad de movimiento horizontal
+        float VelocidadHorizontal = 300.0f;
+
+        // Calcular el desplazamiento horizontal para este fotograma
+        float DesplazamientoHorizontal = VelocidadHorizontal * DeltaTime;
+
+        // Verificar si la nave está moviéndose hacia derecha o izquierda
+
+        if (DireccionMovimientoHorizontal == 1) // Movimiento hacia derecha
+        {
+
+
+            // Mover la nave hacia derecha
+            FVector NuevaPosicion = PosicionActual + FVector(0.0f, DesplazamientoHorizontal - 1.0f, 0.0f);
+            if (NuevaPosicion.Y <= LimiteDerecho)
+            {
+                Parent->SetActorLocation(NuevaPosicion);
+            }
+            else
+            {
+                // Si alcanza el límite superior, cambiar la dirección de movimiento a hacia izquierda
+                DireccionMovimientoHorizontal = -1;
+            }
+        }
+        else // Movimiento hacia izquierda
+        {
+            // Mover la nave hacia izquierda
+            FVector NuevaPosicion = PosicionActual - FVector(0.0f, DesplazamientoHorizontal - 1.0f, 0.0f);
+            if (NuevaPosicion.Y >= LimiteIzquierdo)
+            {
+                Parent->SetActorLocation(NuevaPosicion);
+            }
+            else
+            {
+                // Si alcanza el límite de la izquierda, cambiar la dirección de movimiento a hacia la derecha
+                DireccionMovimientoHorizontal = 1;
+                Parent->SetActorLocation(FVector(NuevaPosicion.X, NuevaPosicion.Y - 100.0f, NuevaPosicion.Z));
+            }
+        }
+    }
+
 }
    
 
@@ -53,7 +105,7 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     SetActorLocation(ReaparicionPocision);*/
 
 
-    FVector PosicionActual = GetActorLocation();
+    /*FVector PosicionActual = GetActorLocation();
     FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * velocidad, PosicionActual.Y, PosicionActual.Z);
 
     SetActorLocation(NuevaPosicion);
@@ -64,9 +116,38 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
 
         SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
 
+    }*/
+
+   /* FVector PosicionActual = GetActorLocation();
+    FVector NuevaPosicion = FVector(PosicionActual.X, PosicionActual.Y - 100 * DeltaTime * velocidad, PosicionActual.Z);
+
+    SetActorLocation(NuevaPosicion);
+
+    if (NuevaPosicion.Y < limiteX)
+    {
+        SetActorLocation(FVector(PosicionActual.X, 1500.0f, PosicionActual.Z));
+    }*/
+     
+
+    float LimiteDerecho = 1000.0f;
+    float LimiteIzquierdo = -1000.0f;
+//    float velocidad = 0.8;
+
+    FVector NuevaPosicion = FVector(GetActorLocation().X , GetActorLocation().Y - velocidad* 100*DeltaTime, GetActorLocation().Z); //calcula la nueva posicion de la nave
+
+    // Verifica los límites de la posición en X
+    if (NuevaPosicion.Y < LimiteIzquierdo)
+    {
+        NuevaPosicion.Y = LimiteDerecho;
+    }
+    else if (NuevaPosicion.Y > LimiteDerecho)
+    {
+        NuevaPosicion.Y = LimiteIzquierdo;
     }
 
+    SetActorLocation(NuevaPosicion); //establece la nueva p
 
+    
 
     
     

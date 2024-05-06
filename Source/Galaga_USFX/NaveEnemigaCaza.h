@@ -16,6 +16,7 @@ class GALAGA_USFX_API ANaveEnemigaCaza : public ANaveEnemiga
 
 private:
 	int cantidadBombas;
+	int LimiteInferiorX;
 
 public:
 	ANaveEnemigaCaza();
@@ -29,8 +30,10 @@ protected:
 	virtual void Destruirse();
 	virtual void Escapar();
 
+
 public:
 
 	virtual void Tick(float DeltaTime) override;
+	int DireccionMovimientoHorizontal;
 
 };

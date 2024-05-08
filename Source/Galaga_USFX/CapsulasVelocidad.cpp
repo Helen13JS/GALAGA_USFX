@@ -6,7 +6,7 @@
 ACapsulasVelocidad::ACapsulasVelocidad()
 {
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>
-		CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
+		CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule_2.Shape_NarrowCapsule_2'"));
 	if (CylinderMeshAsset.Succeeded())
 	{
 		GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);

@@ -18,7 +18,7 @@ void ACapsulasArmas::CustomizeAppearance()
     // Por ejemplo, cambia la malla estática y el material
 
     // Ejemplo: Cambiar la malla estática a un cilindro
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_WideCapsule.Shape_WideCapsule'"));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Tube_2.Shape_Tube_2'"));
     if (CylinderMeshAsset.Succeeded())
     {
         

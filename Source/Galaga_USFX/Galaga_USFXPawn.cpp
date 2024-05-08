@@ -16,8 +16,11 @@
 #include "InventoryComponent.h"
 #include "Capsulas.h"
 #include "CapsulasEnergia.h"
+#include "CapsulasEnergiaNegativa.h"
 #include "CapsulasArmas.h"
+#include "CapsulasMunicionRapida.h"
 #include "CapsulasVelocidad.h"
+#include "CapsulasVelocidadExtrema.h"
 //#include "CapsulaVelocidad.h"
 #include "Containers/Queue.h"
 
@@ -399,6 +402,18 @@ void AGalaga_USFXPawn::TakeItem(ACapsulas*
 		FTimerHandle MyTimerHandle1;
 		GetWorldTimerManager().SetTimer(MyTimerHandle1, this, &AGalaga_USFXPawn::ReloadAmmo, DelayInSeconds, bLooping);
 	}
+	// Intenta hacer un cast a ACapsulasMunicionRapida
+	ACapsulasMunicionRapida* MunicionRapidaItem = Cast<ACapsulasMunicionRapida>(InventoryItem);
+	if (MunicionRapidaItem)
+	{
+		// Incrementa la velocidad de las municiones
+		FireRate -= MunicionRapidaItem->VelocidadMunicionIncremento;
+		if (FireRate < 0.01f) // Asegúrate de que FireRate no sea demasiado pequeño
+		{
+			FireRate = 0.01f;
+		}
+
+	}
 
 	ACapsulasEnergia* EnergyItem = Cast<ACapsulasEnergia>(InventoryItem);
 	if (EnergyItem)
@@ -408,11 +423,27 @@ void AGalaga_USFXPawn::TakeItem(ACapsulas*
 
 	}
 
+	ACapsulasEnergiaNegativa* NegativeEnergyItem = Cast<ACapsulasEnergiaNegativa>(InventoryItem);
+	if (NegativeEnergyItem)
+	{
+		FTimerHandle MyTimerHandle3;
+		GetWorldTimerManager().SetTimer(MyTimerHandle3, this, &AGalaga_USFXPawn::ReloadEnergy, DelayInSeconds, bLooping);
+	}
+
+
+
 	ACapsulasVelocidad* SpeedItem = Cast<ACapsulasVelocidad>(InventoryItem);
 	if (SpeedItem)
 	{
 		FTimerHandle MyTimerHandle3;
 		GetWorldTimerManager().SetTimer(MyTimerHandle3, this, &AGalaga_USFXPawn::MoveFast, DelayInSeconds, bLooping);
+	}
+
+	ACapsulasVelocidadExtrema* SpeedItem2 = Cast<ACapsulasVelocidadExtrema>(InventoryItem);
+	if (SpeedItem2)
+	{
+		FTimerHandle MyTimerHandle4;
+		GetWorldTimerManager().SetTimer(MyTimerHandle4, this, &AGalaga_USFXPawn::MoveFastExtreme, DelayInSeconds, bLooping);
 	}
 
 	//GetWorldTimerManager().SetTimer(MyTimerHandle1, this, &AGalaga_USFX_L01Pawn::ReloadAmmo, DelayInSeconds, bLooping);
@@ -444,13 +475,25 @@ void AGalaga_USFXPawn::ReloadAmmo()
 			//MyInventory->RemoveFromInventory(AmmoItem);
 			NumProyectilesDisparados = 0; // Restablece el contador de proyectiles disparados.
 			MaxProyectilesDisparados = 50; // Establece el número máximo de proyectiles disparados
+			//MunicionRapidaItem= 0; // Restablece la velocidad de las municiones
+			VelocidadMunicionIncremento = 1000.0f; // Restablece la velocidad de las municiones
 			bCanFire = true; // Permite al jugador disparar nuevamente.
+
+
+			// Muestra un mensaje de depuración
 
 			if (GEngine)
 			{
 				FString Message = FString::Printf(TEXT("Se recargaron +%d de municion"), MaxProyectilesDisparados);
 				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
 			}
+
+			if (GEngine)
+			{
+				FString Message = FString::Printf(TEXT("La velocidad de las municiones ha aumentado en %f"), VelocidadMunicionIncremento);
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
+			}
+
 
 			NumItems -= 1; // Disminuye el contador de objetos en el inventario
 			CheckInventory();
@@ -511,6 +554,8 @@ void AGalaga_USFXPawn::ReloadEnergy()
 {
 	// Bandera para verificar si se encontró un objeto de munición
 	bool bFoundEnergy = false;
+	// Bandera para verificar si se encontró un objeto de energía negativa
+	bool bFoundNegativeEnergy = false;
 	// Itera sobre los objetos en el inventario para encontrar uno de Energia
 	ACapsulas* InventoryItem = nullptr;
 	//for (AInventoryActor* InventoryItem : MyInventory->CurrentInventory)
@@ -538,7 +583,32 @@ void AGalaga_USFXPawn::ReloadEnergy()
 			break;
 		}
 
+		// Intenta hacer un cast a ACapsulasEnergiaNegativa
+		ACapsulasEnergiaNegativa* NegativeEnergyItem = Cast<ACapsulasEnergiaNegativa>(InventoryItem);
+		if (NegativeEnergyItem)
+		{
+			// Se encontró un objeto de energía negativa en el inventario
+			bFoundNegativeEnergy = true;
+
+			// Aquí debes disminuir la energía del Pawn
+			// Por ejemplo, si tienes una variable Energy en tu Pawn, podrías hacer:
+			// Energy -= 100;
+
+			// Muestra un mensaje de depuración
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, "Se disminuyo 100 pts de vida");
+			}
+			NumItems -= 1;
+			CheckInventory();
+			// Sal del bucle ya que encontraste y manejaste un objeto de energía negativa
+			break;
+		}
+
 	}
+
+
+
 	// Verifica si no se encontró ningún objeto de munición
 	if (!bFoundEnergy)
 	{
@@ -550,19 +620,7 @@ void AGalaga_USFXPawn::ReloadEnergy()
 	}
 }
 
-// Este es un método que se llama cuando tu Pawn comienza a superponerse con otro actor
-//void APawn::OnOverlapBegin(class AActor* OverlappedActor, class AActor* OtherActor)
-//{
-//	// Verifica si el otro actor es una cápsula
-//	if (OtherActor && (OtherActor != this) && OtherActor->IsA(ACapsula::StaticClass()))
-//	{
-//		// Aumenta la velocidad de tu Pawn
-//		velocidad += 10.0f;
-//
-//		// Destruye la cápsula
-//		OtherActor->Destroy();
-//	}
-//}
+
 
 void AGalaga_USFXPawn::MoveFast()
 {
@@ -577,3 +635,11 @@ void AGalaga_USFXPawn::VelocidadNormal()
 	velocity = false;
 	MoveSpeed = 1000.0f;
 }
+
+void AGalaga_USFXPawn::MoveFastExtreme()
+{
+	MoveSpeed = 4000.0f;
+	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFXPawn::VelocidadNormal, 5.0f);
+}
+
+

@@ -6,7 +6,10 @@
 #include "GameFramework/Actor.h"
 #include "CapsulasInterface.h"
 #include "CapsulasArmas.h"
+#include "CapsulasMunicionRapida.h"
 #include "CapsulasEnergia.h"
+#include "CapsulasVelocidadExtrema.h"
+#include "CapsulasEnergiaNegativa.h"
 #include "CapEnergiaBuilder.generated.h"
 
 UCLASS()
@@ -28,15 +31,14 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 
-private:
-	AAuxCapsulas* Capsula;
+
+	class APaqueteCapsula* Capsula;
 
 public:
-	void AgregarEnergia() override;
-	void AgregarMunicion() override;
-	void AgregarSalud() override;
-	virtual AAuxCapsulas* GetCapsula() override;
+	void AgregarEnergia(FString _tipoE) override;
+	void AgregarMunicion(FString _tipoM) override;
+	void AgregarVelocidad(FString _tipoV) override;
+	class APaqueteCapsula* GetPaqueteCapsula() override;
 
-	TMap <FVector, AActor*> TMCapsulas;
 
 };

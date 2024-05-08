@@ -22,8 +22,7 @@ private: \
 	friend struct Z_Construct_UClass_ACapSaludBuilder_Statics; \
 public: \
 	DECLARE_CLASS(ACapSaludBuilder, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX"), NO_API) \
-	DECLARE_SERIALIZER(ACapSaludBuilder) \
-	virtual UObject* _getUObject() const override { return const_cast<ACapSaludBuilder*>(this); }
+	DECLARE_SERIALIZER(ACapSaludBuilder)
 
 
 #define Galaga_USFX_Source_Galaga_USFX_CapSaludBuilder_h_14_INCLASS \
@@ -32,8 +31,7 @@ private: \
 	friend struct Z_Construct_UClass_ACapSaludBuilder_Statics; \
 public: \
 	DECLARE_CLASS(ACapSaludBuilder, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX"), NO_API) \
-	DECLARE_SERIALIZER(ACapSaludBuilder) \
-	virtual UObject* _getUObject() const override { return const_cast<ACapSaludBuilder*>(this); }
+	DECLARE_SERIALIZER(ACapSaludBuilder)
 
 
 #define Galaga_USFX_Source_Galaga_USFX_CapSaludBuilder_h_14_STANDARD_CONSTRUCTORS \

@@ -27,20 +27,58 @@ void ACapsuleDirector::Tick(float DeltaTime)
 
 }
 
-AAuxCapsulas* ACapsuleDirector::ConstruirCapsula(ICapsulasInterface* Builder)
+void ACapsuleDirector::ConstruirPaqueteCapsula(AActor* Builder)
 {
-	if (Builder)
-	{
-		Builder->AgregarEnergia();
-		Builder->AgregarMunicion();
-		Builder->AgregarSalud();
-
-		return Builder->GetCapsula();
-	}
-	else
-	{
-		// Manejar el caso de que el constructor sea nulo (error)
-		return nullptr;
-	}
+	BuilderResponsable = Cast<ICapsulasInterface>(Builder);
 }
+
+void ACapsuleDirector::ConstrirPaquete()
+{
+	BuilderResponsable->AgregarEnergia("EnergiaPositiva");
+	BuilderResponsable->AgregarMunicion("Municion");
+	BuilderResponsable->AgregarVelocidad("VelocidadRapida");
+	//BuilderResponsable
+
+}
+
+void ACapsuleDirector::GenerarCapsulasEnergia()
+{
+	BuilderResponsable ->AgregarEnergia("EnergiaNegativa");
+	BuilderResponsable->AgregarEnergia("EnergiaPositiva");
+
+}
+
+void ACapsuleDirector::GenerarCapsulasMunicion()
+{
+		BuilderResponsable->AgregarMunicion("Municion");
+		BuilderResponsable->AgregarMunicion("MunicionRapida");
+}
+
+void ACapsuleDirector::GenerarCapsulasVelocidad()
+{
+	BuilderResponsable->AgregarVelocidad("VelocidadRapida");
+	BuilderResponsable->AgregarVelocidad("VelocidadExtrema");
+}
+
+APaqueteCapsula* ACapsuleDirector::PaqueteCapsula()
+{
+	return BuilderResponsable->GetPaqueteCapsula();
+}
+
+//AAuxCapsulas* ACapsuleDirector::ConstruirCapsula(ICapsulasInterface* Builder)
+//{
+//	if (Builder)
+//	{
+//		Builder->AgregarEnergia();
+//		Builder->AgregarMunicion();
+//		Builder->AgregarVelocidad();
+//
+//		return Builder->GetCapsula();
+//	}
+//	else
+//	{
+//		// Manejar el caso de que el constructor sea nulo (error)
+//		return nullptr;
+//	}
+//}
 

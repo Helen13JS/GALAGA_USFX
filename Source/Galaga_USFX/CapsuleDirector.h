@@ -16,6 +16,7 @@ class GALAGA_USFX_API ACapsuleDirector : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ACapsuleDirector();
+	ICapsulasInterface* BuilderResponsable;
 
 protected:
 	// Called when the game starts or when spawned
@@ -25,6 +26,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	AAuxCapsulas* ConstruirCapsula(ICapsulasInterface* Builder);
+	//AAuxCapsulas* ConstruirCapsula(ICapsulasInterface* Builder);
+	void ConstruirPaqueteCapsula(AActor* Builder);
+	void ConstrirPaquete();
+	void GenerarCapsulasEnergia();
+	void GenerarCapsulasMunicion();
+	void GenerarCapsulasVelocidad();
+	class APaqueteCapsula* PaqueteCapsula();
+
+
 
 };

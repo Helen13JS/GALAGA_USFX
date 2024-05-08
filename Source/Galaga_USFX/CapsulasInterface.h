@@ -4,28 +4,25 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "AuxCapsulas.h"
+#include "PaqueteCapsula.h"
 #include "CapsulasInterface.generated.h"
 
-// This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UCapsulasInterface : public UInterface
 {
 	GENERATED_BODY()
 };
 
-/**
- * 
- */
+
 class GALAGA_USFX_API ICapsulasInterface
 {
 	GENERATED_BODY()
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void AgregarEnergia() = 0;
-	virtual void AgregarMunicion() = 0;
-	virtual void AgregarSalud() = 0;
-	virtual AAuxCapsulas* GetCapsula() = 0;
+	virtual void AgregarEnergia(FString _tipoE) = 0;
+	virtual void AgregarMunicion(FString _tipoM) = 0;
+	virtual void AgregarVelocidad(FString _tipoV) = 0;
+	virtual class APaqueteCapsula* GetPaqueteCapsula() = 0;
 
 };

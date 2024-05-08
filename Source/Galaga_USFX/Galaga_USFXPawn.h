@@ -48,6 +48,8 @@ public:
 
 	void MoveFast();
 	void VelocidadNormal();
+	void MoveFastExtreme();
+
 
 
 
@@ -115,6 +117,12 @@ private:
 
 	int32 NumProyectilesDisparados;
 	int32 MaxProyectilesDisparados;
+
+	public:
+		// Define cuánto se incrementará la velocidad de las municiones
+		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Municion")
+		float VelocidadMunicionIncremento;
+	//int32 MunicionRapidaItem;
 	int32 NumItems;
 	bool movimiento;
 

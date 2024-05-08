@@ -1,7 +1,0 @@
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoBeta.generated.h

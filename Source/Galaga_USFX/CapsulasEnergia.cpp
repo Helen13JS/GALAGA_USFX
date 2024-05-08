@@ -6,7 +6,7 @@
 ACapsulasEnergia::ACapsulasEnergia()
 {
     static ConstructorHelpers::FObjectFinder<UStaticMesh>
-        CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Tube.Shape_Tube'"));
+        CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_WideCapsule_2.Shape_WideCapsule_2'"));
     if (CylinderMeshAsset.Succeeded())
     {
         GetStaticMeshComponent()->SetStaticMesh(CylinderMeshAsset.Object);

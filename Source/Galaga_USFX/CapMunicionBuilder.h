@@ -6,9 +6,11 @@
 #include "GameFramework/Actor.h"
 #include "CapsulasInterface.h"
 #include "CapsulasEnergia.h"
+#include "CapsulasVelocidadExtrema.h"
+#include "CapsulasEnergiaNegativa.h"
 #include "CapsulasArmas.h"
+#include "CapsulasMunicionRapida.h"
 #include "CapMunicionBuilder.generated.h"
-
 UCLASS()
 class GALAGA_USFX_API ACapMunicionBuilder : public AActor, public ICapsulasInterface
 {
@@ -27,14 +29,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-private:
-	AAuxCapsulas* Capsula;
+
+	class APaqueteCapsula* Capsula;
 
 public:
-	 void AgregarEnergia() override;
-	 void AgregarMunicion() override;
-	 void AgregarSalud() override;
-	virtual AAuxCapsulas* GetCapsula() override;
+	 void AgregarEnergia(FString _tipoE) override;
+	 void AgregarMunicion(FString _tipoM) override;
+	 void AgregarVelocidad(FString _tipoV) override;
+	 class APaqueteCapsula* GetPaqueteCapsula() override;
 
-	TMap <FVector,AActor*> TMCapsulas;
+	//TMap <FVector,AActor*> TMCapsulas;
 };

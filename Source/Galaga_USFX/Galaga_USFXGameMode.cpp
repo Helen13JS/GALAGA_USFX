@@ -25,6 +25,9 @@
 #include "CapsulasEnergia.h" 
 #include "CapsulasArmas.h"
 #include "CapsulasVelocidad.h"
+#include "CapsulasVelocidadExtrema.h"
+#include "PaqueteCapsula.h"
+#include "CapVelocityBuilder.h"
 
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 {
@@ -90,14 +93,32 @@ void AGalaga_USFXGameMode::BeginPlay()
 		}
 
 
-		CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
-		ICapsulasInterface* Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
-		ICapsulasInterface* CapsulaEnergia = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
-		ICapsulasInterface* CapsulaSalud = GetWorld()->SpawnActor<ACapSaludBuilder>();
+		/*CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
+
+
+		ICapsulasInterface* Capsula = nullptr;
+
+		switch (FMath::RandRange(1, 3))
+		{
+			case 1:
+			   Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+			break;
+			case 2:
+				Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+				break;
+			case 3:
+				Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
+				break;
+		
+		}
+
+		AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);*/
+		/*ICapsulasInterface* CapsulaEnergia = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		ICapsulasInterface* CapsulaVelocidad = GetWorld()->SpawnActor<ACapVelocityBuilder>();
 		AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);
 
 		AAuxCapsulas* capsulaEnergia = CapsuleDirector->ConstruirCapsula(CapsulaEnergia);
-		AAuxCapsulas* capsulaSalud = CapsuleDirector->ConstruirCapsula(CapsulaSalud);
+		AAuxCapsulas* capsulaVelocidad = CapsuleDirector->ConstruirCapsula(CapsulaVelocidad);*/
 
 
 
@@ -207,6 +228,9 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 	//Para el spawn de las objetos de inventario
 	//GetWorld()->GetTimerManager().SetTimer(SpawnTimerHandle, this, &AGalaga_USFXGameMode::SpawnInventario, 30.0f, true, 0.0f);
+
+		//Para el spawn de las capsulas
+		GetWorld()->GetTimerManager().SetTimer(SpawnCapsulas, this, &AGalaga_USFXGameMode::GenerarCapsulas, 10.0f, true, 0.0f);
 	
 	}
 		
@@ -219,6 +243,43 @@ void AGalaga_USFXGameMode::Tick(float DeltaTime)
 
  TiempoTranscurrido ++;
 
+}
+
+void AGalaga_USFXGameMode::GenerarCapsulas()
+{
+	
+	CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
+
+
+	//ICapsulasInterface* Capsula = nullptr;
+
+	switch (FMath::RandRange(1, 3))
+	{
+	case 1:
+		CapVelocityBuilder = GetWorld()->SpawnActor<ACapVelocityBuilder>();
+		//Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapVelocityBuilder);
+		CapsuleDirector->GenerarCapsulasEnergia();
+
+		break;
+	case 2:
+
+		CapMunicionBuilder = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapMunicionBuilder);
+		CapsuleDirector->GenerarCapsulasMunicion();
+		//Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+		break;
+	case 3:
+		CapEnergiaBuilder = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapEnergiaBuilder);
+		CapsuleDirector->GenerarCapsulasVelocidad();
+		//Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
+		break;
+
+	}
+	APaqueteCapsula* capsulas = CapsuleDirector->PaqueteCapsula();
+
+	//AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);
 }
 
 //void AGalaga_USFXGameMode::SpawnInventario()
@@ -241,3 +302,5 @@ void AGalaga_USFXGameMode::Tick(float DeltaTime)
 //		}
 //	}
 //}
+
+

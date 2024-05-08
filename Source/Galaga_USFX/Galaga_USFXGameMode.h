@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
-#include"CapMunicionBuilder.h"
+#include "CapMunicionBuilder.h"
+#include "CapVelocityBuilder.h"
+#include "CapEnergiaBuilder.h"
 #include "CapsuleDirector.h"
 #include "AuxCapsulas.h"
 #include "CapsulasInterface.h"
 #include "Galaga_USFXGameMode.generated.h"
-
-
 class ANaveEnemiga;
 class ANaveEnemigaNodriza;
 class ANaveEnemigaNodrizaAlfa;
@@ -43,6 +43,12 @@ class AGalaga_USFXGameMode : public AGameModeBase
 public:
 	AGalaga_USFXGameMode();
 
+	class ACapVelocityBuilder* CapVelocityBuilder;
+	class ACapMunicionBuilder* CapMunicionBuilder;
+	class ACapEnergiaBuilder* CapEnergiaBuilder;
+
+	class ACapsuleDirector* CapsuleDirector;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -63,11 +69,13 @@ protected:
 	float SpawnInterval=2.0f;
 	// Declarar el Handle del Timer
 	FTimerHandle SpawnTimerHandle;
+	FTimerHandle SpawnCapsulas;
 
 public:
 	virtual void Tick(float DeltaTime) override;
 
-	void SpawnInventario();
+	//void SpawnInventario();
+	void GenerarCapsulas();
 
 public:
 	// Inicialización del TMap
@@ -79,7 +87,7 @@ public:
 
 private :
 
-	ACapsuleDirector* CapsuleDirector;
+	//ACapsuleDirector* CapsuleDirector;
 
 };
 

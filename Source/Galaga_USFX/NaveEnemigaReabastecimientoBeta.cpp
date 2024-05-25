@@ -10,7 +10,7 @@ ANaveEnemigaReabastecimientoBeta::ANaveEnemigaReabastecimientoBeta()
 
 }
 
-void ANaveEnemigaReabastecimientoBeta::Mover()
+void ANaveEnemigaReabastecimientoBeta::Mover(float DeltaTime)
 {
 }
 

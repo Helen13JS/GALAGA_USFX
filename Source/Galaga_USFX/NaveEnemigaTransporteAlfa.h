@@ -24,9 +24,9 @@ public:
 
 protected:
 	ANaveEnemigaTransporteAlfa();
-	 void Mover();
-	virtual void Disparar();
-	virtual void Destruirse();
-	virtual void Escapar();
+	void Mover(float DeltaTime)  ;
+	void Disparar() override;
+	void Destruirse() override;
+	void Escapar() override;
 	
 };

@@ -35,7 +35,7 @@ protected:
 	float volumen;
 	float limiteY;
 	float limiteX;
-
+	float FireRate;
 public:
 	
 
@@ -89,6 +89,8 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+	FORCEINLINE float GetFireRate() const { return FireRate; }
+	FORCEINLINE void SetFireRate(float _FireRate) { FireRate = _FireRate; }
 
 
 protected:

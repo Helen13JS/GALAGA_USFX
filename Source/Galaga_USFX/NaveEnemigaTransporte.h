@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+#include "FacadeTipoDisparo.h"
 #include "NaveEnemigaTransporte.generated.h"
 
 /**
@@ -26,7 +27,16 @@ public:
 	FORCEINLINE float GetCapacidadCargaVolumen() const { return capacidadCargaVolumen; }
 	FORCEINLINE void SetCapacidadCargaVolumen(float capacidad) { capacidadCargaVolumen = capacidad; }
 
+	TSubclassOf<class AFoton> NewProjectileFoton;
+
+private:
+	class AFacadeTipoDisparo* DisparoFacade;
+	
+
 protected:
+
+	virtual void BeginPlay() override;
+
 	
 	virtual void Mover(float DeltaTime);
 	virtual void Disparar();

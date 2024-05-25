@@ -1,119 +1,143 @@
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/AuxCapsulas.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\AuxCapsulas.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\AuxCapsulas.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Bonus.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Bonus.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Bonus.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapEnergiaBuilder.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapEnergiaBuilder.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasInterface.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\PaqueteCapsula.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasEnergia.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Capsulas.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/AuxCapsulas.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\AuxCapsulas.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\AuxCapsulas.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Bomba.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Bomba.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Bomba.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXProjectile.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXProjectile.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Bonus.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Bonus.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Bonus.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapEnergiaBuilder.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapEnergiaBuilder.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasInterface.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\PaqueteCapsula.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasEnergia.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Capsulas.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\MovimientoVertical.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\MovimientoVertical.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsulas.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergia.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasEnergiaNegativa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergiaNegativa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasArmas.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasArmas.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasMunicionRapida.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasMunicionRapida.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasVelocidad.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasVelocidad.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulasVelocidadExtrema.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasVelocidadExtrema.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\PaqueteCapsula.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasInterface.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapEnergiaBuilder.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapMunicionBuilder.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapMunicionBuilder.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapMunicionBuilder.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapSaludBuilder.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapSaludBuilder.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapSaludBuilder.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Capsulas.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulaSalud.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsulaSalud.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulaSalud.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasArmas.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasEnergia.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasEnergiaNegativa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasInterface.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasMunicionRapida.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasVelocidad.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsulasVelocidadExtrema.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapsuleDirector.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapsuleDirector.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsuleDirector.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/CapVelocityBuilder.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\CapVelocityBuilder.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapVelocityBuilder.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/escenario.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\escenario.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\escenario.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Galaga_USFX.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Galaga_USFX.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXGameMode.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXGameMode.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\MovimientoVertical.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\MovimientoVertical.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsulas.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergia.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasEnergiaNegativa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasEnergiaNegativa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasArmas.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasArmas.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasMunicionRapida.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasMunicionRapida.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasVelocidad.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasVelocidad.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulasVelocidadExtrema.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasVelocidadExtrema.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\PaqueteCapsula.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulasInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapEnergiaBuilder.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapMunicionBuilder.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapMunicionBuilder.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapMunicionBuilder.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapSaludBuilder.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapSaludBuilder.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapSaludBuilder.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Capsulas.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulaSalud.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsulaSalud.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsulaSalud.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasArmas.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasEnergia.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasEnergiaNegativa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasInterface.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasMunicionRapida.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasVelocidad.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsulasVelocidadExtrema.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapsuleDirector.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapsuleDirector.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapsuleDirector.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapVelocityBuilder.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapVelocityBuilder.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapVelocityBuilder.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoBasic.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\DisparoBasic.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoBasic.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoMisil.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\DisparoMisil.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoMisil.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/escenario.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\escenario.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\escenario.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeRecargar.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\FacadeRecargar.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeRecargar.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Laser.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Laser.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Foton.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Foton.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeTipoDisparo.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\FacadeTipoDisparo.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeTipoDisparo.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\ShipFactory.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporte.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Foton.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFX.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFX.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXGameMode.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXGameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXGameMode.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXPawn.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXGameMode.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXPawn.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporte.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporteAlfa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteAlfa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporteBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteBeta.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaAlfa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaBeta.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaAlfa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaAlfa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaBeta.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaAlfa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaAlfa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaBeta.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoAlfa.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoAlfa.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoBeta.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoBeta.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Puntaje.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje.generated.h
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\ShipFactory.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXPawn.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXProjectile.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXProjectile.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporteAlfa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteAlfa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporteBeta.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteBeta.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaAlfa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaBeta.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaBeta.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaAlfa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaAlfa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaBeta.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaBeta.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodriza.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodriza.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaAlfa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaAlfa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaNodrizaBeta.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaNodrizaBeta.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimiento.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimiento.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoAlfa.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoAlfa.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaReabastecimientoBeta.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaReabastecimientoBeta.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Puntaje.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXPawn.cpp
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h
@@ -140,37 +164,34 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/NavMovementComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\AI/Navigation/PathFollowingAgentInterface.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PathFollowingAgentInterface.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\MovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NavMovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\PawnMovementComponent.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Interfaces/NetworkPredictionInterface.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXProjectile.cpp
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ProjectileMovementComponent.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/InventoryComponent.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/MovimientoVertical.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemiga.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCaza.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCazaAlfa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCazaBeta.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspia.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspiaAlfa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspiaBeta.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodriza.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodrizaAlfa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodrizaBeta.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimiento.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimientoAlfa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimientoBeta.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporte.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteAlfa.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteBeta.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/PaqueteCapsula.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp
-D:\PaqueteCapsulas\Galaga_USFX\Source\Galaga_USFX\proyectilEnemigo.h
-D:\PaqueteCapsulas\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyectilEnemigo.generated.h
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/Puntaje.cpp
-D:/PaqueteCapsulas/Galaga_USFX/Source/Galaga_USFX/ShipFactory.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXProjectile.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/InventoryComponent.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Laser.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/MovimientoVertical.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemiga.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCaza.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCazaAlfa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaCazaBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspia.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspiaAlfa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaEspiaBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodriza.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodrizaAlfa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaNodrizaBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimiento.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimientoAlfa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimientoBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporte.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteAlfa.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/PaqueteCapsula.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\proyectilEnemigo.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyectilEnemigo.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/Puntaje.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/ShipFactory.cpp

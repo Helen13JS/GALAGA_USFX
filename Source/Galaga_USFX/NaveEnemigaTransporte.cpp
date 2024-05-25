@@ -2,11 +2,16 @@
 
 
 #include "NaveEnemigaTransporte.h"
+#include "Foton.h"
+#include "FacadeTipoDisparo.h"
 
 ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 {
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+	//DisparoFacade = CreateDefaultSubobject<AFacadeTipoDisparo>(TEXT("DisparoFacade"));
+	NewProjectileFoton = nullptr;
 
 }
 
@@ -14,8 +19,22 @@ void ANaveEnemigaTransporte::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
+	FireRate += DeltaTime;
+	if (FireRate > 1.0f)
+	{
+		Disparar();
+		FireRate = 0;
+	}
 }
 
+
+void ANaveEnemigaTransporte::BeginPlay()
+{
+	Super::BeginPlay();
+	DisparoFacade = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+	//DisparoFacade->AsignarDisparo("Foton");
+	//DisparoFacade->Launch(GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f));
+}
 
 void ANaveEnemigaTransporte::Mover(float DeltaTime)
 {
@@ -123,6 +142,14 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
 
 void ANaveEnemigaTransporte::Disparar()
 {
+	FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f);//distancia de disparo
+	// Spawnear el proyectil
+
+	FVector _SpawnDirection = FVector(-1.0f, 0.0f, 0.0f);
+	FVector SpawnDirection = _SpawnDirection;
+	//DisparoFacade->AsignarDisparo("Foton");
+	//DisparoFacade->Launch(SpawnDirection);
+	DisparoFacade->Launch("Foton", SpawnLocation, SpawnDirection);
 }
 
 void ANaveEnemigaTransporte::Destruirse()

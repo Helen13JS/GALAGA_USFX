@@ -53,6 +53,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	class AFacadeTipoDisparo* FacadeTipoDisparo;
+
 
 public:
 	TArray<ANaveEnemiga*> TANavesEnemigas;

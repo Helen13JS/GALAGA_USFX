@@ -17,6 +17,7 @@ class GALAGA_USFX_API ANaveEnemigaCaza : public ANaveEnemiga
 private:
 	int cantidadBombas;
 	int LimiteInferiorX;
+	class AFacadeTipoDisparo* FacadeDisparo;
 
 public:
 	ANaveEnemigaCaza();
@@ -34,6 +35,25 @@ protected:
 public:
 
 	virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
+	//void FuncionColision(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
 	int DireccionMovimientoHorizontal;
+
+    //void DisparoSimple();
+	//void DisparoFoton();
+	//void DisparoLaser();
+	//void DisparoBomba();
+	FTimerHandle TimerHandleDisparo_ShotTimerExpired;
+	float FireRate;
+	int a;
+	int TiempoTranscurrido;
+	bool bCanFire;
+
+	
+
+
+	void ShotTimerExpired();
+	FORCEINLINE float GetFireRate() const { return FireRate; }
+	FORCEINLINE void SetFireRate(float _FireRate) { FireRate = _FireRate; }
 
 };

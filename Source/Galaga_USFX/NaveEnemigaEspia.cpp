@@ -2,6 +2,10 @@
 
 
 #include "NaveEnemigaEspia.h"
+#include "Laser.h"
+#include "Bomba.h"
+#include "Foton.h"
+#include "FacadeTipoDisparo.h"
 
 
 ANaveEnemigaEspia::ANaveEnemigaEspia()
@@ -15,6 +19,19 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
+    FireRate += DeltaTime;
+    if (FireRate > 1.0f)
+    {
+        Disparar();
+        FireRate = 0;
+    }
+}
+
+void ANaveEnemigaEspia::BeginPlay()
+{
+    Super::BeginPlay();
+	DisparoFacade = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+	
 }
 
 
@@ -61,24 +78,28 @@ void ANaveEnemigaEspia::Mover(float DeltaTime)
 
 
     
-    
-    /*//Obtiene la posicion actual del actor
-    FVector PosicionActual = GetActorLocation();
-
-    //Genera nueva scoordenadas X e Y aleatorias
-    float NuevaX = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-    float NuevaY = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-
-    //Crea un nuevo vector de posicion con las coordenads aleatorias y la misma Z que la posicion actual
-    FVector NuevaPosicion = (FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z));
-
-    //Establece la nueva posicion del actor
-    SetActorLocation(NuevaPosicion);*/
 
 }
 
 void ANaveEnemigaEspia::Disparar()
 {
+    FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f);//distancia de disparo
+    
+
+    // Spawnear el proyectil
+    //ABomba* NewProjectile = GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
+
+
+    //if (NewProjectile)
+    //{
+    //    // Modificar dirección y velocidad del proyectil según sea necesario
+      FVector _SpawnDirection = FVector(-1.0f, 0.0f, 0.0f);
+      FVector SpawnDirection = _SpawnDirection;
+    //    NewProjectile->FireInDirection(SpawnDirection);
+    //}
+      DisparoFacade->Launch("Misile", SpawnLocation, _SpawnDirection);
+
+
 }
 
 void ANaveEnemigaEspia::Destruirse()

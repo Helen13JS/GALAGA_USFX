@@ -28,9 +28,9 @@ public:
 protected:
 	
 	//virtual void Tick(float DeltaTime);
-	virtual void Mover();
-	virtual void Disparar();
-	virtual void Destruirse();
-	virtual void Escapar();
+	void Mover(float DeltaTime) override  ;
+	void Disparar() override;
+	void Destruirse() override;
+	void Escapar() override;
 	
 };

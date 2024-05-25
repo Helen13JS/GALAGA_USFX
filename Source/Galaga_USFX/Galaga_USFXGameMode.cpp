@@ -28,6 +28,8 @@
 #include "CapsulasVelocidadExtrema.h"
 #include "PaqueteCapsula.h"
 #include "CapVelocityBuilder.h"
+#include "FacadeTipoDisparo.h"
+
 
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 {
@@ -44,7 +46,7 @@ void AGalaga_USFXGameMode::BeginPlay()
 	//Set the game state to playing
 
 	FVector SpawnNaveLocation = FVector(500.f, -500.f, 200.f);
-	FRotator RotacionNave = FRotator::ZeroRotator;
+	FRotator RotacionNave = FRotator(180.0f,0.0f,0.0f);
 
 	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
 	//FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
@@ -61,6 +63,7 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X , SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
 			ANaveEnemiga* NuevaNaveEnemigaCaza = AShipFactory::CrearNaveEnemiga("EnemigaCaza", World, PosicionNaveActual, RotacionNave);
+            //NuevaNaveEnemigaCaza->SetFacadeDisparo(FacadeTipoDisparo);
 			TANavesEnemigas.Push(NuevaNaveEnemigaCaza);
 		}
 
@@ -93,132 +96,15 @@ void AGalaga_USFXGameMode::BeginPlay()
 		}
 
 
-		/*CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
+		 //FacadeTipoDisparo = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+		 //FacadeTipoDisparo->AsignarDisparo("Laser");
+		 //FacadeTipoDisparo->AsignarDisparo("Bomba");
+		 //FacadeTipoDisparo->AsignarDisparo("Foton");
+		//FTimerHandle timeDisparo;
+		//GetWorldTimerManager().SetTimer(timeDisparo, this, &::Disparar, 2.0f, true, 0.0f);
 
 
-		ICapsulasInterface* Capsula = nullptr;
-
-		switch (FMath::RandRange(1, 3))
-		{
-			case 1:
-			   Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
-			break;
-			case 2:
-				Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
-				break;
-			case 3:
-				Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
-				break;
 		
-		}
-
-		AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);*/
-		/*ICapsulasInterface* CapsulaEnergia = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
-		ICapsulasInterface* CapsulaVelocidad = GetWorld()->SpawnActor<ACapVelocityBuilder>();
-		AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);
-
-		AAuxCapsulas* capsulaEnergia = CapsuleDirector->ConstruirCapsula(CapsulaEnergia);
-		AAuxCapsulas* capsulaVelocidad = CapsuleDirector->ConstruirCapsula(CapsulaVelocidad);*/
-
-
-
-
-
-		/*const int32 NumeroDeColumnasReabasteimiento = 1;
-		const int32 NumeroDeFilasReabastecimiento = 5;
-
-		// Generar naves enemigas caza y agregarlas al TMap en las columnas correspondientes
-
-		for (int32 Columna = 0; Columna < NumeroDeColumnasReabasteimiento; ++Columna)
-		{
-			TArray<ANaveEnemigaReabastecimiento*> NavesEnColumna;
-			for (int32 Fila = 0; Fila < NumeroDeFilasReabastecimiento; ++Fila)
-			{
-				// Definir la ubicación y rotación de la nave enemiga
-				FVector SpawningLocation = FVector(Columna * 300 + 1800.0f, Fila * 200 + -500.0f, 250.0f);
-				FRotator SpawningRotation = FRotator::ZeroRotator;
-
-				// Generar la nave enemiga caza y agregarla al TArray
-
-				ANaveEnemigaReabastecimiento* NuevaNaveReabastecimiento = GetWorld()->SpawnActor<ANaveEnemigaReabastecimiento>(SpawningLocation, SpawningRotation);
-				NavesEnColumna.Add(NuevaNaveReabastecimiento);
-			}
-			// Agregar el TArray al TMap
-			ColumnaNavesEnemigasReabastecimiento.Add(Columna, NavesEnColumna);
-		}
-
-		const int32 NumeroDeColumnasNodriza = 1;
-		const int32 NumeroDeFilasNodriza = 5;
-
-		for (int32 Columna = 0; Columna < NumeroDeColumnasNodriza; ++Columna)
-		{
-			TArray<ANaveEnemigaNodriza*> NavesEnColumna;
-			for (int32 Fila = 0; Fila < NumeroDeFilasNodriza; ++Fila)
-			{
-				FVector SpawningLocation = FVector(Columna * 300 + 1500.0f, Fila * 200 + -500.0f, 250.0f);
-				FRotator SpawningRotation = FRotator::ZeroRotator;
-
-				ANaveEnemigaNodriza* NuevaNaveNodriza = GetWorld()->SpawnActor<ANaveEnemigaNodriza>(SpawningLocation, SpawningRotation);
-				NavesEnColumna.Add(NuevaNaveNodriza);
-			}
-			ColumnaNavesEnemigasNodriza.Add(Columna, NavesEnColumna);
-		}
-
-		const int32 NumeroDeColumnasEspia = 1;
-		const int32 NumeroDeFilasEspia = 5;
-
-		for (int32 Columna = 0; Columna < NumeroDeColumnasEspia; ++Columna)
-		{
-			TArray<ANaveEnemigaEspia*> NavesEnColumna;
-			for (int32 Fila = 0; Fila < NumeroDeFilasEspia; ++Fila)
-			{
-				FVector SpawningLocation = FVector(Columna * 300 + 1200.0f, Fila * 200 + -500.0f, 250.0f);
-				FRotator SpawningRotation = FRotator::ZeroRotator;
-
-				ANaveEnemigaEspia* NuevaNaveEspia = GetWorld()->SpawnActor<ANaveEnemigaEspia>(SpawningLocation, SpawningRotation);
-				NavesEnColumna.Add(NuevaNaveEspia);
-			}
-			ColumnaNavesEnemigasEspia.Add(Columna, NavesEnColumna);
-		}
-
-		const int32 NumeroDeColumnasTransporte = 1;
-		const int32 NumeroDeFilasTransporte = 5;
-
-		for (int32 Columna = 0; Columna < NumeroDeColumnasTransporte; ++Columna)
-		{
-			TArray<ANaveEnemigaTransporte*> NavesEnColumna;
-			for (int32 Fila = 0; Fila < NumeroDeFilasTransporte; ++Fila)
-			{
-				FVector SpawningLocation = FVector(Columna * 300 + 900.0f, Fila * 200 + -500.0f, 250.0f);
-				FRotator SpawningRotation = FRotator::ZeroRotator;
-
-				ANaveEnemigaTransporte* NuevaNaveTransporte = GetWorld()->SpawnActor<ANaveEnemigaTransporte>(SpawningLocation, SpawningRotation);
-				NavesEnColumna.Add(NuevaNaveTransporte);
-			}
-			ColumnaNavesEnemigasTransporte.Add(Columna, NavesEnColumna);
-		}
-
-		const int32 NumeroDeColumnasCaza = 2;
-		const int32 NumeroDeFilasCaza = 5;
-
-		for (int32 Columna = 0; Columna < NumeroDeColumnasCaza; ++Columna)
-		{
-			TArray<ANaveEnemigaCaza*> NavesEnColumna;
-			for (int32 Fila = 0; Fila < NumeroDeFilasCaza; ++Fila)
-			{
-				FVector SpawningLocation = FVector(Columna * 300 + 300.0f, Fila * 200 + -500.0f, 250.0f);
-				FRotator SpawningRotation = FRotator::ZeroRotator;
-
-				ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawningLocation, SpawningRotation);
-				NavesEnColumna.Add(NuevaNaveCaza);
-				if (Fila == 2)
-				{
-					NuevaNaveCaza->Destroy();
-				}
-			}
-			ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
-		}*/
-
 		
 
 		TiempoTranscurrido = 0;
@@ -279,7 +165,6 @@ void AGalaga_USFXGameMode::GenerarCapsulas()
 	}
 	APaqueteCapsula* capsulas = CapsuleDirector->PaqueteCapsula();
 
-	//AAuxCapsulas* capsula = CapsuleDirector->ConstruirCapsula(Capsula);
 }
 
 //void AGalaga_USFXGameMode::SpawnInventario()

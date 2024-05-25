@@ -2,6 +2,12 @@
 
 
 #include "NaveEnemigaCaza.h"
+#include "FacadeTipoDisparo.h"
+#include "Foton.h"
+#include "Laser.h"
+#include "Engine/CollisionProfile.h"
+#include "Galaga_USFXProjectile.h"
+#include "Galaga_USFXPawn.h"
 
 
 
@@ -9,6 +15,8 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
     static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO1.TwinStickUFO1'"));
     mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+    FireRate= 0;
   
 }
 
@@ -16,136 +24,61 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
+    FireRate += DeltaTime;
+    if (FireRate > 1.0f)
+	{
+		Disparar();
+		FireRate = 0;
+	}
 
-    AActor* Parent = GetOwner();
+}
 
-    if (Parent)
-    {
-        FVector PosicionActual = Parent->GetActorLocation();
-
-        // Definir los límite DERECHO E IZQUIERDO de movimiento
-        float LimiteDerecho = 1000.0f;
-        float LimiteIzquierdo = -1000.0f;
-
-        // Definir la velocidad de movimiento horizontal
-        float VelocidadHorizontal = 300.0f;
-
-        // Calcular el desplazamiento horizontal para este fotograma
-        float DesplazamientoHorizontal = VelocidadHorizontal * DeltaTime;
-
-        // Verificar si la nave está moviéndose hacia derecha o izquierda
-
-        if (DireccionMovimientoHorizontal == 1) // Movimiento hacia derecha
-        {
-
-
-            // Mover la nave hacia derecha
-            FVector NuevaPosicion = PosicionActual + FVector(0.0f, DesplazamientoHorizontal - 1.0f, 0.0f);
-            if (NuevaPosicion.Y <= LimiteDerecho)
-            {
-                Parent->SetActorLocation(NuevaPosicion);
-            }
-            else
-            {
-                // Si alcanza el límite superior, cambiar la dirección de movimiento a hacia izquierda
-                DireccionMovimientoHorizontal = -1;
-            }
-        }
-        else // Movimiento hacia izquierda
-        {
-            // Mover la nave hacia izquierda
-            FVector NuevaPosicion = PosicionActual - FVector(0.0f, DesplazamientoHorizontal - 1.0f, 0.0f);
-            if (NuevaPosicion.Y >= LimiteIzquierdo)
-            {
-                Parent->SetActorLocation(NuevaPosicion);
-            }
-            else
-            {
-                // Si alcanza el límite de la izquierda, cambiar la dirección de movimiento a hacia la derecha
-                DireccionMovimientoHorizontal = 1;
-                Parent->SetActorLocation(FVector(NuevaPosicion.X, NuevaPosicion.Y - 100.0f, NuevaPosicion.Z));
-            }
-        }
-    }
-
+void ANaveEnemigaCaza::BeginPlay()
+{
+    Super::BeginPlay();
+	
+    FacadeDisparo= GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+    //FTimerHandle timeDisparo;
+   // GetWorldTimerManager().SetTimer(timeDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true, 0.0f);
+//}
+//void ANaveEnemigaCaza::FuncionColision(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
+//{
+//    ABomba* Projectile = Cast<ABomba>(OtherActor);
+//    if (Projectile)
+//    {
+//        // Destruir la nave enemiga
+//        Destroy();
+//
+//    }
+//}
+//
 }
    
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
+
 {
     
-    /*//Obtiene la posicion actual del actor
-    FVector PosicionActual = GetActorLocation();
 
-    //Genera nueva scoordenadas X e Y aleatorias
-    float NuevaX = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-    float NuevaY = FMath::RandRange(-1000.0f, 1000.0f) * DeltaTime;
-
-    //Crea un nuevo vector de posicion con las coordenads aleatorias y la misma Z que la posicion actual
-    FVector NuevaPosicion = (FVector(PosicionActual.X + NuevaX, PosicionActual.Y + NuevaY, PosicionActual.Z));
-
-    //Establece la nueva posicion del actor
-    SetActorLocation(NuevaPosicion);*/
-
-
-   /* static FVector PosicionActual = GetActorLocation();
-
-    static float TopeAbajo = PosicionActual.X - 1300.0f;
-    static float Reaparicion = PosicionActual.X + 200.0f;
-    static float MovimientoY = 0.0f;
-
-
-    FVector Desplazamiento = FVector(-50.0f * DeltaTime, MovimientoY * DeltaTime, FMath::RandRange(-500.0f, 500.0f) * DeltaTime);
-
-    FVector ReaparicionPocision = GetActorLocation() + Desplazamiento;
-    if (ReaparicionPocision.X < TopeAbajo)
-    {
-        ReaparicionPocision.X = Reaparicion;
-    }
-    SetActorLocation(ReaparicionPocision);*/
-
-
-    /*FVector PosicionActual = GetActorLocation();
-    FVector NuevaPosicion = FVector(PosicionActual.X - 100 * DeltaTime * velocidad, PosicionActual.Y, PosicionActual.Z);
-
-    SetActorLocation(NuevaPosicion);
-
-
-    if (NuevaPosicion.X < limiteX) 
-    {
-
-        SetActorLocation(FVector(1500.0f, PosicionActual.Y, PosicionActual.Z));
-
-    }*/
-
-   /* FVector PosicionActual = GetActorLocation();
-    FVector NuevaPosicion = FVector(PosicionActual.X, PosicionActual.Y - 100 * DeltaTime * velocidad, PosicionActual.Z);
-
-    SetActorLocation(NuevaPosicion);
-
-    if (NuevaPosicion.Y < limiteX)
-    {
-        SetActorLocation(FVector(PosicionActual.X, 1500.0f, PosicionActual.Z));
-    }*/
      
 
-    float LimiteDerecho = 1000.0f;
-    float LimiteIzquierdo = -1000.0f;
-//    float velocidad = 0.8;
+    float LimiteDerechoF = 1000.0f;
+    float LimiteIzquierdoF = -1000.0f;
+     //float velocidad = 0.8;
 
-    FVector NuevaPosicion = FVector(GetActorLocation().X , GetActorLocation().Y - velocidad* 100*DeltaTime, GetActorLocation().Z); //calcula la nueva posicion de la nave
+    FVector NuevaPosicionF = FVector(GetActorLocation().X , GetActorLocation().Y - velocidad* 100*DeltaTime, GetActorLocation().Z); //calcula la nueva posicion de la nave
 
     // Verifica los límites de la posición en X
-    if (NuevaPosicion.Y < LimiteIzquierdo)
+    if (NuevaPosicionF.Y < LimiteIzquierdoF)
     {
-        NuevaPosicion.Y = LimiteDerecho;
+        NuevaPosicionF.Y = LimiteDerechoF;
     }
-    else if (NuevaPosicion.Y > LimiteDerecho)
+    else if (NuevaPosicionF.Y > LimiteDerechoF)
     {
-        NuevaPosicion.Y = LimiteIzquierdo;
+        NuevaPosicionF.Y = LimiteIzquierdoF;
     }
 
-    SetActorLocation(NuevaPosicion); //establece la nueva p
+    SetActorLocation(NuevaPosicionF); //establece la nueva p
 
     
 
@@ -181,9 +114,19 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     SetActorLocation(NuevaPosicion);*/
 
 }
-
+void ANaveEnemigaCaza::ShotTimerExpired()
+{
+    bCanFire = true;
+}
 void ANaveEnemigaCaza::Disparar()
 {
+
+    FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f);//distancia de disparo
+    FVector _SpawnDirection = FVector(-1.0f, 0.0f, 0.0f);
+    FVector SpawnDirection = _SpawnDirection;
+
+    FacadeDisparo->Launch("Laser",SpawnLocation,SpawnDirection);
+
 }
 
 void ANaveEnemigaCaza::Destruirse()
@@ -193,3 +136,5 @@ void ANaveEnemigaCaza::Destruirse()
 void ANaveEnemigaCaza::Escapar()
 {
 }
+
+

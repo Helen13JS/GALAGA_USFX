@@ -11,7 +11,7 @@ ANaveEnemigaEspiaAlfa::ANaveEnemigaEspiaAlfa()
 
 }
 
-void ANaveEnemigaEspiaAlfa::Mover()
+void ANaveEnemigaEspiaAlfa::Mover(float DeltaTime)
 {
 }
 

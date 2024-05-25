@@ -13,7 +13,7 @@ ANaveEnemigaNodrizaAlfa::ANaveEnemigaNodrizaAlfa()
 
 
 
-void ANaveEnemigaNodrizaAlfa::Mover()
+void ANaveEnemigaNodrizaAlfa::Mover(float DeltaTime)
 {
     
 

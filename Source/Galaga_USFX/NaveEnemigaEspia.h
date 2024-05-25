@@ -1,9 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+#include "Bomba.h"
 #include "NaveEnemigaEspia.generated.h"
 
 /**
@@ -21,7 +21,8 @@ public:
 	ANaveEnemigaEspia();
 	FORCEINLINE int GetCampoVision() const { return campoVision; }
 	FORCEINLINE void SetCampoVision(int _campoVision) { campoVision = _campoVision; }
-
+	TSubclassOf<class ABomba> NewProjectileBomba;
+	class AFacadeTipoDisparo* DisparoFacade;
 protected:
 	
 	virtual void Mover(float DeltaTime);
@@ -30,5 +31,6 @@ protected:
 	virtual void Escapar();
 public:
 	void Tick(float DeltaTime) override;
+	void BeginPlay() override;
 	
 };

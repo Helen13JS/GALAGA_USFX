@@ -19,6 +19,7 @@
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoBasic.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoMisil.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/escenario.cpp"
+#include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeNivel1.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeRecargar.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeTipoDisparo.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/Foton.cpp"

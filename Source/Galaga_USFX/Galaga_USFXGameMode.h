@@ -21,7 +21,7 @@ class ANaveEnemigaTransporteAlfa;
 class ANaveEnemigaTransporteBeta;
 
 class ANaveEnemigaCaza;
-class ANaveEnemigaCazaAlfa;
+
 class ANaveEnemigaCazaBeta;
 
 class ANaveEnemigaEspia;
@@ -53,16 +53,17 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	class AFacadeTipoDisparo* FacadeTipoDisparo;
+	
+class AFacadeNivel1* FacadeNivel1Capsulas;
 
 
-public:
-	TArray<ANaveEnemiga*> TANavesEnemigas;
-	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
-	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
-	TArray<ANaveEnemigaNodriza*> TANavesEnemigasNodriza;
-	TArray<ANaveEnemigaReabastecimiento*> TANavesEnemigasReabastecimiento;
-	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
+//public:
+//	TArray<ANaveEnemiga*> TANavesEnemigas;
+//	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+//	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
+//	TArray<ANaveEnemigaNodriza*> TANavesEnemigasNodriza;
+//	TArray<ANaveEnemigaReabastecimiento*> TANavesEnemigasReabastecimiento;
+//	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
 	
 protected:
 	int TiempoTranscurrido;
@@ -81,11 +82,11 @@ public:
 
 public:
 	// Inicialización del TMap
-	TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
+	/*TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
 	TMap<int32, TArray<ANaveEnemigaEspia*>> ColumnaNavesEnemigasEspia;
 	TMap<int32, TArray<ANaveEnemigaNodriza*>> ColumnaNavesEnemigasNodriza;
 	TMap<int32, TArray<ANaveEnemigaReabastecimiento*>> ColumnaNavesEnemigasReabastecimiento;
-	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;
+	TMap<int32, TArray<ANaveEnemigaTransporte*>> ColumnaNavesEnemigasTransporte;*/
 
 private :
 

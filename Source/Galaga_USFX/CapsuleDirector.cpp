@@ -60,7 +60,7 @@ void ACapsuleDirector::GenerarCapsulasVelocidad()
 	BuilderResponsable->AgregarVelocidad("VelocidadExtrema");
 }
 
-APaqueteCapsula* ACapsuleDirector::PaqueteCapsula()
+APaqueteCapsula* ACapsuleDirector::ObtenerPaqueteCapsula()
 {
 	return BuilderResponsable->GetPaqueteCapsula();
 }

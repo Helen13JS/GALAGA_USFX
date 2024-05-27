@@ -6,6 +6,7 @@
 #include "Foton.h"
 #include "Bomba.h"
 #include "DisparoMisil.h"
+#include "DisparoBasic.h"
 #include "FacadeRecargar.h"
 #include "ShipFactory.h"
 //#include ""
@@ -73,12 +74,15 @@ void AFacadeTipoDisparo::Launch(FString TipoDisparo,FVector SpawnLocation,FVecto
 	{
 		laser = GetWorld()->SpawnActor<ALaser>(ALaser::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
 	}
-		else if (TipoDisparo == "Bomba")
+	else if (TipoDisparo == "Bomba")
 	{
 		bomba = GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
 	}
-	
-	
+	else if (TipoDisparo == "Basico")
+	{
+		Basic = GetWorld()->SpawnActor<ADisparoBasic>(ADisparoBasic::StaticClass(), SpawnLocation, FRotator::ZeroRotator);
+
+	}
 
 	
 

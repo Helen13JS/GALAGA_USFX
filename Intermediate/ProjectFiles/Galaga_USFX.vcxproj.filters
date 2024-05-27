@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{863953DC-5AFE-4106-B01F-39E15306D716}</UniqueIdentifier>
+      <UniqueIdentifier>{0C3BA359-42B4-4EF3-95D6-1A4435554F17}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{AB5C9775-8CA5-4C91-BA9B-169BB1FEE111}</UniqueIdentifier>
+      <UniqueIdentifier>{FDBFF0D2-D831-4F30-AA79-6BBAA5ABC0E0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX">
-      <UniqueIdentifier>{5D9B69A3-7AEE-494C-880A-A0075534B11D}</UniqueIdentifier>
+      <UniqueIdentifier>{FC92855F-D23E-4435-B3B3-31CD27E44075}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX\AuxCapsulas.cpp">
       <Filter>Source\Galaga_USFX</Filter>
@@ -152,6 +152,12 @@
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX\escenario.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\FacadeNivel1.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\FacadeNivel1.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\FacadeRecargar.cpp">

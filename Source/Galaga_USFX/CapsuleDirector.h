@@ -32,7 +32,7 @@ public:
 	void GenerarCapsulasEnergia();
 	void GenerarCapsulasMunicion();
 	void GenerarCapsulasVelocidad();
-	class APaqueteCapsula* PaqueteCapsula();
+	class APaqueteCapsula* ObtenerPaqueteCapsula();
 
 
 

@@ -17,7 +17,7 @@ class GALAGA_USFX_API ANaveEnemigaCazaAlfa : public ANaveEnemigaCaza
 private:
 	int cantidadlaser;
 
-
+	class AFacadeTipoDisparo* FacadeDisparo;
 public:
 
 	ANaveEnemigaCazaAlfa();
@@ -27,7 +27,8 @@ public:
 
 protected:
 	
-	//virtual void Tick(float DeltaTime);
+	virtual void Tick(float DeltaTime);
+	virtual void BeginPlay();
 	void Mover(float DeltaTime) override  ;
 	void Disparar() override;
 	void Destruirse() override;

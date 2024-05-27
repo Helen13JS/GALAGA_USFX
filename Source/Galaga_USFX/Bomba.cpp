@@ -11,8 +11,8 @@
 ABomba::ABomba()
 {
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("StaticMesh'/Game/Content/Meshes/Missile.Missile'"));
-	Bombamalla = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh'/Game/Content/Meshes/Missile.Missile'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("StaticMesh'/Game/Content/Meshes/BulletLevel1.BulletLevel1'"));
+	Bombamalla = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh'/Game/Content/Meshes/BulletLevel1.BulletLevel1'"));
 	Bombamalla->BodyInstance.SetCollisionProfileName("Projectile");
 	RootComponent = Bombamalla;
 	Bombamalla->SetStaticMesh(BallMesh.Object);

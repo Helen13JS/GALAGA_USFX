@@ -27,6 +27,7 @@ private:
 	class ABomba* bomba;
 	class ALaser* laser;
 	class AFoton* foton;
+	class ADisparoMisil* misil;
 	//class AFacadeRecargar* recargar; 
 
 public:

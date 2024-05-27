@@ -149,7 +149,7 @@ void ANaveEnemigaTransporte::Disparar()
 	FVector SpawnDirection = _SpawnDirection;
 	//DisparoFacade->AsignarDisparo("Foton");
 	//DisparoFacade->Launch(SpawnDirection);
-	DisparoFacade->Launch("Foton", SpawnLocation, SpawnDirection);
+	DisparoFacade->Launch("Misile", SpawnLocation, SpawnDirection);
 }
 
 void ANaveEnemigaTransporte::Destruirse()

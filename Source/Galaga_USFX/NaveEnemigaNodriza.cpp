@@ -2,6 +2,7 @@
 
 
 #include "NaveEnemigaNodriza.h"
+#include "FacadeTipoDisparo.h"
 
 ANaveEnemigaNodriza::ANaveEnemigaNodriza()
 {
@@ -14,6 +15,20 @@ void ANaveEnemigaNodriza::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
+    tiempoDisparo += DeltaTime;
+
+    if (tiempoDisparo >= 1.0f)
+	{
+		Disparar();
+		tiempoDisparo = 0.0f;
+	}
+}
+
+void ANaveEnemigaNodriza::BeginPlay()
+{
+    Super::BeginPlay();
+
+    Disparo = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
 }
 
 
@@ -76,6 +91,12 @@ void ANaveEnemigaNodriza::Mover(float DeltaTime)
 
 void ANaveEnemigaNodriza::Disparar()
 {
+
+    FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f);//distancia de disparo
+    FVector _SpawnDirection = FVector(-1.0f, 0.0f, 0.0f);
+    FVector SpawnDirection = _SpawnDirection;
+
+    Disparo->Launch("Bomba", SpawnLocation, SpawnDirection);
 }
 
 void ANaveEnemigaNodriza::Destruirse()

@@ -24,6 +24,11 @@
 //#include "CapsulaVelocidad.h"
 #include "Containers/Queue.h"
 
+#include "StateInterface.h"
+#include "StateEnergiaFull.h"
+#include "StateSigiloso.h"
+#include "StatePotenciado.h"
+
 #include "GameFramework/PlayerInput.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
@@ -245,6 +250,8 @@ void AGalaga_USFXPawn::Tick(float DeltaSeconds)
 		MoveFast();
 		//MoveSpeed = 1000.0f;
 	}
+
+	InicializarEstados();
 }
 
 void AGalaga_USFXPawn::FireShot(FVector FireDirection)
@@ -642,4 +649,83 @@ void AGalaga_USFXPawn::MoveFastExtreme()
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFXPawn::VelocidadNormal, 5.0f);
 }
 
+void AGalaga_USFXPawn::SetState(IStateInterface* State)
+{
+	Estado=State;
+}
 
+void AGalaga_USFXPawn::InicializarEstados()
+{
+
+	/*if (Health >= 1500)
+	{
+		EstadoEnergiaCompleta = GetWorld()->SpawnActor<AEstadoEnergiaLlena>();
+		EstadoEnergiaCompleta->EstablecerNaveJugador(this);
+		EstablecerEstados(EstadoEnergiaCompleta);
+	}*/
+	//else
+		//if (Health >= 1000)
+	//	//{
+	//		StateSigiloso = GetWorld()->SpawnActor<AStateSigiloso>();
+	//		StateSigiloso->EstablecerNaveJugador(this);
+	//		StateSigiloso->EstadoSigiloso();
+	//		SetState(StateSigiloso);
+	//	//}
+	//
+
+	//Estado = StateEnergiaFull;
+
+}
+
+void AGalaga_USFXPawn::PawnEnergiaCompleta()
+{
+	Estado -> EnergiaCompleta();
+}
+
+void AGalaga_USFXPawn::PawnEnergiaMedia()
+{
+}
+
+void AGalaga_USFXPawn::PawnPotenciado()
+{
+}
+
+void AGalaga_USFXPawn::PawnDefensivo()
+{
+}
+
+void AGalaga_USFXPawn::PawnSigiloso()
+{
+	Estado -> EstadoSigiloso();
+}
+
+IStateInterface* AGalaga_USFXPawn::GetEstadoActual()
+{
+	return Estado;
+}
+
+IStateInterface* AGalaga_USFXPawn::GetEstadoEnergiaCompleta()
+{
+	return StateEnergiaFull;
+}
+
+IStateInterface* AGalaga_USFXPawn::GetEstadoEnergiaMedia()
+{
+	return nullptr;
+}
+
+IStateInterface* AGalaga_USFXPawn::GetEstadoSigiloso()
+{
+	return StateSigiloso;
+}
+
+FString AGalaga_USFXPawn::ObtenerEstadoActual()
+{
+	if (Estado)
+	{
+		return "El estado actual es: " + Estado->ObtenerEstado();
+	}
+	else {
+		return "No hay estado";
+	}
+}

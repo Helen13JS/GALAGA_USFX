@@ -28,5 +28,8 @@ protected:
 public:
 	ANaveEnemigaNodriza();
 	virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
+
+	class AFacadeTipoDisparo* Disparo;
 	
 };

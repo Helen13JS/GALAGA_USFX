@@ -38,8 +38,8 @@ void ANaveEnemigaCaza::BeginPlay()
     Super::BeginPlay();
 	
     FacadeDisparo= GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
-    //FTimerHandle timeDisparo;
-   // GetWorldTimerManager().SetTimer(timeDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true, 0.0f);
+   /* FTimerHandle timeDisparo;
+    GetWorldTimerManager().SetTimer(timeDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true, 0.0f);*/
 //}
 //void ANaveEnemigaCaza::FuncionColision(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 //{
@@ -126,6 +126,8 @@ void ANaveEnemigaCaza::Disparar()
     FVector SpawnDirection = _SpawnDirection;
 
     FacadeDisparo->Launch("Laser",SpawnLocation,SpawnDirection);
+
+   // FacadeDisparo -> Launch()
 
 }
 

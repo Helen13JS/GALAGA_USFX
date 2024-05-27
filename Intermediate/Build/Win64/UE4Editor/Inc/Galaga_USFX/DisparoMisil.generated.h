@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ADisparoMisil)
 
 
-#define Galaga_USFX_Source_Galaga_USFX_DisparoMisil_h_12_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_Source_Galaga_USFX_DisparoMisil_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Misilmalla() { return STRUCT_OFFSET(ADisparoMisil, Misilmalla); }
+
+
 #define Galaga_USFX_Source_Galaga_USFX_DisparoMisil_h_9_PROLOG
 #define Galaga_USFX_Source_Galaga_USFX_DisparoMisil_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

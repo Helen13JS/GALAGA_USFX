@@ -97,7 +97,7 @@ void ANaveEnemigaEspia::Disparar()
       FVector SpawnDirection = _SpawnDirection;
     //    NewProjectile->FireInDirection(SpawnDirection);
     //}
-      DisparoFacade->Launch("Misile", SpawnLocation, _SpawnDirection);
+      DisparoFacade->Launch("Foton", SpawnLocation, _SpawnDirection);
 
 
 }

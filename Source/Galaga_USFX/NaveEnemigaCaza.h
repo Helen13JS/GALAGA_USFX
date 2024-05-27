@@ -18,6 +18,7 @@ private:
 	int cantidadBombas;
 	int LimiteInferiorX;
 	class AFacadeTipoDisparo* FacadeDisparo;
+	float TiempoCambio;
 
 public:
 	ANaveEnemigaCaza();

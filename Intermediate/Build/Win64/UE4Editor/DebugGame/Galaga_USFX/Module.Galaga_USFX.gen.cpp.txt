@@ -67,6 +67,8 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX/DisparoBasic.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoBasic.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/DisparoMisil.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/DisparoMisil.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXProjectile.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXProjectile.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoMisil.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/escenario.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/escenario.h
@@ -98,10 +100,10 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StateInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateInterface.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFXProjectile.gen.cpp
-D:\Facade\Galaga_USFX\Source\Galaga_USFX/Galaga_USFXProjectile.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXProjectile.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/InventoryComponent.gen.cpp
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Laser.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/Laser.h
@@ -165,3 +167,13 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/ShipFactory.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/ShipFactory.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateEnergiaFull.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/StateEnergiaFull.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateEnergiaFull.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateInterface.gen.cpp
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StatePotenciado.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/StatePotenciado.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StatePotenciado.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateSigiloso.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/StateSigiloso.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateSigiloso.generated.h

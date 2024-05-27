@@ -1,11 +1,11 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InventoryComponent.h"
 #include "Capsulas.h"
+#include "StateInterface.h"
 #include "Galaga_USFXPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -133,6 +133,36 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+	public:
+
+		IStateInterface *StatePotenciado;
+		IStateInterface *StateEnergiaFull;
+		IStateInterface *StateSigiloso;
+		IStateInterface *StateDefensivo;
+		IStateInterface *Estado;
+
+		void SetState(IStateInterface *State);
+public:
+			void InicializarEstados();
+
+			void PawnEnergiaCompleta();
+			void PawnEnergiaMedia();
+			//void PawnEnergiaBaja();
+			void PawnPotenciado();
+			void PawnDefensivo();
+			void PawnSigiloso();
+
+			IStateInterface* GetEstadoActual();
+			IStateInterface* GetEstadoEnergiaCompleta();
+			IStateInterface* GetEstadoEnergiaMedia();
+			//IStateInterface * GetEstadoEnergiaBaja();
+			//IStateInterface * GetEstadoPotenciado();
+			//IStateInterface * GetEstadoDefensivo();
+			IStateInterface* GetEstadoSigiloso();
+			FString ObtenerEstadoActual();
+		
+
 
 };
 

@@ -27,7 +27,7 @@ private:
 	class ABomba* bomba;
 	class ALaser* laser;
 	class AFoton* foton;
-	class AFacadeRecargar* recargar;
+	//class AFacadeRecargar* recargar; 
 
 public:
 	void AsignarDisparo(FString TipoDisparo);

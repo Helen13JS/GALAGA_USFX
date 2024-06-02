@@ -21,9 +21,17 @@ public:
 		UPROPERTY(VisibleAnywhere, Category = "Movement")
 		UProjectileMovementComponent* ProjectileMovementComponent;
 
+		UFUNCTION()
+		virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+			AActor* Other, class UPrimitiveComponent* OtherComp,
+			bool bSelfMoved, FVector HitLocation, FVector
+			HitNormal, FVector NormalImpulse, const FHitResult&
+			Hit) override;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	int  vida;
 
 public:	
 	// Called every frame

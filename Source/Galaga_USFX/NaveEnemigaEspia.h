@@ -5,7 +5,7 @@
 #include "NaveEnemiga.h"
 #include "Bomba.h"
 #include "NaveEnemigaEspia.generated.h"
-
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnNotifyDelegate2);
 /**
  * 
  */
@@ -21,7 +21,7 @@ public:
 	ANaveEnemigaEspia();
 	FORCEINLINE int GetCampoVision() const { return campoVision; }
 	FORCEINLINE void SetCampoVision(int _campoVision) { campoVision = _campoVision; }
-	TSubclassOf<class ABomba> NewProjectileBomba;
+	//TSubclassOf<class ABomba> NewProjectileBomba;
 	class AFacadeTipoDisparo* DisparoFacade;
 protected:
 	
@@ -33,4 +33,25 @@ public:
 	void Tick(float DeltaTime) override;
 	void BeginPlay() override;
 	
+	//UPROPERTY();
+	TArray<class ISubscriptorInterface*> NavesSubscriptoras;
+
+	void SubscribirNave(class ISubscriptorInterface* navesubscriptora);
+	void DesubscribirNave(class ISubscriptorInterface* navesubscriptora);
+
+	UFUNCTION()
+	void NotificarNaves();
+
+public:
+	DECLARE_EVENT(ANaveEnemigaEspia, FOnNotification)
+	FOnNotification NotificationEvent;
+public:
+	// Evento que se dispara cuando se debe notificar a las naves enemigas cazas
+	
+	FOnNotifyDelegate2 evento;
+
+
+	void UpdateNave();
+
+	//FOnNotification& OnNotify() override { return NotificationEvent; }
 };

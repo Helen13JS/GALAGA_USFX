@@ -1,11 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "NaveEnemiga.generated.h"
-
 //class UstaticMeshComponent;
 
 UCLASS(abstract)
@@ -100,4 +98,7 @@ protected:
 	void Disparar() PURE_VIRTUAL(ANaveEnemiga::Disparar, );
 	void Destruirse() PURE_VIRTUAL(ANaveEnemiga::Destruirse, );
 	void Escapar() PURE_VIRTUAL(ANaveEnemiga::Escapar, );
+
+public: 
+	
 };

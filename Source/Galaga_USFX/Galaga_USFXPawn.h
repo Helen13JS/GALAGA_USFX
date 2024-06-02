@@ -41,6 +41,10 @@ public:
 		HitNormal, FVector NormalImpulse, const FHitResult&
 		Hit) override;
 
+	int Life;
+	FORCEINLINE float GetVida() const { return Life; }
+	FORCEINLINE void SetVida(float NewVida) { Life = NewVida; }
+
 	UFUNCTION()
 	void ReloadAmmo();
 
@@ -76,6 +80,7 @@ protected:
 	FTimerHandle TimerHandle_Salto;
 	// Begin Actor Interface
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void BeginPlay() override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End Actor Interface
 
@@ -118,6 +123,8 @@ private:
 	int32 NumProyectilesDisparados;
 	int32 MaxProyectilesDisparados;
 
+	
+
 	public:
 		// Define cuánto se incrementará la velocidad de las municiones
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Municion")
@@ -134,35 +141,62 @@ public:
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 
-	public:
 
+//	patron state
+	private:
+
+		// estados de la nave
 		IStateInterface *StatePotenciado;
 		IStateInterface *StateEnergiaFull;
 		IStateInterface *StateSigiloso;
 		IStateInterface *StateDefensivo;
-		IStateInterface *Estado;
+		IStateInterface *State;
 
-		void SetState(IStateInterface *State);
+		
 public:
-			void InicializarEstados();
+	IStateInterface* getState() { return State; }
+	void SetState(IStateInterface* _State) { State = _State; }
 
-			void PawnEnergiaCompleta();
-			void PawnEnergiaMedia();
-			//void PawnEnergiaBaja();
-			void PawnPotenciado();
-			void PawnDefensivo();
-			void PawnSigiloso();
+	IStateInterface* GetEstadoPotenciado() { return StatePotenciado; }
+	IStateInterface* GetEstadoDefensivo() { return StateDefensivo; }
+    IStateInterface* GetEstadoSigiloso() { return StateSigiloso; }
+	IStateInterface* GetEstadoEnergiaCompleta() { return StateEnergiaFull; }
 
-			IStateInterface* GetEstadoActual();
-			IStateInterface* GetEstadoEnergiaCompleta();
-			IStateInterface* GetEstadoEnergiaMedia();
-			//IStateInterface * GetEstadoEnergiaBaja();
-			//IStateInterface * GetEstadoPotenciado();
-			//IStateInterface * GetEstadoDefensivo();
-			IStateInterface* GetEstadoSigiloso();
-			FString ObtenerEstadoActual();
+	void InicializarEstados();
+	//funcion cambiar estado
+	FORCEINLINE void EstablecerEstados(IStateInterface* _Estado);
+
+
+	//IStateInterface* GetEstadoActual();
+	//
+	//IStateInterface* GetEstadoEnergiaMedia();
+	////IStateInterface * GetEstadoEnergiaBaja();
+	
+	
+	//FString ObtenerEstadoActual();
 		
 
+			void EnergiaCompleta();
+			//void PawnEnergiaMedia();
+			////void PawnEnergiaBaja();
+			//void PawnPotenciado();
+			//void PawnDefensivo();
+			void Sigiloso();
+
+			
+
+
+  public:
+	 // DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);
+	  // Evento que se dispara cuando el jugador consume una cápsula de munición
+	//  FOnMunitionCapsuleConsumed OnMunitionCapsuleConsumed;
+
+	  // Delegado que se dispara cuando se consume una cápsula de munición
+	  DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);
+	  FOnMunitionCapsuleConsumed OnMunitionCapsuleConsumed;
+
+		
+			
 
 };
 

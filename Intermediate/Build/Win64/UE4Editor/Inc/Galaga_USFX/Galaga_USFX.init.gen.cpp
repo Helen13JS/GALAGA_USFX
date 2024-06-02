@@ -11,18 +11,24 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_init() {}
+	GALAGA_USFX_API UFunction* Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature();
+	GALAGA_USFX_API UFunction* Z_Construct_UDelegateFunction_Galaga_USFX_OnNotifyDelegate2__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_Galaga_USFX_OnNotifyDelegate2__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Galaga_USFX",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xF0C78F83,
-				0x4A31C6B4,
+				0xBFE2DE4A,
+				0xB3CFA57D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

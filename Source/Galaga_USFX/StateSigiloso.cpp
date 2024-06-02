@@ -90,8 +90,10 @@ FString AStateSigiloso::ObtenerEstado()
 	return FString();
 }
 
-void AStateSigiloso::EstablecerNaveJugador(AGalaga_USFXPawn* NaveJugador)
+void AStateSigiloso::SetNaveJugador(AGalaga_USFXPawn* NaveJugador)
 {
-    	NavePawn = NaveJugador;
+     NavePawn = Cast<AGalaga_USFXPawn>(NaveJugador);
+    	//NavePawn = NaveJugador;
+     NavePawn ->SetState(NavePawn->GetEstadoSigiloso());
 }
 

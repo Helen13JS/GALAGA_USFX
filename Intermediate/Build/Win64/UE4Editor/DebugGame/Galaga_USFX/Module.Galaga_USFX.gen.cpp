@@ -46,6 +46,7 @@
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaTransporte.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaTransporteAlfa.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaTransporteBeta.gen.cpp"
+#include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NavePublisher.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/PaqueteCapsula.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/proyectilEnemigo.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Puntaje.gen.cpp"
@@ -54,3 +55,4 @@
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateInterface.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StatePotenciado.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateSigiloso.gen.cpp"
+#include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/SubscriptorInterface.gen.cpp"

@@ -45,8 +45,8 @@ AFacadeNivel1::AFacadeNivel1()
 void AFacadeNivel1::BeginPlay()
 {
 	Super::BeginPlay();
-	//CrearNivel();
-	GetWorld()->GetTimerManager().SetTimer(Spawn, this, &AFacadeNivel1::CrearNivel, 10.0f, true, 0.0f);
+	CrearNivel();
+	GetWorld()->GetTimerManager().SetTimer(Spawn, this, &AFacadeNivel1::CrearCapsulas, 10.0f, true, 0.0f);
 
 	
 	
@@ -62,24 +62,123 @@ void AFacadeNivel1::Tick(float DeltaTime)
 void AFacadeNivel1::CrearNivel()
 {
 	
-	// Genera un número aleatorio entre 1 y 3
-	int nivelAleatorio = FMath::RandRange(1, 3);
+	//// Genera un número aleatorio entre 1 y 3
+	//int nivelAleatorio = FMath::RandRange(1, 3);
 
-	// Crea el nivel correspondiente
-	switch (nivelAleatorio)
-	{
-	case 1:
-		//NivelBasico();
-		break;
-	case 2:
-		//NivelIntermedio();
-		break;
-	case 3:
+	//// Crea el nivel correspondiente
+	//switch (nivelAleatorio)
+	//{
+	//case 1:
+	//	//NivelBasico();
+	//	break;
+	//case 2:
+	//	//NivelIntermedio();
+		//break;
+	//case 3:
 		NivelAvanzado();
-		break;
-	}
+		//break;
+	//}
 
 }
+
+
+void AFacadeNivel1::NivelAvanzado()
+{
+	
+
+	FRotator RotacionNave = FRotator(180.0f, 0.0f, 0.0f);
+	FVector SpawnNaveLocation2 = FVector(100.f, -500.f, 200.f);
+	UWorld* const World = GetWorld();
+	NaveCazaAlfa = GetWorld()->SpawnActor<ANaveEnemigaCazaAlfa>(SpawnNaveLocation2, RotacionNave);
+
+
+	FVector SpawnNaveLocation = FVector(500.f, -500.f, 200.f);
+	//FRotator RotacionNave = FRotator(180.0f, 0.0f, 0.0f);
+
+	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
+
+
+	if (World != nullptr)
+	{
+		CrearCapsulas();
+
+
+		for (int i = 0; i < 6; i++)
+
+		{
+
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
+			ANaveEnemiga* NuevaNaveEnemigaCaza = AShipFactory::CrearNaveEnemiga("EnemigaCaza", World, PosicionNaveActual, RotacionNave);
+			TANavesEnemigas.Push(NuevaNaveEnemigaCaza);
+		}
+
+		for (int i = 0; i < 6; i++)
+		{
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + 200, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
+			ANaveEnemiga* NuevaNaveEnemigaEspia = AShipFactory::CrearNaveEnemiga("EnemigaEspia", World, PosicionNaveActual, RotacionNave);
+			TANavesEnemigas.Push(NuevaNaveEnemigaEspia);
+		}
+
+		for (int i = 0; i < 6; i++)
+		{
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
+			ANaveEnemiga* NuevaNaveEnemigaNodriza = AShipFactory::CrearNaveEnemiga("EnemigaNodriza", World, PosicionNaveActual, RotacionNave);
+			TANavesEnemigas.Push(NuevaNaveEnemigaNodriza);
+		}
+
+		for (int i = 0; i < 6; i++)
+		{
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 200, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
+			ANaveEnemiga* NuevaNaveEnemigaReabastecimiento = AShipFactory::CrearNaveEnemiga("EnemigaReabastecimiento", World, PosicionNaveActual, RotacionNave);
+			TANavesEnemigas.Push(NuevaNaveEnemigaReabastecimiento);
+		}
+
+		for (int i = 0; i < 6; i++)
+		{
+			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
+			ANaveEnemiga* NuevaNaveEnemigaTransporte = AShipFactory::CrearNaveEnemiga("EnemigaTransporte", World, PosicionNaveActual, RotacionNave);
+			TANavesEnemigas.Push(NuevaNaveEnemigaTransporte);
+		}
+
+	}
+}
+
+void AFacadeNivel1::CrearCapsulas()
+{
+	//crear power ups
+	CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
+
+
+
+	switch (FMath::RandRange(1, 3))
+	{
+	case 1:
+		CapVelocityBuilder = GetWorld()->SpawnActor<ACapVelocityBuilder>();
+		//Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapVelocityBuilder);
+		CapsuleDirector->GenerarCapsulasEnergia();
+
+		break;
+	case 2:
+
+		CapMunicionBuilder = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapMunicionBuilder);
+		CapsuleDirector->GenerarCapsulasMunicion();
+		//Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
+		break;
+	case 3:
+		CapEnergiaBuilder = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
+		CapsuleDirector->ConstruirPaqueteCapsula(CapEnergiaBuilder);
+		CapsuleDirector->GenerarCapsulasVelocidad();
+		//Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
+		break;
+
+	}
+
+	APaqueteCapsula* capsulas = CapsuleDirector->ObtenerPaqueteCapsula();
+
+}
+
 
 void AFacadeNivel1::NivelBasico()
 {
@@ -217,93 +316,4 @@ void AFacadeNivel1::NivelIntermedio()
 //	}
 }
 
-void AFacadeNivel1::NivelAvanzado()
-{
-	//crear power ups
-	CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
-
-
-
-	switch (FMath::RandRange(1, 3))
-	{
-	case 1:
-		CapVelocityBuilder = GetWorld()->SpawnActor<ACapVelocityBuilder>();
-		//Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
-		CapsuleDirector->ConstruirPaqueteCapsula(CapVelocityBuilder);
-		CapsuleDirector->GenerarCapsulasEnergia();
-
-		break;
-	case 2:
-
-		CapMunicionBuilder = GetWorld()->SpawnActor<ACapMunicionBuilder>();
-		CapsuleDirector->ConstruirPaqueteCapsula(CapMunicionBuilder);
-		CapsuleDirector->GenerarCapsulasMunicion();
-		//Capsula = GetWorld()->SpawnActor<ACapMunicionBuilder>();
-		break;
-	case 3:
-		CapEnergiaBuilder = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
-		CapsuleDirector->ConstruirPaqueteCapsula(CapEnergiaBuilder);
-		CapsuleDirector->GenerarCapsulasVelocidad();
-		//Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
-		break;
-
-	}
-
-	APaqueteCapsula* capsulas = CapsuleDirector->ObtenerPaqueteCapsula();
-
-	FRotator RotacionNave = FRotator(180.0f, 0.0f, 0.0f);
-	FVector SpawnNaveLocation2 = FVector(100.f, -500.f, 200.f);
-	UWorld* const World = GetWorld();
-	NaveCazaAlfa = GetWorld()->SpawnActor<ANaveEnemigaCazaAlfa>(SpawnNaveLocation2, RotacionNave);
-
-
-	FVector SpawnNaveLocation = FVector(500.f, -500.f, 200.f);
-	//FRotator RotacionNave = FRotator(180.0f, 0.0f, 0.0f);
-
-	FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
-	
-
-	if (World != nullptr)
-	{
-
-
-		for (int i = 0; i < 6; i++)
-
-		{
-
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
-			ANaveEnemiga* NuevaNaveEnemigaCaza = AShipFactory::CrearNaveEnemiga("EnemigaCaza", World, PosicionNaveActual, RotacionNave);
-			TANavesEnemigas.Push(NuevaNaveEnemigaCaza);
-		}
-
-		for (int i = 0; i < 6; i++)
-		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + 200, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
-			ANaveEnemiga* NuevaNaveEnemigaEspia = AShipFactory::CrearNaveEnemiga("EnemigaEspia", World, PosicionNaveActual, RotacionNave);
-			TANavesEnemigas.Push(NuevaNaveEnemigaEspia);
-		}
-
-		for (int i = 0; i < 6; i++)
-		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X + 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
-			ANaveEnemiga* NuevaNaveEnemigaNodriza = AShipFactory::CrearNaveEnemiga("EnemigaNodriza", World, PosicionNaveActual, RotacionNave);
-			TANavesEnemigas.Push(NuevaNaveEnemigaNodriza);
-		}
-
-		for (int i = 0; i < 6; i++)
-		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 200, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
-			ANaveEnemiga* NuevaNaveEnemigaReabastecimiento = AShipFactory::CrearNaveEnemiga("EnemigaReabastecimiento", World, PosicionNaveActual, RotacionNave);
-			TANavesEnemigas.Push(NuevaNaveEnemigaReabastecimiento);
-		}
-
-		for (int i = 0; i < 6; i++)
-		{
-			FVector PosicionNaveActual = FVector(SpawnNaveLocation.X - 400, SpawnNaveLocation.Y + i * 200, SpawnNaveLocation.Z);
-			ANaveEnemiga* NuevaNaveEnemigaTransporte = AShipFactory::CrearNaveEnemiga("EnemigaTransporte", World, PosicionNaveActual, RotacionNave);
-			TANavesEnemigas.Push(NuevaNaveEnemigaTransporte);
-		}
-
-	}
-}
 

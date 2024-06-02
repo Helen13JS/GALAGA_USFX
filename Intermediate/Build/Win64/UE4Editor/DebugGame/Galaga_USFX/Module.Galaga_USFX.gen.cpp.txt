@@ -117,6 +117,10 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemiga.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaCaza.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaCaza.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\SubscriptorInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\SubscriptorInterface.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaCazaAlfa.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaCazaAlfa.h
@@ -125,8 +129,6 @@ D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEne
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaCazaBeta.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaBeta.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaEspia.gen.cpp
-D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaEspia.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaEspiaAlfa.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaEspiaAlfa.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaAlfa.generated.h
@@ -160,6 +162,9 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEne
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NaveEnemigaTransporteBeta.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NaveEnemigaTransporteBeta.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteBeta.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NavePublisher.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/NavePublisher.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NavePublisher.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/PaqueteCapsula.gen.cpp
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/proyectilEnemigo.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/proyectilEnemigo.h
@@ -180,3 +185,4 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StatePo
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateSigiloso.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/StateSigiloso.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateSigiloso.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/SubscriptorInterface.gen.cpp

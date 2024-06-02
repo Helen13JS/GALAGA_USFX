@@ -13,9 +13,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GALAGA_USFX_NaveEnemigaEspia_generated_h
 
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_8_DELEGATE \
+static inline void FOnNotifyDelegate2_DelegateWrapper(const FMulticastScriptDelegate& OnNotifyDelegate2) \
+{ \
+	OnNotifyDelegate2.ProcessMulticastDelegate<UObject>(NULL); \
+}
+
+
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_SPARSE_DATA
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_RPC_WRAPPERS
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execNotificarNaves);
+
+
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execNotificarNaves);
+
+
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaEspia_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaEspia(); \

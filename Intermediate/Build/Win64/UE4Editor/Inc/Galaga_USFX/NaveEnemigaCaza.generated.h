@@ -14,15 +14,24 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define GALAGA_USFX_NaveEnemigaCaza_generated_h
 
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_SPARSE_DATA
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_RPC_WRAPPERS
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnNotify);
+
+
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnNotify);
+
+
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesANaveEnemigaCaza(); \
 	friend struct Z_Construct_UClass_ANaveEnemigaCaza_Statics; \
 public: \
 	DECLARE_CLASS(ANaveEnemigaCaza, ANaveEnemiga, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX"), NO_API) \
-	DECLARE_SERIALIZER(ANaveEnemigaCaza)
+	DECLARE_SERIALIZER(ANaveEnemigaCaza) \
+	virtual UObject* _getUObject() const override { return const_cast<ANaveEnemigaCaza*>(this); }
 
 
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_INCLASS \
@@ -31,7 +40,8 @@ private: \
 	friend struct Z_Construct_UClass_ANaveEnemigaCaza_Statics; \
 public: \
 	DECLARE_CLASS(ANaveEnemigaCaza, ANaveEnemiga, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/Galaga_USFX"), NO_API) \
-	DECLARE_SERIALIZER(ANaveEnemigaCaza)
+	DECLARE_SERIALIZER(ANaveEnemigaCaza) \
+	virtual UObject* _getUObject() const override { return const_cast<ANaveEnemigaCaza*>(this); }
 
 
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCaza_h_15_STANDARD_CONSTRUCTORS \

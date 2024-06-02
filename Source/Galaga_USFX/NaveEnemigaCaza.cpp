@@ -3,6 +3,8 @@
 
 #include "NaveEnemigaCaza.h"
 #include "FacadeTipoDisparo.h"
+#include "NaveEnemigaEspia.h"
+#include "Kismet/GameplayStatics.h"
 #include "Foton.h"
 #include "Laser.h"
 #include "Engine/CollisionProfile.h"
@@ -17,8 +19,28 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
     mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 
     FireRate= 0;
+
+    ////velocidad = 0.8;
+    //bCanFire = true;
+    //cantidadBombas = 0;
+    //TiempoCambio = 0;
+    //DireccionMovimientoHorizontal = 1;
+    //LimiteInferiorX = -1000;
+    //FacadeDisparo = nullptr;
+    //Espia = nullptr;
+    //Caza = nullptr;
+    ////ShipFactory = nullptr;
   
 }
+//
+//ANaveEnemigaCaza::~ANaveEnemigaCaza()
+//{
+//    if (Espia)
+//    {
+//		Espia->DesubscribirNave(this);
+//       // Destroy();
+//	}
+//}
 
 void ANaveEnemigaCaza::Tick(float DeltaTime)
 {
@@ -36,32 +58,26 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
 void ANaveEnemigaCaza::BeginPlay()
 {
     Super::BeginPlay();
-	
-    FacadeDisparo= GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
-   /* FTimerHandle timeDisparo;
-    GetWorldTimerManager().SetTimer(timeDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true, 0.0f);*/
-//}
-//void ANaveEnemigaCaza::FuncionColision(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
-//{
-//    ABomba* Projectile = Cast<ABomba>(OtherActor);
-//    if (Projectile)
-//    {
-//        // Destruir la nave enemiga
-//        Destroy();
-//
-//    }
-//}
-//
+
+    FacadeDisparo = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+
+
+   
+     Espia = Cast<ANaveEnemigaEspia>(UGameplayStatics::GetActorOfClass(GetWorld(), ANaveEnemigaEspia::StaticClass()));
+        if (Espia)
+        {   
+          
+            Espia->SubscribirNave(this);
+            GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("NaveEnemigaCaza: Suscribiendo a NaveEnemigaEspia"));
+        }
+   
+
 }
    
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
 
 {
-    
-
-     
-
     float LimiteDerechoF = 1000.0f;
     float LimiteIzquierdoF = -1000.0f;
      //float velocidad = 0.8;
@@ -82,42 +98,12 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
 
     
 
-    
-    
-    
-    
-    /*// Define la velocidad de movimiento horizontal de la nave
-    float VelocidadHorizontal = 200.0f; // Puedes ajustar este valor según la velocidad deseada
-
-    // Define una velocidad de rotación
-    float VelocidadRotacion = 40.0f; // Puedes ajustar este valor según la velocidad deseada
-
-    // Calcula el desplazamiento horizontal en la dirección deseada
-    FVector DireccionMovimiento = FVector(1.0f, 0.0f, 0.0f); // Por ejemplo, avanza hacia adelante en el eje X
-    FVector DesplazamientoHorizontal = DireccionMovimiento * VelocidadHorizontal * DeltaTime;//nos ayuda a emprajerar las velocidades en los diferentes dispositivos 
-
-    // Obtiene el tiempo transcurrido desde el inicio del juego y lo escala para que avance más lentamente
-    float TiempoTranscurrido = GetWorld()->TimeSeconds * 0.1f; // Escala de tiempo para que vaya más lento (0.1f)
-
-    // Calcula el ángulo de rotación basado en el tiempo
-    float Angulo = FMath::Fmod(TiempoTranscurrido, 6.0f) * VelocidadRotacion; // El ángulo cambia cada 6 segundos
-
-    // Calcula las coordenadas X e Y para el movimiento circular
-    float Radio = 20.0f; // Radio del círculo
-    float X = FMath::Cos(Angulo) * Radio; // Coordenada X del círculo
-    float Y = FMath::Sin(Angulo) * Radio; // Coordenada Y del círculo
-
-    // Calcula la nueva posición sumando las coordenadas X e Y al desplazamiento horizontal y a la posición actual
-    FVector NuevaPosicion = GetActorLocation() + DesplazamientoHorizontal + FVector(X, Y, 0.0f);
-
-    // Establece la nueva posición del actor
-    SetActorLocation(NuevaPosicion);*/
-
 }
 void ANaveEnemigaCaza::ShotTimerExpired()
 {
-    bCanFire = true;
+   // bCanFire = true;
 }
+
 void ANaveEnemigaCaza::Disparar()
 {
 
@@ -127,7 +113,7 @@ void ANaveEnemigaCaza::Disparar()
 
     FacadeDisparo->Launch("Laser",SpawnLocation,SpawnDirection);
 
-   // FacadeDisparo -> Launch()
+  
 
 }
 
@@ -137,6 +123,53 @@ void ANaveEnemigaCaza::Destruirse()
 
 void ANaveEnemigaCaza::Escapar()
 {
+    // Define cuánto quieres que se mueva la nave enemiga hacia atrás
+    float DistanciaRetroceso = -2000.0f;
+
+    // Obtiene la posición actual de la nave enemiga
+    FVector PosicionActual = GetActorLocation();
+
+    // Calcula la nueva posición moviendo la nave enemiga hacia atrás en el eje Y
+    FVector NuevaPosicion = PosicionActual + FVector(DistanciaRetroceso, 0, 0);
+
+    // Mueve la nave enemiga a la nueva posición
+    SetActorLocation(NuevaPosicion);
 }
+
+void ANaveEnemigaCaza::OnNotify()
+{
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("NaveEnemigaCaza: Notificacion Recibida"));
+  
+        // Llama al método SpawnearNaves de la AShipFactory
+    SpawnNaveEnemigaCaza();
+    
+   // Escapar();
+}
+void ANaveEnemigaCaza::SpawnNaveEnemigaCaza()
+{
+   for (int i = 0; i < 2; ++i)
+    {
+        FVector SpawnLocationextra = GetActorLocation() + FVector(-800.0f + i * 200, 0.0f, 0.0f); // Ajusta la posición según tu lógica
+      
+        Caza= GetWorld()->SpawnActor<ANaveEnemigaCaza>(ANaveEnemigaCaza::StaticClass(), SpawnLocationextra, FRotator::ZeroRotator);
+        // Destruye la nave después de 5 segundos
+        if (Caza)
+        {
+            Caza->SetLifeSpan(5.0f);
+        }
+    }
+}
+void ANaveEnemigaCaza::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+    Super::EndPlay(EndPlayReason);
+
+    // Desuscribe la nave cuando se destruye
+    if (Espia)
+    {
+        Espia->DesubscribirNave(this);
+    }
+}
+
+
 
 

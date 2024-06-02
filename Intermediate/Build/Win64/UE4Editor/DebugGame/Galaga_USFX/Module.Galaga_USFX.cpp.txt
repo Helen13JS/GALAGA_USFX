@@ -65,6 +65,18 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapVelo
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoBasic.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\DisparoBasic.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoBasic.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXPawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StateInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoMisil.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\DisparoMisil.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoMisil.generated.h
@@ -78,6 +90,10 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\SubscriptorInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\SubscriptorInterface.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCaza.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaAlfa.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporte.h
@@ -90,8 +106,6 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaTransporteBeta.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaTransporteBeta.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaBeta.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaCazaBeta.generated.h
-D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaAlfa.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspiaAlfa.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspiaBeta.h
@@ -130,18 +144,6 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXGameMode.generated.h
-D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXPawn.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
-C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-D:\Facade\Galaga_USFX\Source\Galaga_USFX\InventoryComponent.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\InventoryComponent.generated.h
-D:\Facade\Galaga_USFX\Source\Galaga_USFX\StateInterface.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateInterface.generated.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXPawn.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXPawn.cpp
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
@@ -200,6 +202,9 @@ D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaReabastecimientoBeta.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporte.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteAlfa.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteBeta.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/NavePublisher.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NavePublisher.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NavePublisher.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/PaqueteCapsula.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\proyectilEnemigo.h
@@ -210,3 +215,4 @@ D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateEnergiaFull.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateInterface.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StatePotenciado.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateSigiloso.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/SubscriptorInterface.cpp

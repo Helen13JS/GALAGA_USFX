@@ -5,6 +5,11 @@
 #include "Laser.h"
 #include "Bomba.h"
 #include "Foton.h"
+#include "Engine/CollisionProfile.h"
+#include "NaveEnemigaCaza.h"
+#include "SubscriptorInterface.h"
+#include "Galaga_USFXPawn.h"
+
 #include "FacadeTipoDisparo.h"
 
 
@@ -12,6 +17,8 @@ ANaveEnemigaEspia::ANaveEnemigaEspia()
 {
     static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_2.TwinStickUFO_2'"));
     mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
+
+    
 
 }
 
@@ -25,14 +32,68 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
         Disparar();
         FireRate = 0;
     }
+
+   // UpdateNave();
+
 }
 
 void ANaveEnemigaEspia::BeginPlay()
 {
     Super::BeginPlay();
 	DisparoFacade = GetWorld()->SpawnActor<AFacadeTipoDisparo>(AFacadeTipoDisparo::StaticClass());
+    AGalaga_USFXPawn* PlayerPawn = Cast<AGalaga_USFXPawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
+    if (PlayerPawn)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("PlayerPawn encontrado,suscribiendo"));
+        PlayerPawn->OnMunitionCapsuleConsumed.AddDynamic(this, &ANaveEnemigaEspia::NotificarNaves);
+    }
+
+   
 	
 }
+
+void ANaveEnemigaEspia::SubscribirNave(ISubscriptorInterface* navesubscriptora)
+{
+    if (navesubscriptora) {
+    NavesSubscriptoras.Add(navesubscriptora);
+    }
+    ANaveEnemigaCaza* NaveCaza = Cast<ANaveEnemigaCaza>(navesubscriptora);
+    if (NaveCaza)
+    {
+       // evento.AddDynamic(NaveCaza, &ANaveEnemigaCaza::OnNotify);
+    }
+}
+
+void ANaveEnemigaEspia::DesubscribirNave(ISubscriptorInterface* navesubscriptora)
+{
+    NavesSubscriptoras.Remove(navesubscriptora);
+    ANaveEnemigaCaza* NaveCaza = Cast<ANaveEnemigaCaza>(navesubscriptora);
+    if (NaveCaza)
+    {
+	//	evento.RemoveDynamic(NaveCaza, &ANaveEnemigaCaza::OnNotify);
+	}
+}
+
+void ANaveEnemigaEspia::NotificarNaves()
+{
+
+   for (ISubscriptorInterface* nave : NavesSubscriptoras)
+    {
+       if (nave) {
+           nave->OnNotify();
+       }
+	}
+    GEngine -> AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Notificando a las naves enemigas caza"));
+   // OnNotify.Broadcast();
+    evento.Broadcast();
+
+}
+
+
+//void ANaveEnemigaEspia::UpdateNave()
+//{
+//    NotificarNaves();
+//}
 
 
 void ANaveEnemigaEspia::Mover(float DeltaTime)

@@ -4,6 +4,7 @@
 #include "DisparoBasic.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Galaga_USFXPawn.h"
 
 // Sets default values
 ADisparoBasic::ADisparoBasic()
@@ -54,6 +55,20 @@ void ADisparoBasic::Movimientoproyectil(float DeltaTime)
 {
 	/*FVector NewLocation = GetActorLocation() + FVector(VelocidadDisparo, 0.0f, 0.0f) * DeltaTime;
 	SetActorLocation(NewLocation);*/
+}
+
+void ADisparoBasic::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AGalaga_USFXPawn* GalagaPawn = Cast<AGalaga_USFXPawn>(Other);
+	if (GalagaPawn)
+	{
+		Destroy();
+		vida=GalagaPawn->GetVida();
+		vida = vida - 10;
+		GalagaPawn->SetVida(vida);
+		FString Message = FString::Printf(TEXT("Vida Jugador: %f"), vida);
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
+	}
 }
 
 void ADisparoBasic::FireInDirection(FVector& ShootDirection)

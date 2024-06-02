@@ -32,5 +32,5 @@ public:
 	//virtual void EnergiaBaja() = 0;
 
 	virtual FString ObtenerEstado() = 0;
-	virtual void EstablecerNaveJugador(class AGalaga_USFXPawn* NaveJugador) = 0;
+	virtual void SetNaveJugador(class AGalaga_USFXPawn* NaveJugador) = 0;
 };

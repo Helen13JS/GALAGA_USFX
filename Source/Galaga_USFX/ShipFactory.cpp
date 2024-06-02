@@ -69,3 +69,6 @@ ANaveEnemiga* AShipFactory::CrearNaveEnemiga(FString TipoNave, UWorld* World, FV
 	return nullptr;
 }
 
+
+
+

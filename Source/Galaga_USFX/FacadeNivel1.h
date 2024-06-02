@@ -42,5 +42,6 @@ public:
 	void NivelBasico ();
 	void NivelIntermedio();
 	void NivelAvanzado();
+	void CrearCapsulas();
 
 };

@@ -31,7 +31,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
-	//UPROPERTY(VisibleAnywhere, Category = "Estado Energia llena")
+	UPROPERTY(VisibleAnywhere, Category = "Estado	Sigiloso")
 	class AGalaga_USFXPawn* NavePawn;
 
 public:
@@ -43,6 +43,6 @@ public:
 	virtual void EstadoDefensivo() override;
 
 	virtual FString ObtenerEstado() override;
-	virtual void EstablecerNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
+	virtual void SetNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
 
 };

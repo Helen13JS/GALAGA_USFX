@@ -38,26 +38,6 @@ void AFacadeTipoDisparo::Tick(float DeltaTime)
 
 }
 
-void AFacadeTipoDisparo::AsignarDisparo(FString TipoDisparo)
-{
-	/*if (TipoDisparo == "Bomba")
-	{
-		DisparoBomba();
-		municion.Add(GetWorld()->SpawnActor<ALaser>(ALaser::StaticClass()));
-
-	}
-	else if (TipoDisparo == "Foton")
-	{
-		DisparoFoton();
-		municion.Add(GetWorld()->SpawnActor<AFoton>(AFoton::StaticClass()));
-	}
-	else if (TipoDisparo == "Laser")
-	{
-		DisparoLaser();
-		municion.Add(GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass()));
-	}*/
-}
-
 
 void AFacadeTipoDisparo::Launch(FString TipoDisparo,FVector SpawnLocation,FVector SpawnDirection)
 {
@@ -167,6 +147,26 @@ void AFacadeTipoDisparo::Launch(FString TipoDisparo,FVector SpawnLocation,FVecto
 		}
 	}*/
 
+}
+
+void AFacadeTipoDisparo::AsignarDisparo(FString TipoDisparo)
+{
+	/*if (TipoDisparo == "Bomba")
+	{
+		DisparoBomba();
+		municion.Add(GetWorld()->SpawnActor<ALaser>(ALaser::StaticClass()));
+
+	}
+	else if (TipoDisparo == "Foton")
+	{
+		DisparoFoton();
+		municion.Add(GetWorld()->SpawnActor<AFoton>(AFoton::StaticClass()));
+	}
+	else if (TipoDisparo == "Laser")
+	{
+		DisparoLaser();
+		municion.Add(GetWorld()->SpawnActor<ABomba>(ABomba::StaticClass()));
+	}*/
 }
 
 void AFacadeTipoDisparo::DisparoLaser()

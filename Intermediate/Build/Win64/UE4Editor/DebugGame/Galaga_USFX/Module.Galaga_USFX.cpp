@@ -46,6 +46,7 @@
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporte.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteAlfa.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/NaveEnemigaTransporteBeta.cpp"
+#include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/NavePublisher.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/PaqueteCapsula.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/Puntaje.cpp"
@@ -54,3 +55,4 @@
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateInterface.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/StatePotenciado.cpp"
 #include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateSigiloso.cpp"
+#include "D:/Facade/Galaga_USFX/Source/Galaga_USFX/SubscriptorInterface.cpp"

@@ -24,6 +24,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	static ANaveEnemiga* CrearNaveEnemiga(FString TipoNave, UWorld* World, FVector SpawnLocation, FRotator SpawnRotation);
-
+	
 
 };

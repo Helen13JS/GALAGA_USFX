@@ -13,8 +13,9 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 // Cross Module References
-	GALAGA_USFX_API UClass* Z_Construct_UClass_AGalaga_USFXPawn_NoRegister();
+	GALAGA_USFX_API UFunction* Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature();
 	GALAGA_USFX_API UClass* Z_Construct_UClass_AGalaga_USFXPawn();
+	GALAGA_USFX_API UClass* Z_Construct_UClass_AGalaga_USFXPawn_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	UPackage* Z_Construct_UPackage__Script_Galaga_USFX();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
@@ -28,6 +29,30 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 	GALAGA_USFX_API UClass* Z_Construct_UClass_UInventoryComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 // End Cross Module References
+	struct Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "// Delegado que se dispara cuando se consume una c?psula de munici?n\n" },
+		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
+		{ "ToolTip", "Delegado que se dispara cuando se consume una c?psula de munici?n" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AGalaga_USFXPawn, nullptr, "OnMunitionCapsuleConsumed__DelegateSignature", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	DEFINE_FUNCTION(AGalaga_USFXPawn::execReloadAmmo)
 	{
 		P_FINISH;
@@ -299,16 +324,19 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 	const FClassFunctionLinkInfo Z_Construct_UClass_AGalaga_USFXPawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AGalaga_USFXPawn_DropItem, "DropItem" }, // 3933661112
 		{ &Z_Construct_UFunction_AGalaga_USFXPawn_NotifyHit, "NotifyHit" }, // 1774870990
+		{ &Z_Construct_UDelegateFunction_AGalaga_USFXPawn_OnMunitionCapsuleConsumed__DelegateSignature, "OnMunitionCapsuleConsumed__DelegateSignature" }, // 3547996458
 		{ &Z_Construct_UFunction_AGalaga_USFXPawn_ReloadAmmo, "ReloadAmmo" }, // 3777533869
 		{ &Z_Construct_UFunction_AGalaga_USFXPawn_TakeItem, "TakeItem" }, // 3187972593
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFXPawn_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Comment", "//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);\n" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Galaga_USFXPawn.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
+		{ "ToolTip", "DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);" },
 	};
 #endif
 #if WITH_METADATA
@@ -434,7 +462,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFXPawn, 3547117390);
+	IMPLEMENT_CLASS(AGalaga_USFXPawn, 183911781);
 	template<> GALAGA_USFX_API UClass* StaticClass<AGalaga_USFXPawn>()
 	{
 		return AGalaga_USFXPawn::StaticClass();

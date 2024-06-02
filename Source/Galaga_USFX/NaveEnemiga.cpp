@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+//#include "NaveEnemigaEspia.h"
+#include "Kismet/GameplayStatics.h"
 #include "NaveEnemiga.h"
 
 // Sets default values
@@ -19,6 +20,8 @@ ANaveEnemiga::ANaveEnemiga()
 	velocidad = 4;
 	limiteY = 1000;
 	limiteX = -1600.0f;
+
+	
 
 }
 
@@ -41,4 +44,6 @@ FString ANaveEnemiga::GetShipName()
 {
 	return ShipName;
 }
+
+
 

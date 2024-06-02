@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{0C3BA359-42B4-4EF3-95D6-1A4435554F17}</UniqueIdentifier>
+      <UniqueIdentifier>{7F879233-5821-461A-9CE9-1EF98E5CEF10}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FDBFF0D2-D831-4F30-AA79-6BBAA5ABC0E0}</UniqueIdentifier>
+      <UniqueIdentifier>{73671BAD-7CFA-480A-AF4A-452B7EC3FAED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX">
-      <UniqueIdentifier>{FC92855F-D23E-4435-B3B3-31CD27E44075}</UniqueIdentifier>
+      <UniqueIdentifier>{7C3BDDAC-7721-479D-813D-9ACB70E5F570}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX\AuxCapsulas.cpp">
       <Filter>Source\Galaga_USFX</Filter>
@@ -319,6 +319,12 @@
     <ClInclude Include="..\..\Source\Galaga_USFX\NaveEnemigaTransporteBeta.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\NavePublisher.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\NavePublisher.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\PaqueteCapsula.cpp">
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
@@ -365,6 +371,12 @@
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX\StateSigiloso.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\SubscriptorInterface.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\SubscriptorInterface.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
   </ItemGroup>

@@ -19,6 +19,7 @@
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/DisparoBasic.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/DisparoMisil.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/escenario.gen.cpp"
+#include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeNivel1.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeRecargar.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeTipoDisparo.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Foton.gen.cpp"
@@ -53,3 +54,4 @@
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateInterface.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StatePotenciado.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateSigiloso.gen.cpp"
+#include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/SubscriptorInterface.gen.cpp"

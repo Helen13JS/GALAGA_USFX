@@ -76,6 +76,7 @@ AGalaga_USFXPawn::AGalaga_USFXPawn()
 	MyInventory =
 		CreateDefaultSubobject<UInventoryComponent>("MyInventory");
 	NumItems = 0;
+	Life = 1000;
 }
 
 void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -251,7 +252,20 @@ void AGalaga_USFXPawn::Tick(float DeltaSeconds)
 		//MoveSpeed = 1000.0f;
 	}
 
+	//InicializarEstados();
+}
+
+void AGalaga_USFXPawn::BeginPlay()
+{
+	Super::BeginPlay();
 	InicializarEstados();
+
+	//StateDefensivo= GetWorld()->SpawnActor<AStateDefensivo>(AStateDefensivo::StaticClass());
+	StateSigiloso = GetWorld()->SpawnActor<AStateSigiloso>(AStateSigiloso::StaticClass());
+	StatePotenciado = GetWorld()->SpawnActor<AStatePotenciado>(AStatePotenciado::StaticClass());
+	StateEnergiaFull = GetWorld()->SpawnActor<AStateEnergiaFull>(AStateEnergiaFull::StaticClass());
+
+
 }
 
 void AGalaga_USFXPawn::FireShot(FVector FireDirection)
@@ -408,6 +422,8 @@ void AGalaga_USFXPawn::TakeItem(ACapsulas*
 	{
 		FTimerHandle MyTimerHandle1;
 		GetWorldTimerManager().SetTimer(MyTimerHandle1, this, &AGalaga_USFXPawn::ReloadAmmo, DelayInSeconds, bLooping);
+
+		
 	}
 	// Intenta hacer un cast a ACapsulasMunicionRapida
 	ACapsulasMunicionRapida* MunicionRapidaItem = Cast<ACapsulasMunicionRapida>(InventoryItem);
@@ -419,6 +435,9 @@ void AGalaga_USFXPawn::TakeItem(ACapsulas*
 		{
 			FireRate = 0.01f;
 		}
+		GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, "La velocidad de las municiones ha aumentado");
+		OnMunitionCapsuleConsumed.Broadcast();
+		//MunitionCapsuleConsumedEvent.Broadcast();
 
 	}
 
@@ -649,83 +668,105 @@ void AGalaga_USFXPawn::MoveFastExtreme()
 	GetWorld()->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &AGalaga_USFXPawn::VelocidadNormal, 5.0f);
 }
 
-void AGalaga_USFXPawn::SetState(IStateInterface* State)
-{
-	Estado=State;
-}
+//void AGalaga_USFXPawn::SetState(IStateInterface* State)
+//{
+//	Estado=State;
+//}
 
 void AGalaga_USFXPawn::InicializarEstados()
 {
 
-	/*if (Health >= 1500)
+
+
+	if (Life >= 1000)
 	{
-		EstadoEnergiaCompleta = GetWorld()->SpawnActor<AEstadoEnergiaLlena>();
-		EstadoEnergiaCompleta->EstablecerNaveJugador(this);
-		EstablecerEstados(EstadoEnergiaCompleta);
-	}*/
-	//else
-		//if (Health >= 1000)
-	//	//{
-	//		StateSigiloso = GetWorld()->SpawnActor<AStateSigiloso>();
-	//		StateSigiloso->EstablecerNaveJugador(this);
-	//		StateSigiloso->EstadoSigiloso();
-	//		SetState(StateSigiloso);
-	//	//}
-	//
+		//EstadoEnergiaCompleta = GetWorld()->SpawnActor<AEstadoEnergiaLlena>();
+		//EstadoEnergiaCompleta->EstablecerNaveJugador(this);
+		//EstablecerEstados(EstadoEnergiaCompleta);
+		StateEnergiaFull->SetNaveJugador(this);
+		StateEnergiaFull->EnergiaCompleta();
+		EstablecerEstados(StateEnergiaFull);
+	}
+	else if (Life <500)
+		{
+			//StateSigiloso = GetWorld()->SpawnActor<AStateSigiloso>();
+			StateSigiloso->SetNaveJugador(this);
+			StateSigiloso->EstadoSigiloso();
+			SetState(StateSigiloso);
+		}
+	//else if (Health >= 500)
+	//	{
+	//		//StatePotenciado = GetWorld()->SpawnActor<AStatePotenciado>();
+	//		StatePotenciado->SetNaveJugador(this);
+	//		StatePotenciado->EstadoPotenciado();
+	//		SetState(StatePotenciado);
+	//	}
+	//	else
+	//	{
+	//		//StateDefensivo = GetWorld()->SpawnActor<AStateDefensivo>();
+	//		StateDefensivo->SetNaveJugador(this);
+	//		StateDefensivo->EstadoDefensivo();
+	//		SetState(StateDefensivo);
+	//	}
+	
 
 	//Estado = StateEnergiaFull;
 
 }
 
-void AGalaga_USFXPawn::PawnEnergiaCompleta()
+void AGalaga_USFXPawn::EstablecerEstados(IStateInterface* _Estado)
 {
-	Estado -> EnergiaCompleta();
+	State = _Estado;
 }
 
-void AGalaga_USFXPawn::PawnEnergiaMedia()
+void AGalaga_USFXPawn::EnergiaCompleta()
 {
+	State -> EnergiaCompleta();
 }
-
-void AGalaga_USFXPawn::PawnPotenciado()
-{
+//
+//void AGalaga_USFXPawn::PawnEnergiaMedia()
+//{
+//}
+//
+//void AGalaga_USFXPawn::PawnPotenciado()
+//{
+//}
+//
+//void AGalaga_USFXPawn::PawnDefensivo()
+//{
+//}
+//
+void AGalaga_USFXPawn::Sigiloso()
+{	State -> EstadoSigiloso();
 }
-
-void AGalaga_USFXPawn::PawnDefensivo()
-{
-}
-
-void AGalaga_USFXPawn::PawnSigiloso()
-{
-	Estado -> EstadoSigiloso();
-}
-
-IStateInterface* AGalaga_USFXPawn::GetEstadoActual()
-{
-	return Estado;
-}
+//
+//IStateInterface* AGalaga_USFXPawn::GetEstadoActual()
+//{
+//	return Estado;
+//}
 
 IStateInterface* AGalaga_USFXPawn::GetEstadoEnergiaCompleta()
 {
 	return StateEnergiaFull;
 }
-
-IStateInterface* AGalaga_USFXPawn::GetEstadoEnergiaMedia()
-{
-	return nullptr;
-}
+//
+//IStateInterface* AGalaga_USFXPawn::GetEstadoEnergiaMedia()
+//{
+//	return nullptr;
+//}
 
 IStateInterface* AGalaga_USFXPawn::GetEstadoSigiloso()
 {
 	return StateSigiloso;
 }
-
-FString AGalaga_USFXPawn::ObtenerEstadoActual()
-{
-	if (Estado)
-	{
-		return "El estado actual es: " + Estado->ObtenerEstado();
-	}
-	else {
-		return "No hay estado";
-	}
-}
+//
+//FString AGalaga_USFXPawn::ObtenerEstadoActual()
+//{
+//	if (Estado)
+//	{
+//		return "El estado actual es: " + Estado->ObtenerEstado();
+//	}
+//	else {
+//		return "No hay estado";
+//	}
+//}

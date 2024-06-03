@@ -2,6 +2,7 @@
 
 
 #include "Laser.h"
+#include "Galaga_USFXPawn.h"
 #include "GameFramework/ProjectileMovementComponent.h"  // Añade esta línea
 
 // Sets default values
@@ -46,6 +47,22 @@ void ALaser::BeginPlay()
 
 	//GEngine -> AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Laser creado"));
 	
+}
+
+void ALaser::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+
+
+	AGalaga_USFXPawn* GalagaPawn = Cast<AGalaga_USFXPawn>(Other);
+	if (GalagaPawn)
+	{
+		Destroy();
+		vida = GalagaPawn->GetVida();
+		vida = vida - 10;
+		GalagaPawn->SetVida(vida);
+		FString Message = FString::Printf(TEXT("Vida Jugador: %d"), vida);
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
+	}
 }
 
 // Called every frame

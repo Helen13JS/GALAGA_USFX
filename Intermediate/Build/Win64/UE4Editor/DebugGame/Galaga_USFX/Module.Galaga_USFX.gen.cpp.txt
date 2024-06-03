@@ -73,6 +73,9 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Disparo
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/escenario.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/escenario.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\escenario.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/EscudoPawn.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/EscudoPawn.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\EscudoPawn.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeNivel1.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/FacadeNivel1.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeNivel1.generated.h
@@ -172,6 +175,9 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyect
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Puntaje.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/Puntaje.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Puntaje.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/ShieldedState.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/ShieldedState.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShieldedState.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/ShipFactory.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/ShipFactory.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShipFactory.generated.h

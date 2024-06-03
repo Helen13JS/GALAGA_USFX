@@ -43,7 +43,7 @@ public:
 
 	int Life;
 	FORCEINLINE float GetVida() const { return Life; }
-	FORCEINLINE void SetVida(float NewVida) { Life = NewVida; }
+	FORCEINLINE void SetVida(float NewVida);
 
 	UFUNCTION()
 	void ReloadAmmo();
@@ -132,6 +132,7 @@ private:
 	//int32 MunicionRapidaItem;
 	int32 NumItems;
 	bool movimiento;
+	void SetVelocity(float newVelocity);
 
 public:
 	/** Returns ShipMeshComponent subobject **/
@@ -149,39 +150,30 @@ public:
 		IStateInterface *StatePotenciado;
 		IStateInterface *StateEnergiaFull;
 		IStateInterface *StateSigiloso;
-		IStateInterface *StateDefensivo;
+		IStateInterface *StateProtegido;
 		IStateInterface *State;
 
 		
 public:
 	IStateInterface* getState() { return State; }
-	void SetState(IStateInterface* _State) { State = _State; }
+	//void SetState(IStateInterface* _State) { State = _State; }
 
 	IStateInterface* GetEstadoPotenciado() { return StatePotenciado; }
-	IStateInterface* GetEstadoDefensivo() { return StateDefensivo; }
+	IStateInterface* GetEstadoProtegido() { return StateProtegido; }
     IStateInterface* GetEstadoSigiloso() { return StateSigiloso; }
 	IStateInterface* GetEstadoEnergiaCompleta() { return StateEnergiaFull; }
 
 	void InicializarEstados();
 	//funcion cambiar estado
-	FORCEINLINE void EstablecerEstados(IStateInterface* _Estado);
+	void SetEstados(IStateInterface* _Estado);
 
-
-	//IStateInterface* GetEstadoActual();
-	//
-	//IStateInterface* GetEstadoEnergiaMedia();
-	////IStateInterface * GetEstadoEnergiaBaja();
+	void Mesh();
+	void FireShoot();
+	void Mover();
+	void Shield();
 	
 	
-	//FString ObtenerEstadoActual();
-		
-
-			void EnergiaCompleta();
-			//void PawnEnergiaMedia();
-			////void PawnEnergiaBaja();
-			//void PawnPotenciado();
-			//void PawnDefensivo();
-			void Sigiloso();
+	FString ObtenerEstadoActual() { return State->ObtenerEstado(); }
 
 			
 

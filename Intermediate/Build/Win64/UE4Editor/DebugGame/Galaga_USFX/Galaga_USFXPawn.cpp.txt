@@ -1163,6 +1163,8 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX\StateSigiloso.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateSigiloso.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\StatePotenciado.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StatePotenciado.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\ShieldedState.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShieldedState.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h

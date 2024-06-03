@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{7F879233-5821-461A-9CE9-1EF98E5CEF10}</UniqueIdentifier>
+      <UniqueIdentifier>{66B4CD0D-C87D-4E4D-93FF-02CB7FE3E05D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{73671BAD-7CFA-480A-AF4A-452B7EC3FAED}</UniqueIdentifier>
+      <UniqueIdentifier>{58028AAB-68FD-4B94-9C0C-59DB28A0012E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX">
-      <UniqueIdentifier>{7C3BDDAC-7721-479D-813D-9ACB70E5F570}</UniqueIdentifier>
+      <UniqueIdentifier>{DD7D54C3-031D-44C5-92BF-6F814F42681E}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX\AuxCapsulas.cpp">
       <Filter>Source\Galaga_USFX</Filter>
@@ -152,6 +152,12 @@
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX\escenario.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\EscudoPawn.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\EscudoPawn.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\FacadeNivel1.cpp">
@@ -341,6 +347,12 @@
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX\Puntaje.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\ShieldedState.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\ShieldedState.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\ShipFactory.cpp">

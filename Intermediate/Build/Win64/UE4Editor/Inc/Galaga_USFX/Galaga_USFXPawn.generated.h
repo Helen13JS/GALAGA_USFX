@@ -18,7 +18,7 @@ class ACapsulas;
 #endif
 #define GALAGA_USFX_Galaga_USFXPawn_generated_h
 
-#define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXPawn_h_189_DELEGATE \
+#define Galaga_USFX_Source_Galaga_USFX_Galaga_USFXPawn_h_187_DELEGATE \
 static inline void FOnMunitionCapsuleConsumed_DelegateWrapper(const FMulticastScriptDelegate& OnMunitionCapsuleConsumed) \
 { \
 	OnMunitionCapsuleConsumed.ProcessMulticastDelegate<UObject>(NULL); \

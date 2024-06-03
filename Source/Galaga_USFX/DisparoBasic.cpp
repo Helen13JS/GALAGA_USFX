@@ -66,7 +66,7 @@ void ADisparoBasic::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimi
 		vida=GalagaPawn->GetVida();
 		vida = vida - 10;
 		GalagaPawn->SetVida(vida);
-		FString Message = FString::Printf(TEXT("Vida Jugador: %f"), vida);
+		FString Message = FString::Printf(TEXT("Vida Jugador: %d"), vida);
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
 	}
 }

@@ -2,6 +2,7 @@
 
 
 #include "StatePotenciado.h"
+#include "Galaga_USFXPawn.h"
 
 // Sets default values
 AStatePotenciado::AStatePotenciado()
@@ -38,6 +39,10 @@ void AStatePotenciado::EnergiaCompleta()
 
 void AStatePotenciado::EstadoPotenciado()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Se activo el estado sigiloso"));
+	NavePawn->SetVelocity(4000.0f);
+	NavePawn->FireRate *= -2;
+
 }
 
 
@@ -45,16 +50,15 @@ void AStatePotenciado::EstadoSigiloso()
 {
 }
 
-void AStatePotenciado::EstadoDefensivo()
-{
-}
+
 
 FString AStatePotenciado::ObtenerEstado()
 {
-	return FString();
+	return "Nave:Estado Potenciado";
 }
 
-void AStatePotenciado::EstablecerNaveJugador(AGalaga_USFXPawn* NaveJugador)
+void AStatePotenciado::SetNaveJugador(AGalaga_USFXPawn* NaveJugador)
 {
+	NavePawn = NaveJugador;
 }
 

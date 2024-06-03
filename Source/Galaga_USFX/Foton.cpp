@@ -4,6 +4,7 @@
 #include "Foton.h"
 #include "Engine/StaticMeshActor.h"
 #include "Galaga_USFXProjectile.h"
+#include "Galaga_USFXPawn.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
@@ -47,6 +48,21 @@ void AFoton::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	//Moverfoton(DeltaTime);
 
+}
+
+void AFoton::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+
+	AGalaga_USFXPawn* GalagaPawn = Cast<AGalaga_USFXPawn>(Other);
+	if (GalagaPawn)
+	{
+		Destroy();
+		vida = GalagaPawn->GetVida();
+		vida = vida - 10;
+		GalagaPawn->SetVida(vida);
+		FString Message = FString::Printf(TEXT("Vida Jugador: %d"), vida);
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, Message);
+	}
 }
 
 void AFoton::TipoFoton(int tipo)

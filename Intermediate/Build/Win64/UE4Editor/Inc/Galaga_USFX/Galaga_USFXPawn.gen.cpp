@@ -331,12 +331,10 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalaga_USFXPawn_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "Comment", "//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);\n" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Galaga_USFXPawn.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "Galaga_USFXPawn.h" },
-		{ "ToolTip", "DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);" },
 	};
 #endif
 #if WITH_METADATA
@@ -462,7 +460,7 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFXPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalaga_USFXPawn, 183911781);
+	IMPLEMENT_CLASS(AGalaga_USFXPawn, 1150217822);
 	template<> GALAGA_USFX_API UClass* StaticClass<AGalaga_USFXPawn>()
 	{
 		return AGalaga_USFXPawn::StaticClass();

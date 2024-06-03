@@ -25,7 +25,7 @@ public:
 	virtual void EstadoPotenciado() = 0;
 	//virtual void EstadoNormal() = 0;
 	virtual void EstadoSigiloso() = 0;
-	virtual void EstadoDefensivo() = 0;
+	virtual void EstadoProtegido() = 0;
 
 	virtual void EnergiaCompleta() = 0;
 	//virtual void EnergiaMedia() = 0;

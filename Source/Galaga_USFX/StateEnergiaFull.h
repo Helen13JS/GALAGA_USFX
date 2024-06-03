@@ -27,6 +27,9 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 public:
+
+	class UStaticMesh* StealthMesh;
+	class UStaticMesh* OriginalMesh1;
 	UPROPERTY(VisibleAnywhere, Category = "Estado Energia llena")
 	AGalaga_USFXPawn* NavePawn;
 
@@ -35,11 +38,11 @@ public:
 	virtual void EnergiaCompleta() override;
 	//virtual void EnergiaMedia() override;
 	//virtual void EnergiaBaja() override;
-	virtual void EstadoPotenciado() override;
-	virtual void EstadoSigiloso() override;
-	virtual void EstadoDefensivo() override;
+	virtual void EstadoPotenciado() override {};
+	virtual void EstadoSigiloso() override {};
+	virtual void EstadoProtegido() override {};
 
 	virtual FString ObtenerEstado() override;
-	virtual void EstablecerNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
+	virtual void SetNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
 
 };

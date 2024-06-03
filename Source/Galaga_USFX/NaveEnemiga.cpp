@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-//#include "NaveEnemigaEspia.h"
-#include "Kismet/GameplayStatics.h"
 #include "NaveEnemiga.h"
+
+#include "Kismet/GameplayStatics.h"
+
 
 // Sets default values
 ANaveEnemiga::ANaveEnemiga()

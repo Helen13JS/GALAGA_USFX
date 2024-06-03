@@ -23,13 +23,15 @@ AStateSigiloso::AStateSigiloso()
 		OriginalMesh1 = OriginalMeshAsset.Object;
 	}
 
+    NavePawn = nullptr;
+
 }
 
 // Called when the game starts or when spawned
 void AStateSigiloso::BeginPlay()
 {
 	Super::BeginPlay();
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Estado Sigiloso"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Estado Sigiloso"));
 	
 }
 
@@ -51,13 +53,11 @@ void AStateSigiloso::EnergiaCompleta()
 {
 }
 
-void AStateSigiloso::EstadoPotenciado()
-{
-}
+
 
 void AStateSigiloso::EstadoSigiloso()
 {
-    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("se esta usando Estado Sigiloso"));
+    GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Se esta usando Estado Sigiloso"));
 
     if (NavePawn != nullptr && StealthMesh != nullptr)
     {
@@ -81,19 +81,20 @@ void AStateSigiloso::EstadoSigiloso()
     }
 }
 
-void AStateSigiloso::EstadoDefensivo()
+void AStateSigiloso::EstadoProtegido()
 {
 }
 
 FString AStateSigiloso::ObtenerEstado()
 {
-	return FString();
+	return "Nave: Estado Sigiloso";
 }
 
 void AStateSigiloso::SetNaveJugador(AGalaga_USFXPawn* NaveJugador)
 {
-     NavePawn = Cast<AGalaga_USFXPawn>(NaveJugador);
+    NavePawn = Cast<AGalaga_USFXPawn>(NaveJugador);
     	//NavePawn = NaveJugador;
-     NavePawn ->SetState(NavePawn->GetEstadoSigiloso());
+       
+    NavePawn ->SetEstados(NavePawn->GetEstadoSigiloso());
 }
 

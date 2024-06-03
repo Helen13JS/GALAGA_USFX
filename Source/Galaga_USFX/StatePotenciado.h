@@ -30,16 +30,16 @@ public:
 	//UPROPERTY(VisibleAnywhere, Category = "Estado Energia llena")
 	class AGalaga_USFXPawn* NavePawn;
 
-public:
-	virtual void EnergiaCompleta() override;
-	//virtual void EnergiaMedia() override;
-	//virtual void EnergiaBaja() override;
-	virtual void EstadoPotenciado() override;
+private:
 	virtual void EstadoSigiloso() override;
-	virtual void EstadoDefensivo() override;
+	virtual void EstadoProtegido() override {};
+	virtual void EnergiaCompleta() override;
+public:
+	virtual void EstadoPotenciado() override;
+	
 
 	virtual FString ObtenerEstado() override;
-	virtual void EstablecerNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
+	virtual void SetNaveJugador(class AGalaga_USFXPawn* NaveJugador) override;
 
 
 };

@@ -17,7 +17,7 @@ void AStateEnergiaFull::BeginPlay()
 {
 	Super::BeginPlay();
 
-	GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Energia Completa"));
+	//GEngine ->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Energia Completa"));
 	
 }
 
@@ -35,27 +35,23 @@ void AStateEnergiaFull::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 }
 
-void AStateEnergiaFull::EstablecerNaveJugador(AGalaga_USFXPawn* NaveJugador)
+void AStateEnergiaFull::SetNaveJugador(AGalaga_USFXPawn* NaveJugador)
 {
-	NavePawn = NaveJugador;
+	NavePawn = Cast<AGalaga_USFXPawn>(NaveJugador);
+	NavePawn->SetEstados(NavePawn->GetEstadoEnergiaCompleta());
+	//NavePawn = NaveJugador;
 }
 
 void AStateEnergiaFull::EnergiaCompleta()
 {
-	NavePawn->SetState(NavePawn->GetEstadoEnergiaMedia());
+	//codigo para modificar la velocidad de la nave
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Se activo el estado de energia llena"));
+	NavePawn->SetVelocity(3000.0f);
+	//NavePawn->SetState(NavePawn->GetEstadoEnergiaMedia());
 }
 
-void AStateEnergiaFull::EstadoPotenciado()
-{
-}
 
-void AStateEnergiaFull::EstadoSigiloso()
-{
-}
 
-void AStateEnergiaFull::EstadoDefensivo()
-{
-}
 
 FString AStateEnergiaFull::ObtenerEstado()
 {

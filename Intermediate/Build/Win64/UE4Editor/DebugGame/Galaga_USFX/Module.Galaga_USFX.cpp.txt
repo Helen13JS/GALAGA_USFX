@@ -83,6 +83,9 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Disparo
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/escenario.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\escenario.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\escenario.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/EscudoPawn.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\EscudoPawn.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\EscudoPawn.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/FacadeNivel1.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\FacadeNivel1.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeNivel1.generated.h
@@ -164,6 +167,8 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX\StateSigiloso.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateSigiloso.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\StatePotenciado.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StatePotenciado.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\ShieldedState.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ShieldedState.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/PlayerInput.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\GestureRecognizer.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Public\KeyState.h
@@ -210,6 +215,7 @@ D:/Facade/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\proyectilEnemigo.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyectilEnemigo.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/Puntaje.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/ShieldedState.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/ShipFactory.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateEnergiaFull.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateInterface.cpp

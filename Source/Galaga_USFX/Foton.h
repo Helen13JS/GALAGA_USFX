@@ -34,6 +34,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp,
+		AActor* Other, class UPrimitiveComponent* OtherComp,
+		bool bSelfMoved, FVector HitLocation, FVector
+		HitNormal, FVector NormalImpulse, const FHitResult&
+		Hit) override;
+	int vida;
+
 public:
 	void TipoFoton(int tipo);
 	void Rotar();

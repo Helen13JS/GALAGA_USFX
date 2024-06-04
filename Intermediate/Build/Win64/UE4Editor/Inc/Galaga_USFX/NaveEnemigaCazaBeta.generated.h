@@ -58,7 +58,10 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ANaveEnemigaCazaBeta)
 
 
-#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCazaBeta_h_15_PRIVATE_PROPERTY_OFFSET
+#define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCazaBeta_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__CazaMesh() { return STRUCT_OFFSET(ANaveEnemigaCazaBeta, CazaMesh); }
+
+
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCazaBeta_h_12_PROLOG
 #define Galaga_USFX_Source_Galaga_USFX_NaveEnemigaCazaBeta_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

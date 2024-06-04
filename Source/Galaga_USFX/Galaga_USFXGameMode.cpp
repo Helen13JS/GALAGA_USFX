@@ -34,6 +34,11 @@
 #include "CapsuleDirector.h"
 #include "FacadeNivel1.h"
 
+#include "ZigZagStrategy.h"
+#include "ParabolicStrategy.h"
+#include "StrategyInterface.h"
+#include "CircularStrategy.h"
+
 
 
 AGalaga_USFXGameMode::AGalaga_USFXGameMode()
@@ -42,7 +47,9 @@ AGalaga_USFXGameMode::AGalaga_USFXGameMode()
 	PrimaryActorTick.bCanEverTick = true;
 	DefaultPawnClass = AGalaga_USFXPawn::StaticClass();
 	
-
+	//TiempoTranscurrido = 0.0f;
+	Mov = true;
+	Mov2 = true;
 }
 
 void AGalaga_USFXGameMode::BeginPlay()
@@ -51,10 +58,16 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 	FacadeNivel1Capsulas = GetWorld()->SpawnActor<AFacadeNivel1>(AFacadeNivel1::StaticClass());
 	FacadeNivel1Capsulas->CrearNivel();
+
+	FRotator RotacionNave = FRotator(180.0f,0.0f,0.0f);
+	CazaBeta = GetWorld()->SpawnActor<ANaveEnemigaCazaBeta>(FVector (-400.0f,0.0f,200.0f),RotacionNave);
+	//ZigZagStrategy = GetWorld()->SpawnActor<AZigZagStrategy>(AZigZagStrategy::StaticClass());
+	//ParabolicStrategy = GetWorld()->SpawnActor<AParabolicStrategy>(AParabolicStrategy::StaticClass());
+
 	//Set the game state to playing
 
 	//FVector SpawnNaveLocation = FVector(500.f, -500.f, 200.f);
-	//FRotator RotacionNave = FRotator(180.0f,0.0f,0.0f);
+	
 
 	//FVector ubicacionDeObjetosInventario = FVector(1000.0f, -1200.0f, 100.0f);
 	////FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
@@ -114,7 +127,7 @@ void AGalaga_USFXGameMode::BeginPlay()
 		
 		
 
-		TiempoTranscurrido = 0;
+		//TiempoTranscurrido = 0;
 
 		// Inicializar el Handle del Timer
    // SpawnTimerHandle = FTimerHandle();
@@ -130,16 +143,46 @@ void AGalaga_USFXGameMode::BeginPlay()
 }
 
 
+
+
 void AGalaga_USFXGameMode::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
- TiempoTranscurrido ++;
+	
+	
+	TiempoTranscurrido++;
+	CazaBeta->CambiarMovimiento(estrategia);
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Tiempo: %f"), TiempoTranscurrido));
+	//if (Mov) {
+		if (TiempoTranscurrido >= 200)
+		{
+			//CazaBeta->CambiarMovimiento(estrategia);
+			estrategia = NewObject<AZigZagStrategy>();
+	
+		}
+		//Mov = false;
+	//}
+	//if (Mov2)
+	//{
+		else if (TiempoTranscurrido >= 100)
+		{
+			//CazaBeta->CambiarMovimiento(estrategia);
+			estrategia = NewObject<ACircularStrategy>();
+			
+		}
+		else if (TiempoTranscurrido >= 20)
+		{
+			//CazaBeta->CambiarMovimiento(estrategia);
+			estrategia = NewObject<AParabolicStrategy>();
+			
+		}
+		//Mov2 = false;
+	
 
 }
 
-void AGalaga_USFXGameMode::GenerarCapsulas()
-{
+//void AGalaga_USFXGameMode::GenerarCapsulas()
+//{
 	
 	//CapsuleDirector = GetWorld()->SpawnActor<ACapsuleDirector>();
 
@@ -172,7 +215,7 @@ void AGalaga_USFXGameMode::GenerarCapsulas()
 	//}
 	//APaqueteCapsula* capsulas = CapsuleDirector->PaqueteCapsula();
 
-}
+//}
 
 //void AGalaga_USFXGameMode::SpawnInventario()
 //

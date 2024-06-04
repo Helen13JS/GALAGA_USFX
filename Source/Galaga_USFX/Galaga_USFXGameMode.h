@@ -66,7 +66,7 @@ class AFacadeNivel1* FacadeNivel1Capsulas;
 //	TArray<ANaveEnemigaTransporte*> TANavesEnemigasTransporte;
 	
 protected:
-	int TiempoTranscurrido;
+	float TiempoTranscurrido;
 
 	//float TimeSinceLastSpawn= 0.0f;
 	float SpawnInterval=2.0f;
@@ -78,7 +78,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	//void SpawnInventario();
-	void GenerarCapsulas();
+	//void GenerarCapsulas();
 
 public:
 	// Inicialización del TMap
@@ -91,6 +91,16 @@ public:
 private :
 
 	//ACapsuleDirector* CapsuleDirector;
+public:
+	/*class AZigZagStrategy* ZigZagStrategy;
+	class AParabolicStrategy * ParabolicStrategy;*/
+	class IStrategyInterface* estrategia;
+	/*class AStrategy_MInfinity* EstrategiaInfinity;
+	class AStrategy_MW* EstrategiaW;*/
+
+	class ANaveEnemigaCazaBeta* CazaBeta;
+	bool Mov;
+	bool Mov2;
 
 };
 

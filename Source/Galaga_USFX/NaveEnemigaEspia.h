@@ -51,7 +51,7 @@ public:
 	FOnNotifyDelegate2 evento;
 
 
-	void UpdateNave();
+	//void UpdateNave();
 
 	//FOnNotification& OnNotify() override { return NotificationEvent; }
 };

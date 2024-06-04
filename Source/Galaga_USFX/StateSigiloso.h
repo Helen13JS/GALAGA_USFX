@@ -36,8 +36,6 @@ public:
 
 public:
 	virtual void EnergiaCompleta() override;
-	//virtual void EnergiaMedia() override;
-	//virtual void EnergiaBaja() override;
 	virtual void EstadoPotenciado() override {};
 	virtual void EstadoSigiloso() override;
 	virtual void EstadoProtegido() override;

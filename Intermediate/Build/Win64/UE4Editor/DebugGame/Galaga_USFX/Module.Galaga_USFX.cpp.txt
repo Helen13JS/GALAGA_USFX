@@ -62,6 +62,13 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsule
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/CapVelocityBuilder.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\CapVelocityBuilder.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapVelocityBuilder.generated.h
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/CircularStrategy.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CircularStrategy.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StrategyInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StrategyInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CircularStrategy.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/DisparoBasic.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\DisparoBasic.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\DisparoBasic.generated.h
@@ -91,8 +98,6 @@ D:\Facade\Galaga_USFX\Source\Galaga_USFX\FacadeNivel1.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeNivel1.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCazaAlfa.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaCaza.h
-D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
-D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemigaEspia.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemigaEspia.generated.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\SubscriptorInterface.h
@@ -147,6 +152,12 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Galaga_USFXGameMode.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\ZigZagStrategy.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StrategyPawnInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StrategyPawnInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ZigZagStrategy.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\ParabolicStrategy.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ParabolicStrategy.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/Galaga_USFXPawn.cpp
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
@@ -211,6 +222,7 @@ D:/Facade/Galaga_USFX/Source/Galaga_USFX/NavePublisher.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\NavePublisher.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NavePublisher.generated.h
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/PaqueteCapsula.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/ParabolicStrategy.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/proyectilEnemigo.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\proyectilEnemigo.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyectilEnemigo.generated.h
@@ -221,4 +233,7 @@ D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateEnergiaFull.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateInterface.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StatePotenciado.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/StateSigiloso.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/StrategyInterface.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/StrategyPawnInterface.cpp
 D:/Facade/Galaga_USFX/Source/Galaga_USFX/SubscriptorInterface.cpp
+D:/Facade/Galaga_USFX/Source/Galaga_USFX/ZigZagStrategy.cpp

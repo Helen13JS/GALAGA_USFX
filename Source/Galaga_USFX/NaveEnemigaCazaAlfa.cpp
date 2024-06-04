@@ -11,6 +11,7 @@ ANaveEnemigaCazaAlfa::ANaveEnemigaCazaAlfa()
 	mallaNaveEnemiga->SetStaticMesh(ShipMesh.Object);
 	FireRate = 0;
 
+
 }
 
 void ANaveEnemigaCazaAlfa::Tick(float DeltaTime)

@@ -44,7 +44,7 @@ void ANaveEnemigaEspia::BeginPlay()
     AGalaga_USFXPawn* PlayerPawn = Cast<AGalaga_USFXPawn>(GetWorld()->GetFirstPlayerController()->GetPawn());
     if (PlayerPawn)
     {
-        GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("PlayerPawn encontrado,suscribiendo"));
+        //GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("PlayerPawn encontrado,suscribiendo"));
         PlayerPawn->OnMunitionCapsuleConsumed.AddDynamic(this, &ANaveEnemigaEspia::NotificarNaves);
     }
 

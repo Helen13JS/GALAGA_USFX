@@ -39,7 +39,7 @@ void AStatePotenciado::EnergiaCompleta()
 
 void AStatePotenciado::EstadoPotenciado()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Se activo el estado sigiloso"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Purple, TEXT("Se activo el estado Potenciado"));
 	NavePawn->SetVelocity(4000.0f);
 	NavePawn->FireRate *= -2;
 

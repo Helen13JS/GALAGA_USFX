@@ -29,6 +29,9 @@
 #include "StateSigiloso.h"
 #include "StatePotenciado.h"
 #include "ShieldedState.h"
+#include "StateInterface.h"
+#include "StrategyPawnInterface.h"
+#include "ZigZagStrategy.h"
 
 #include "GameFramework/PlayerInput.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -111,6 +114,11 @@ void AGalaga_USFXPawn::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	//FInputActionKeyMapping CrearBarreraKey("CrearBarrera", EKeys::K, 0, 0, 0, 0);
 	FInputActionKeyMapping DoubleShotKey("Doubleshot", EKeys::J, 0, 0, 0, 0);
 	FInputActionKeyMapping MoveFast("MoveFast", EKeys::G, 0, 0, 0, 0);
+
+
+	//FInputActionKeyMapping CambiarEstrategia("CambiarStrategiaZigZag", EKeys::H, 0, 0, 0, 0);
+	//GetWorld()->GetFirstPlayerController()->PlayerInput->AddActionMapping(CambiarEstrategia);
+	//PlayerInputComponent->BindAction("CambiarStrategiaZigZag", IE_Pressed, this, &AGalaga_USFXPawn::CambiarEstrategia);
 
 
 	//PlayerInputComponent->BindAction("ReloadAmmo", IE_Pressed, this, &AGalaga_USFXPawn::ReloadAmmo);
@@ -214,6 +222,12 @@ void AGalaga_USFXPawn::ReturnStart()
 
 void AGalaga_USFXPawn::Tick(float DeltaSeconds)
 {
+
+	// Ejecuta la estrategia de movimiento actual
+	if (CurrentMovementStrategy != nullptr)
+	{
+		CurrentMovementStrategy->ExecuteMovementPawn(this);
+	}
 	// Find movement direction
 	const float ForwardValue = GetInputAxisValue(MoveForwardBinding);
 	const float RightValue = GetInputAxisValue(MoveRightBinding);
@@ -259,6 +273,10 @@ void AGalaga_USFXPawn::Tick(float DeltaSeconds)
 void AGalaga_USFXPawn::BeginPlay()
 {
 	Super::BeginPlay();
+
+	// Set the current movement strategy
+	CurrentMovementStrategy = Cast<IStrategyPawnInterface>(ZigZagStrategy);
+	ZigZagStrategyP = GetWorld()->SpawnActor <AZigZagStrategy>();
 	
 
 	StateProtegido= GetWorld()->SpawnActor<AShieldedState>(AShieldedState::StaticClass());
@@ -695,8 +713,8 @@ void AGalaga_USFXPawn::InicializarEstados()
 	{
 		
 		StateEnergiaFull->SetNaveJugador(this);
-		//StateEnergiaFull->EnergiaCompleta();
-		Mover();
+		StateEnergiaFull->EnergiaCompleta();
+		//Mover();
 		SetEstados(StateEnergiaFull);
 		
 	}
@@ -704,15 +722,15 @@ void AGalaga_USFXPawn::InicializarEstados()
 		{
 			
 		    StateSigiloso->SetNaveJugador(this);
-			//StateSigiloso->EstadoSigiloso();
-			Mesh();
+			StateSigiloso->EstadoSigiloso();
+			//Mesh();
 			SetEstados(StateSigiloso);
 		}
 	else if (Life <= 300 && Life >= 200)
 	{
 		StateProtegido->SetNaveJugador(this);
-		//StateProtegido->EstadoProtegido();
-		Shield();
+		StateProtegido->EstadoProtegido();
+		//Shield();
 		SetEstados(StateProtegido);
 	}
 	else if (Life <= 100 && Life >= 0)
@@ -750,3 +768,38 @@ void AGalaga_USFXPawn::SetEstados(IStateInterface* _Estado)
 {
 	State = _Estado;
 }
+
+
+
+
+
+
+
+void AGalaga_USFXPawn::SetMovementStrategy(IStrategyPawnInterface* NewMovementStrategy)
+{
+	//CurrentMovementStrategy = NewMovementStrategy;
+}
+
+//void AGalaga_USFXPawn::CambiarEstrategia()
+//{
+//	if (bIsZigZagActive)
+//	{
+//		// Si el movimiento en zigzag está activo, restablece la estrategia de movimiento a la estrategia predeterminada
+//		SetMovementStrategy(CurrentMovementStrategy);
+//		bIsZigZagActive = false;
+//	}
+//	else
+//	{
+//		// Si el movimiento en zigzag no está activo, cambia a la estrategia de movimiento en zigzag
+//		SetMovementStrategy(ZigZagStrategy);
+//		bIsZigZagActive = true;
+//
+//		// Configura un temporizador para desactivar el movimiento en zigzag después de 5 segundos
+//		GetWorld()->GetTimerManager().SetTimer(TimerHandleZZ, this, &AGalaga_USFXPawn::CambiarEstrategia, 5.0f,false,0.0f);
+//		//GetWorld()->GetTimerManager().SetTimer(SpawnCapsulas, this, &AGalaga_USFXGameMode::GenerarCapsulas, 10.0f, true, 0.0f);
+//
+//	}
+//
+//	//Pawn 
+//}
+

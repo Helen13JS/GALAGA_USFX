@@ -62,6 +62,11 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Capsule
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/CapVelocityBuilder.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/CapVelocityBuilder.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CapVelocityBuilder.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/CircularStrategy.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/CircularStrategy.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StrategyInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StrategyInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CircularStrategy.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/DisparoBasic.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/DisparoBasic.h
 D:\Facade\Galaga_USFX\Source\Galaga_USFX\Galaga_USFXProjectile.h
@@ -169,6 +174,9 @@ D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/NavePub
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/NavePublisher.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NavePublisher.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/PaqueteCapsula.gen.cpp
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/ParabolicStrategy.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/ParabolicStrategy.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ParabolicStrategy.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/proyectilEnemigo.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/proyectilEnemigo.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\proyectilEnemigo.generated.h
@@ -191,4 +199,11 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StatePo
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StateSigiloso.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/StateSigiloso.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StateSigiloso.generated.h
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StrategyInterface.gen.cpp
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/StrategyPawnInterface.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/StrategyPawnInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StrategyPawnInterface.generated.h
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/SubscriptorInterface.gen.cpp
+D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/ZigZagStrategy.gen.cpp
+D:\Facade\Galaga_USFX\Source\Galaga_USFX/ZigZagStrategy.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\ZigZagStrategy.generated.h

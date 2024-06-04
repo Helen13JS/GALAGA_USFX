@@ -14,6 +14,9 @@ class GALAGA_USFX_API ANaveEnemigaCazaBeta : public ANaveEnemigaCaza
 {
 	GENERATED_BODY()
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = EscoprioMesh, meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* CazaMesh;
+
 private:
 	int armasInteligentes;
 
@@ -28,5 +31,21 @@ protected:
 	virtual void Disparar() override;
 	virtual void Destruirse() override;
 	virtual void Escapar() override;
+
+	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 	
+
+public:
+	class IStrategyInterface* Estrategia;
+
+public:
+	void CambiarMovimiento(IStrategyInterface* _Estrategia);
+	//void ActivarEstrategias();
+	//void Disparar();
+
+private:
+	FTimerHandle TimpodeDisparo;
+	//class AGalaga_USFXPawn* Pawn;
+	float firerate;
 };

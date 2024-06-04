@@ -187,6 +187,22 @@ public:
 	  DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMunitionCapsuleConsumed);
 	  FOnMunitionCapsuleConsumed OnMunitionCapsuleConsumed;
 
+	  //patron strategy
+	 // class IStrategyInterface* Estrategia;
+	  // La estrategia de movimiento actual
+	 class IStrategyPawnInterface* CurrentMovementStrategy;
+	 class IStrategyPawnInterface* ZigZagStrategy;
+
+public:
+	// Si el movimiento en zigzag está activo
+	bool bIsZigZagActive;
+	// El manejador del temporizador
+	FTimerHandle TimerHandleZZ;
+	class AZigZagStrategy* ZigZagStrategyP;
+	void SetMovementStrategy(IStrategyPawnInterface* NewMovementStrategy);
+	//void CambiarEstrategia();
+	//void ActivarEstrategias();
+
 		
 			
 

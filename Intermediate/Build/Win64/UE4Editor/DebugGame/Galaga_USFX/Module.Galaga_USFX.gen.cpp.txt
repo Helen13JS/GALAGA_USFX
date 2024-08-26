@@ -93,7 +93,6 @@ D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\FacadeT
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Foton.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/Foton.h
 D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\Foton.generated.h
-D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFX.init.gen.cpp
 D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFXGameMode.gen.cpp
 D:\Facade\Galaga_USFX\Source\Galaga_USFX/Galaga_USFXGameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h

@@ -1,0 +1,7 @@
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CircularStrategy.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\StrategyInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\StrategyInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CircularStrategy.generated.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\NaveEnemiga.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\NaveEnemiga.generated.h

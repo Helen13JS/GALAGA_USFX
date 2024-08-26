@@ -47,7 +47,7 @@ void ANaveEnemigaCaza::Tick(float DeltaTime)
     Super::Tick(DeltaTime);
     Mover(DeltaTime);
     FireRate += DeltaTime;
-    if (FireRate > 1.0f)
+    if (FireRate > 2.0f)
 	{
 		Disparar();
 		FireRate = 0;
@@ -108,7 +108,7 @@ void ANaveEnemigaCaza::Disparar()
 {
 
     FVector SpawnLocation = GetActorLocation() + GetActorForwardVector() * +100 + FVector(0.0f, 0.0f, 0.0f);//distancia de disparo
-    FVector _SpawnDirection = FVector(-1.0f, 0.0f, 0.0f);
+    FVector _SpawnDirection = FVector(-2.0f, 0.0f, 0.0f);
     FVector SpawnDirection = _SpawnDirection;
 
     FacadeDisparo->Launch("Laser",SpawnLocation,SpawnDirection);

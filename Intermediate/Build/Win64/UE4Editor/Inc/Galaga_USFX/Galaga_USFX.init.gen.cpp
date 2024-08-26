@@ -27,8 +27,8 @@ void EmptyLinkFunctionForGeneratedCodeGalaga_USFX_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x9F190DB2,
-				0xFBF6EB18,
+				0xF907CE27,
+				0x33F84A24,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

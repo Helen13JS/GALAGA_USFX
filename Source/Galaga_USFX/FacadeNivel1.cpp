@@ -46,7 +46,7 @@ void AFacadeNivel1::BeginPlay()
 {
 	Super::BeginPlay();
 	CrearNivel();
-	GetWorld()->GetTimerManager().SetTimer(Spawn, this, &AFacadeNivel1::CrearCapsulas, 10.0f, true, 0.0f);
+	GetWorld()->GetTimerManager().SetTimer(Spawn, this, &AFacadeNivel1::CrearCapsulas, 15.0f, true, 0.0f);
 
 	
 	
@@ -156,7 +156,7 @@ void AFacadeNivel1::CrearCapsulas()
 		CapVelocityBuilder = GetWorld()->SpawnActor<ACapVelocityBuilder>();
 		//Capsula = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
 		CapsuleDirector->ConstruirPaqueteCapsula(CapVelocityBuilder);
-		CapsuleDirector->GenerarCapsulasEnergia();
+		CapsuleDirector->GenerarCapsulasVelocidad();
 
 		break;
 	case 2:
@@ -169,7 +169,7 @@ void AFacadeNivel1::CrearCapsulas()
 	case 3:
 		CapEnergiaBuilder = GetWorld()->SpawnActor<ACapEnergiaBuilder>();
 		CapsuleDirector->ConstruirPaqueteCapsula(CapEnergiaBuilder);
-		CapsuleDirector->GenerarCapsulasVelocidad();
+		CapsuleDirector->GenerarCapsulasEnergia();
 		//Capsula = GetWorld()->SpawnActor<ACapVelocityBuilder>();
 		break;
 

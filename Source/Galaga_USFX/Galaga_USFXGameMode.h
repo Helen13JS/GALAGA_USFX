@@ -92,8 +92,9 @@ private :
 
 	//ACapsuleDirector* CapsuleDirector;
 public:
-	/*class AZigZagStrategy* ZigZagStrategy;
-	class AParabolicStrategy * ParabolicStrategy;*/
+	class AZigZagStrategy* ZigZagStrategy;
+	class ACircularStrategy* CircularStrategy;
+	class AParabolicStrategy * ParabolicStrategy;
 	class IStrategyInterface* estrategia;
 	/*class AStrategy_MInfinity* EstrategiaInfinity;
 	class AStrategy_MW* EstrategiaW;*/

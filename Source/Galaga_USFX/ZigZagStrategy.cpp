@@ -47,7 +47,7 @@ void AZigZagStrategy::Movement(ANaveEnemiga* enemy)
 {
 
 	if (enemy) {
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ZigZagStrategy::ExecuteMovement"));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ZigZagStrategy::ExecuteMovement"));
 		FVector NewLocation = enemy->GetActorLocation() + CurrentDirection * Speed * enemy->GetWorld()->DeltaTimeSeconds;
 
 		// Si la nave llega al límite en el eje X, cambia la dirección

@@ -25,7 +25,6 @@
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeRecargar.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/FacadeTipoDisparo.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Foton.gen.cpp"
-#include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFX.init.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFXGameMode.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFXPawn.gen.cpp"
 #include "D:/Facade/Galaga_USFX/Intermediate/Build/Win64/UE4Editor/Inc/Galaga_USFX/Galaga_USFXProjectile.gen.cpp"

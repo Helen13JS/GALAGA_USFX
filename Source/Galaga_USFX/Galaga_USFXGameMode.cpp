@@ -61,8 +61,9 @@ void AGalaga_USFXGameMode::BeginPlay()
 
 	FRotator RotacionNave = FRotator(180.0f,0.0f,0.0f);
 	CazaBeta = GetWorld()->SpawnActor<ANaveEnemigaCazaBeta>(FVector (-400.0f,0.0f,200.0f),RotacionNave);
-	//ZigZagStrategy = GetWorld()->SpawnActor<AZigZagStrategy>(AZigZagStrategy::StaticClass());
-	//ParabolicStrategy = GetWorld()->SpawnActor<AParabolicStrategy>(AParabolicStrategy::StaticClass());
+	ZigZagStrategy = GetWorld()->SpawnActor<AZigZagStrategy>(AZigZagStrategy::StaticClass());
+	ParabolicStrategy = GetWorld()->SpawnActor<AParabolicStrategy>(AParabolicStrategy::StaticClass());
+	CircularStrategy = GetWorld()->SpawnActor<ACircularStrategy>(ACircularStrategy::StaticClass());
 
 	//Set the game state to playing
 
@@ -151,13 +152,13 @@ void AGalaga_USFXGameMode::Tick(float DeltaTime)
 	
 	
 	TiempoTranscurrido++;
-	CazaBeta->CambiarMovimiento(estrategia);
+	//CazaBeta->CambiarMovimiento(estrategia);
 	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Orange, FString::Printf(TEXT("Tiempo: %f"), TiempoTranscurrido));
 	//if (Mov) {
 		if (TiempoTranscurrido >= 200)
 		{
-			//CazaBeta->CambiarMovimiento(estrategia);
-			estrategia = NewObject<AZigZagStrategy>();
+			CazaBeta->CambiarMovimiento(ZigZagStrategy);
+			//estrategia = NewObject<AZigZagStrategy>();
 	
 		}
 		//Mov = false;
@@ -166,14 +167,14 @@ void AGalaga_USFXGameMode::Tick(float DeltaTime)
 	//{
 		else if (TiempoTranscurrido >= 100)
 		{
-			//CazaBeta->CambiarMovimiento(estrategia);
-			estrategia = NewObject<ACircularStrategy>();
+			CazaBeta->CambiarMovimiento(CircularStrategy);
+			//estrategia = NewObject<ACircularStrategy>();
 			
 		}
 		else if (TiempoTranscurrido >= 20)
 		{
-			//CazaBeta->CambiarMovimiento(estrategia);
-			estrategia = NewObject<AParabolicStrategy>();
+			CazaBeta->CambiarMovimiento(ParabolicStrategy);
+			//estrategia = NewObject<AParabolicStrategy>();
 			
 		}
 		//Mov2 = false;

@@ -38,7 +38,7 @@ void ACircularStrategy::Movement(ANaveEnemiga* enemy)
     float Angulo = FMath::Fmod(TiempoTranscurrido, 6.0f) * VelocidadRotacion; // El ángulo cambia cada 6 segundos
 
     // Calcula las coordenadas X e Y para el movimiento circular
-    float Radio = 5.0f; // Radio del círculo
+    float Radio = 3.0f; // Radio del círculo
     float X = FMath::Cos(Angulo) * Radio; // Coordenada X del círculo
     float Y = FMath::Sin(Angulo) * Radio; // Coordenada Y del círculo
 

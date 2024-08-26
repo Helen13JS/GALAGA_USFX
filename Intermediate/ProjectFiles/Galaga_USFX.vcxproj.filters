@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{87C9C077-D71C-49D7-AADF-2A9C7EC6070F}</UniqueIdentifier>
+      <UniqueIdentifier>{41A2E9FB-049F-4828-B389-2EBB8DC2F7FD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{A1209A34-C063-4614-A533-9083F3751FCF}</UniqueIdentifier>
+      <UniqueIdentifier>{9DEBC714-58F1-4B76-BA5E-6A2C3039153E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX">
-      <UniqueIdentifier>{E894526B-9152-434D-A556-E3854263FE6E}</UniqueIdentifier>
+      <UniqueIdentifier>{65E5AC17-61D9-4BFE-A26B-58417F686DDC}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Galaga_USFX\AuxCapsulas.cpp">
       <Filter>Source\Galaga_USFX</Filter>
@@ -142,6 +142,12 @@
     <ClInclude Include="..\..\Source\Galaga_USFX\CircularStrategy.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\CollectionInterface.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\CollectionInterface.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\DisparoBasic.cpp">
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
@@ -221,6 +227,18 @@
       <Filter>Source\Galaga_USFX</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Galaga_USFX\InventoryComponent.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\InventoryIterator.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\InventoryIterator.h">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Galaga_USFX\IteratorInterface.cpp">
+      <Filter>Source\Galaga_USFX</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX\IteratorInterface.h">
       <Filter>Source\Galaga_USFX</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Galaga_USFX\Laser.cpp">

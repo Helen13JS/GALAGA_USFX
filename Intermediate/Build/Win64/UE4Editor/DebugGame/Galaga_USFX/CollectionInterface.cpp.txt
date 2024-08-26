@@ -1,0 +1,5 @@
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\DebugGame\Galaga_USFX\Definitions.Galaga_USFX.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\CollectionInterface.h
+D:\Facade\Galaga_USFX\Source\Galaga_USFX\IteratorInterface.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\IteratorInterface.generated.h
+D:\Facade\Galaga_USFX\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX\CollectionInterface.generated.h

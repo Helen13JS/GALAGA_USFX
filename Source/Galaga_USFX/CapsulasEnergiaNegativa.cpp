@@ -9,7 +9,7 @@ ACapsulasEnergiaNegativa::ACapsulasEnergiaNegativa()
 	PrimaryActorTick.bCanEverTick = true;
 	
 	static ConstructorHelpers::FObjectFinder<UStaticMesh>
-		CylinderMeshAsset(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_WideCapsule_3.Shape_WideCapsule_3'"));
+		CylinderMeshAsset(TEXT("StaticMesh'/Game/Meshes/NegativeEnergy.NegativeEnergy'"));
 
 	if (CylinderMeshAsset.Succeeded())
 	{
